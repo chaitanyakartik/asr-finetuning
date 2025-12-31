@@ -8,7 +8,7 @@ OUTPUT_DIR = "final_dataset"
 OUTPUT_MANIFEST = os.path.join(OUTPUT_DIR, "master_train_manifest.json")
 
 # The subfolders to merge
-DATASETS = ["Shrutilipi", "Kathbath", "IndicVoices", "Vaani"]
+DATASETS = ["Shrutilipi", "Kathbath", "IndicVoices"]
 
 def merge_manifests():
     print("--- 🔗 Starting Manifest Merge ---")

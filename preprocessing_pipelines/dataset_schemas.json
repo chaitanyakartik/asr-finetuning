@@ -1,0 +1,64 @@
+{
+  "Shrutilipi": {
+    "dataset": "ai4bharat/Shrutilipi",
+    "keys": [
+      "audio_filepath",
+      "text",
+      "duration",
+      "lang"
+    ]
+  },
+
+  "Kathbath": {
+    "dataset": "ai4bharat/kathbath",
+    "keys": [
+      "fname",
+      "text",
+      "audio_filepath",
+      "lang",
+      "duration",
+      "gender",
+      "speaker_id"
+    ]
+  },
+
+  "IndicVoices": {
+    "dataset": "ai4bharat/IndicVoices",
+    "keys": [
+      "audio_filepath",
+      "text",
+      "duration",
+      "lang",
+      "samples",
+      "verbatim",
+      "normalized",
+      "speaker_id",
+      "scenario",
+      "task_name",
+      "gender",
+      "age_group",
+      "job_type",
+      "qualification",
+      "area",
+      "district",
+      "state",
+      "occupation",
+      "verification_report",
+      "unsanitized_verbatim",
+      "unsanitized_normalized"
+    ]
+  },
+
+  "Vaani": {
+    "dataset": "ARTPARK-IISc/Vaani-transcription-part",
+    "keys": [
+      "audio",
+      "language",
+      "gender",
+      "state",
+      "district",
+      "transcript",
+      "referenceImage"
+    ]
+  }
+}
