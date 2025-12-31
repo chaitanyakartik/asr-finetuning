@@ -2,3 +2,8 @@
 .venv/
 .DS_Store
 processed_data/*/wavs/
+# Ignore archive files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
