@@ -1,0 +1,8 @@
+soundfile
+huggingface
+tqdm
+dotenv
+soundfile
+datasets
+torchcodec
+torch

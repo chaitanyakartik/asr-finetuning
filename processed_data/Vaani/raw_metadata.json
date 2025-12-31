@@ -1,0 +1,72 @@
+[
+    {
+        "original_index": 0,
+        "filename": "Vaani_0.wav",
+        "sr": 16000,
+        "district": "Bijapur",
+        "gender": "Male"
+    },
+    {
+        "original_index": 1,
+        "filename": "Vaani_1.wav",
+        "sr": 16000,
+        "district": "Bijapur",
+        "gender": "Male"
+    },
+    {
+        "original_index": 2,
+        "filename": "Vaani_2.wav",
+        "sr": 16000,
+        "district": "Bijapur",
+        "gender": "Female"
+    },
+    {
+        "original_index": 3,
+        "filename": "Vaani_3.wav",
+        "sr": 16000,
+        "district": "Bijapur",
+        "gender": "Male"
+    },
+    {
+        "original_index": 4,
+        "filename": "Vaani_4.wav",
+        "sr": 16000,
+        "district": "Bijapur",
+        "gender": "Male"
+    },
+    {
+        "original_index": 5,
+        "filename": "Vaani_5.wav",
+        "sr": 16000,
+        "district": "Bijapur",
+        "gender": "Male"
+    },
+    {
+        "original_index": 6,
+        "filename": "Vaani_6.wav",
+        "sr": 16000,
+        "district": "Dharwad",
+        "gender": "Female"
+    },
+    {
+        "original_index": 7,
+        "filename": "Vaani_7.wav",
+        "sr": 16000,
+        "district": "Bijapur",
+        "gender": "Male"
+    },
+    {
+        "original_index": 8,
+        "filename": "Vaani_8.wav",
+        "sr": 16000,
+        "district": "Bijapur",
+        "gender": "Male"
+    },
+    {
+        "original_index": 9,
+        "filename": "Vaani_9.wav",
+        "sr": 16000,
+        "district": "Dharwad",
+        "gender": "Female"
+    }
+]
