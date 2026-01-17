@@ -1,5 +1,6 @@
 import os
 import json
+import re
 from tqdm import tqdm
 
 # --- CONFIGURATION ---
@@ -8,7 +9,22 @@ OUTPUT_DIR = "final_dataset"
 OUTPUT_MANIFEST = os.path.join(OUTPUT_DIR, "master_train_manifest.json")
 
 # The subfolders to merge
-DATASETS = ["Shrutilipi", "Kathbath", "IndicVoices"]
+DATASETS = ["Shrutilipi", "Kathbath", "IndicVoices", "Vaani","IISc_MILE", "OpenSLR79", "ReSPIN"]
+def clean_text(text):
+    """Clean text by removing tags, English translations, and formatting symbols"""
+    # Remove only the tags themselves, keep the content inside
+    text = re.sub(r'<[^>]+>', '', text)
+    
+    # Remove English words wrapped in {} like {chair}, {picture}, etc.
+    text = re.sub(r'\s*\{[^}]+\}', '', text)
+    
+    # Remove formatting symbols: - _ @ # $ ! % & *
+    text = re.sub(r'[-_@#$!%&*]', '', text)
+    
+    # Clean up multiple spaces
+    text = re.sub(r'\s+', ' ', text)
+    
+    return text.strip()
 
 def merge_manifests():
     print("--- 🔗 Starting Manifest Merge ---")
@@ -32,6 +48,8 @@ def merge_manifests():
         dataset_duration = 0.0
         for line in lines:
             entry = json.loads(line)
+            # Clean the text field
+            entry['text'] = clean_text(entry['text'])
             master_entries.append(entry)
             dataset_duration += entry['duration']
             

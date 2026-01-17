@@ -7,3 +7,4 @@ processed_data/*/wavs/
 *.tar
 *.tar.gz
 *.tgz
+.DS_Store

@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import soundfile as sf
 from datasets import load_dataset, Audio
 from dotenv import load_dotenv
@@ -14,6 +15,19 @@ WAV_DIR = os.path.join(OUTPUT_DIR, "wavs")
 
 # Ensure directories exist
 os.makedirs(WAV_DIR, exist_ok=True)
+
+def clean_text(text):
+    """Remove noise tags and English translations wrapped in {}"""
+    # Remove only the tags themselves, keep the content inside
+    text = re.sub(r'<[^>]+>', '', text)
+    
+    # Remove English words wrapped in {} like {chair}, {picture}, etc.
+    text = re.sub(r'\s*\{[^}]+\}', '', text)
+    
+    # Clean up multiple spaces
+    text = re.sub(r'\s+', ' ', text)
+    
+    return text.strip()
 
 def run_vaani_pipeline():
     print(f"--- 🚀 Starting Pipeline: {DATASET_NAME} ---")
@@ -65,6 +79,9 @@ def run_vaani_pipeline():
             
             # Vaani uses 'transcript' for the text
             text = item.get('transcript', "")
+            
+            # Clean the text: remove noise tags and English translations
+            text = clean_text(text)
             
             # --- C. SAVE AUDIO ---
             filename = f"{DATASET_NAME}_{i}.wav"
