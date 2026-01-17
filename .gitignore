@@ -1,7 +1,7 @@
 .env
 .venv/
 .DS_Store
-processed_data/*/wavs/
+data/processed_data/*/wavs/
 # Ignore archive files
 *.zip
 *.tar
