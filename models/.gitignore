@@ -1,0 +1,12 @@
+# Ignore all .nemo model files (too large for git)
+*.nemo
+
+# Ignore downloaded checkpoints
+*.ckpt
+*.pt
+*.pth
+
+# Keep the download script and README
+!download_model.py
+!README.md
+!.gitignore
