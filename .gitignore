@@ -8,3 +8,5 @@ data/processed_data/*/wavs/
 *.tar.gz
 *.tgz
 .DS_Store
+evaluation/benchmarking/curation/test_data/*/wavs/
+*.nemo

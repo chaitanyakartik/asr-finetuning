@@ -1,0 +1,72 @@
+[
+    {
+        "original_index": 0,
+        "filename": "Kathbath_0.wav",
+        "sr": 16000,
+        "speaker_id": 235,
+        "gender": "Female"
+    },
+    {
+        "original_index": 1,
+        "filename": "Kathbath_1.wav",
+        "sr": 16000,
+        "speaker_id": 551,
+        "gender": "Female"
+    },
+    {
+        "original_index": 2,
+        "filename": "Kathbath_2.wav",
+        "sr": 16000,
+        "speaker_id": 551,
+        "gender": "Female"
+    },
+    {
+        "original_index": 3,
+        "filename": "Kathbath_3.wav",
+        "sr": 16000,
+        "speaker_id": 1182,
+        "gender": "Female"
+    },
+    {
+        "original_index": 4,
+        "filename": "Kathbath_4.wav",
+        "sr": 16000,
+        "speaker_id": 551,
+        "gender": "Female"
+    },
+    {
+        "original_index": 5,
+        "filename": "Kathbath_5.wav",
+        "sr": 16000,
+        "speaker_id": 551,
+        "gender": "Female"
+    },
+    {
+        "original_index": 6,
+        "filename": "Kathbath_6.wav",
+        "sr": 16000,
+        "speaker_id": 551,
+        "gender": "Female"
+    },
+    {
+        "original_index": 7,
+        "filename": "Kathbath_7.wav",
+        "sr": 16000,
+        "speaker_id": 235,
+        "gender": "Female"
+    },
+    {
+        "original_index": 8,
+        "filename": "Kathbath_8.wav",
+        "sr": 16000,
+        "speaker_id": 235,
+        "gender": "Female"
+    },
+    {
+        "original_index": 9,
+        "filename": "Kathbath_9.wav",
+        "sr": 16000,
+        "speaker_id": 235,
+        "gender": "Female"
+    }
+]
