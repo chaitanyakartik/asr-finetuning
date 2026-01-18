@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-01-18T13:43:00.052058",
+  "metrics": {
+    "wer": 15.93,
+    "cer": 2.12,
+    "status": "completed"
+  },
+  "status": "completed"
+}
