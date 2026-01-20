@@ -1,0 +1,15 @@
+2026-01-19 16:39:12,780 [Rank 2436910] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 16:39:22,696 [Rank 2436910] 📂 Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 16:41:19,864 [Rank 2439388] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 16:41:28,073 [Rank 2439388] 📂 Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 16:43:53,677 [Rank 2444065] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 16:44:01,539 [Rank 2444065] 📂 Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 17:13:03,484 [Rank 2474216] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 17:13:13,686 [Rank 2474216] 🔒 Encoder Frozen
+2026-01-19 17:13:13,729 [Rank 2474216] 📂 Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 17:30:30,103 [Rank 2495815] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 17:32:37,551 [Rank 2497160] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 17:32:47,599 [Rank 2497160] 🔒 Encoder Frozen
+2026-01-19 17:32:47,599 [Rank 2497160] 🛡️  SAFETY MODE: CTC Loss Disabled (0.0). RNNT Weight (1.0)
+2026-01-19 17:32:47,641 [Rank 2497160] 📂 Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 18:32:25,339 [Rank 2497160] ✅ Training Done. Model saved: /mnt/data/asr-finetuning/training/models/kathbath_hybrid_h200_phase1_safe_final.nemo

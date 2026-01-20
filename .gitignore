@@ -20,7 +20,6 @@ data/**/baseline_data/
 # =========================
 # TRAINING ARTIFACTS
 # =========================
-training/
 training/experiments/**/2026-*/
 training/experiments/**/checkpoints/
 
@@ -31,14 +30,12 @@ training/experiments/**/checkpoints/
 # LOGS
 # =========================
 events.out.tfevents.*
-lightning_logs.txt
 nemo_log_*.txt
 nemo_error_log.txt
 
 # =========================
 # Weights & Biases
 # =========================
-wandb/
 training/experiments/wandb/
 
 # =========================
