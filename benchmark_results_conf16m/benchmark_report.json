@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-01-20T12:43:52.452436",
+  "benchmarks": [
+    {
+      "name": "en_clean_read",
+      "manifest": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v1/en_clean_read.json",
+      "status": "completed",
+      "metrics": {
+        "wer": 100.22,
+        "cer": 91.74,
+        "num_samples": 25,
+        "status": "completed"
+      },
+      "output_dir": "benchmark_results_conf16m/en_clean_read"
+    },
+    {
+      "name": "kn_conversational",
+      "status": "skipped",
+      "reason": "Invalid manifest"
+    },
+    {
+      "name": "kn_clean_read",
+      "manifest": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v1/kn_clean_read.json",
+      "status": "completed",
+      "metrics": {
+        "wer": 19.47,
+        "cer": 4.01,
+        "num_samples": 10,
+        "status": "completed"
+      },
+      "output_dir": "benchmark_results_conf16m/kn_clean_read"
+    },
+    {
+      "name": "kn_en_codeswitch",
+      "manifest": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v1/kn_en_codeswitch.json",
+      "status": "completed",
+      "metrics": {
+        "wer": 100.0,
+        "cer": 100.0,
+        "num_samples": 10,
+        "status": "completed"
+      },
+      "output_dir": "benchmark_results_conf16m/kn_en_codeswitch"
+    }
+  ],
+  "summary": {
+    "total_benchmarks": 4,
+    "completed": 3,
+    "failed": 0
+  }
+}

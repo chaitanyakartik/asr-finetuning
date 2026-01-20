@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 DATASET_NAME = "Kathbath"
 HF_DATASET_ID = "ai4bharat/kathbath"
 HF_CONFIG = "kannada"  # Verified in your previous inspection
-N_SAMPLES = 10         # Set to -1 for full download
-OUTPUT_DIR = "processed_data/Kathbath"
+N_SAMPLES = -1         # Set to -1 for full download
+OUTPUT_DIR = "data/processed_data/Kathbath"
 WAV_DIR = os.path.join(OUTPUT_DIR, "wavs")
 
 # Ensure directories exist

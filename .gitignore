@@ -10,3 +10,51 @@ data/processed_data/*/wavs/
 .DS_Store
 evaluation/benchmarking/curation/test_data/*/wavs/
 *.nemo
+# Raw / baseline audio data (never commit)
+data/baseline_data/
+data/**/baseline_data/
+
+# Audio files (safety net)
+*.wav
+*.flac
+# =========================
+# TRAINING ARTIFACTS
+# =========================
+training/
+training/experiments/**/2026-*/
+training/experiments/**/checkpoints/
+
+*.ckpt
+*-last.ckpt
+
+# =========================
+# LOGS
+# =========================
+events.out.tfevents.*
+lightning_logs.txt
+nemo_log_*.txt
+nemo_error_log.txt
+
+# =========================
+# Weights & Biases
+# =========================
+wandb/
+training/experiments/wandb/
+
+# =========================
+# Python junk
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+
+# =========================
+# Results / benchmarks
+# =========================
+# Ignore temp / ad-hoc runs
+benchmark_results_*_tmp/
+results_*_tmp/
+
+# Ignore TensorBoard & logs
+events.out.tfevents.*
+lightning_logs.txt
