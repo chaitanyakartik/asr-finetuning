@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 # --- CONFIG ---
 VOCAB_SIZE = 3000   # 3k is the "Sweet Spot" for 100M models
-OUTPUT_DIR = "training/tokenizers/kn_master_v3000"
+OUTPUT_DIR = "training/tokenizers/kn_master_v3000_retrained"
 TEMP_TEXT_FILE = "kannada_corpus_dump.txt"
 
 # OPTIONS: "wikipedia" or "indic_corp"
@@ -90,11 +90,25 @@ def build_tokenizer():
         vocab_size=VOCAB_SIZE,
         character_coverage=0.9995,
         model_type='bpe',
-        byte_fallback=True,
+        byte_fallback=False,
         input_sentence_size=MAX_SENTENCES,
         shuffle_input_sentence=True,
         max_sentence_length=10000  # <--- Increased limit
     )
+        
+    # Create vocab.txt from tokenizer.vocab
+    print("📝 Creating vocab.txt...")
+    vocab_file = os.path.join(OUTPUT_DIR, "tokenizer.vocab")
+    vocab_txt_file = os.path.join(OUTPUT_DIR, "vocab.txt")
+    
+    with open(vocab_file, 'r', encoding='utf-8') as f_in, \
+         open(vocab_txt_file, 'w', encoding='utf-8') as f_out:
+        for line in f_in:
+            # Extract just the token (first column before tab)
+            token = line.split('\t')[0]
+            f_out.write(token + '\n')
+    
+    print(f"✅ vocab.txt created with {VOCAB_SIZE} tokens")
     
     if os.path.exists(TEMP_TEXT_FILE):
         os.remove(TEMP_TEXT_FILE)

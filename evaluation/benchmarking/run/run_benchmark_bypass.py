@@ -176,24 +176,32 @@ def compute_metrics(predictions_path):
         "num_samples": len(results),
     }
 
-def generate_report(benchmark_results, output_dir):
-    """Generate aggregate benchmark report"""
+def generate_report(metrics, output_dir):
+    """Generate benchmark report"""
+    # Save JSON report
     report_path = os.path.join(output_dir, 'benchmark_report.json')
     
     report = {
         'timestamp': datetime.now().isoformat(),
-        'benchmarks': benchmark_results,
-        'summary': {
-            'total_benchmarks': len(benchmark_results),
-            'completed': sum(1 for b in benchmark_results if b.get('status') == 'completed'),
-            'failed': sum(1 for b in benchmark_results if b.get('status') == 'failed')
-        }
+        'metrics': metrics
     }
     
     with open(report_path, 'w', encoding='utf-8') as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
     
-    print(f"\n📄 Report saved to: {report_path}")
+    # Save text report in the format requested
+    text_report_path = os.path.join(output_dir, 'report.txt')
+    wer = metrics.get('wer', 0)
+    cer = metrics.get('cer', 0)
+    num_samples = metrics.get('num_samples', 0)
+    
+    report_text = f"WER: {wer:.2f}% | CER: {cer:.2f}% | Samples: {num_samples}"
+    
+    with open(text_report_path, 'w', encoding='utf-8') as f:
+        f.write(report_text + '\n')
+    
+    print(f"\n📄 JSON report saved to: {report_path}")
+    print(f"📄 Text report saved to: {text_report_path}")
     return report
 
 # -------------------------
@@ -246,7 +254,10 @@ def main():
     print("=" * 80)
     print(metrics)
 
-    generate_report(metrics, args.output_dir)
+    # Save report to models directory
+    models_dir = os.path.join(PROJECT_ROOT, "models")
+    os.makedirs(models_dir, exist_ok=True)
+    generate_report(metrics, models_dir)
 
     print("\n✅ Benchmark complete")
     return 0

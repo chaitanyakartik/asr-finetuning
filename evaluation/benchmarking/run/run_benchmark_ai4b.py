@@ -25,6 +25,9 @@ except ImportError:
     JIWER_AVAILABLE = False
     print("⚠️  Warning: jiwer not installed. Install with: pip install jiwer")
 
+# Add project root to path
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Run ASR benchmarks")
     parser.add_argument("--model", type=str, required=True, help="Path to .nemo model file")
@@ -96,11 +99,12 @@ def compute_metrics(predictions_path):
         c = cer(refs, hyps) * 100
         
         print(f"      WER: {w:.2f}% | CER: {c:.2f}%")
-        return {'wer': round(w, 2), 'cer': round(c, 2), 'status': 'completed'}
+        return {'wer': round(w, 2), 'cer': round(c, 2), 'num_samples': len(results), 'status': 'completed'}
     except Exception as e: return {'status': 'failed', 'error': str(e)}
 
 def generate_report(metrics, output_dir):
     """Generate and save the summary report"""
+    # Save JSON report
     report_path = os.path.join(output_dir, 'benchmark_report.json')
     
     report = {
@@ -112,7 +116,19 @@ def generate_report(metrics, output_dir):
     with open(report_path, 'w', encoding='utf-8') as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
     
-    print(f"\n📄 Report saved to: {report_path}")
+    # Save text report in the format requested
+    text_report_path = os.path.join(output_dir, 'report.txt')
+    wer_val = metrics.get('wer', 0)
+    cer_val = metrics.get('cer', 0)
+    num_samples = metrics.get('num_samples', 0)
+    
+    report_text = f"WER: {wer_val:.2f}% | CER: {cer_val:.2f}% | Samples: {num_samples}"
+    
+    with open(text_report_path, 'w', encoding='utf-8') as f:
+        f.write(report_text + '\n')
+    
+    print(f"\n📄 JSON report saved to: {report_path}")
+    print(f"📄 Text report saved to: {text_report_path}")
 
 def main():
     args = parse_args()
@@ -162,8 +178,11 @@ def main():
         metrics = compute_metrics(res['predictions_path'])
     else:
         metrics = {'status': 'failed', 'error': res.get('error')}
-        
-    generate_report(metrics, args.output_dir)
+    
+    # Save report to models directory
+    models_dir = os.path.join(PROJECT_ROOT, "models")
+    os.makedirs(models_dir, exist_ok=True)
+    generate_report(metrics, models_dir)
     
     print("\n✅ Benchmark run complete!")
     return 0
