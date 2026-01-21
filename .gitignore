@@ -55,3 +55,4 @@ results_*_tmp/
 # Ignore TensorBoard & logs
 events.out.tfevents.*
 lightning_logs.txt
+data/training/v2/iisc_mile/raw_extract/train/trans_files/*.txt
