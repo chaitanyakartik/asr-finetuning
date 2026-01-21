@@ -10,7 +10,7 @@ TAR_FILENAME = "mile_kannada_train.tar.gz"
 DOWNLOAD_URL = f"https://www.openslr.org/resources/126/{TAR_FILENAME}"
 
 # Paths
-OUTPUT_DIR = "/Users/chaitanyakartik/Projects/asr-finetuning/data/training/v2/iisc_mile"
+OUTPUT_DIR = "data/training/v2/iisc_mile"
 RAW_DIR = os.path.join(OUTPUT_DIR, "raw_extract")
 TAR_PATH = os.path.join(OUTPUT_DIR, TAR_FILENAME)
 

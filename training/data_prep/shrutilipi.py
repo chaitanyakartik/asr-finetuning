@@ -11,7 +11,7 @@ HF_CONFIG = "kannada"
 
 ### Set to -1 for full download
 N_SAMPLES = -1  
-OUTPUT_DIR = "/Users/chaitanyakartik/Projects/asr-finetuning/data/training/v2/shrutilipi"
+OUTPUT_DIR = "data/training/v2/shrutilipi"
 WAV_DIR = os.path.join(OUTPUT_DIR, "wavs")
 
 # Ensure directories exist

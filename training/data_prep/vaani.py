@@ -10,7 +10,7 @@ DATASET_NAME = "Vaani"
 HF_DATASET_ID = "ARTPARK-IISc/Vaani-transcription-part"
 HF_CONFIG = "Kannada"  # Verified in your simulation
 N_SAMPLES = -1         # Set to -1 for full download
-OUTPUT_DIR = "/Users/chaitanyakartik/Projects/asr-finetuning/data/training/v2/vaani"
+OUTPUT_DIR = "data/training/v2/vaani"
 WAV_DIR = os.path.join(OUTPUT_DIR, "wavs")
 
 # Ensure directories exist
