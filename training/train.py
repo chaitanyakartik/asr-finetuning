@@ -205,7 +205,7 @@ def run_training(args):
         model.spec_augmentation = None # Disable for stability in Phase 1
 
     # ---------------------------------------------------------
-    # 3. DATA LOADING (Safe Mode Filtering)
+    # 3. DATA LOADING (Updated for H200 & Short/Long Files)
     # ---------------------------------------------------------
     train_ds = {
         'manifest_filepath': args.train_manifest,
@@ -215,8 +215,8 @@ def run_training(args):
         'num_workers': 16,
         'pin_memory': True,
         'use_start_end_token': False,
-        'min_duration': 3.0,      # PHASE 0 SAFETY (No short files)
-        'max_duration': 20.0,
+        'min_duration': 1.5,      # UPDATED: Save short files (Was 3.0)
+        'max_duration': 40.0,     # UPDATED: Save long files (Was 20.0)
         'prefetch_factor': 4
     }
     model.setup_training_data(train_data_config=train_ds)
@@ -234,24 +234,7 @@ def run_training(args):
     })
 
     # ---------------------------------------------------------
-    # 4. OPTIMIZER & SCHEDULER
-    # ---------------------------------------------------------
-    # LR Logic: Phase 1 (Boost Decoder) vs Phase 2/3 (Nudge Encoder)
-    if args.phase == 1:
-        lr = 0.0005  # Moderate for Decoder
-    else:
-        lr = 0.0001  # Very Low for Fine-Tuning
-    
-    if args.lr: lr = args.lr # Override if provided
-        
-    optimizer_conf = {
-        'name': 'adamw', 'lr': lr, 'weight_decay': 1e-3,
-        'sched': {'name': 'CosineAnnealing', 'warmup_ratio': 0.1, 'min_lr': 1e-7}
-    }
-    model.setup_optimization(optimizer_conf)
-
-    # ---------------------------------------------------------
-    # 5. TRAINER
+    # 4. TRAINER SETUP (Moved BEFORE Optimizer)
     # ---------------------------------------------------------
     callbacks = []
     if args.phase == 3:
@@ -277,7 +260,30 @@ def run_training(args):
 
     config = OmegaConf.structured(exp_config)
     exp_manager.exp_manager(trainer, config)
+    
+    # CRITICAL FIX: Link Trainer to Model BEFORE setting up optimizer
     model.set_trainer(trainer)
+
+    # ---------------------------------------------------------
+    # 5. OPTIMIZER & SCHEDULER (Now safe to init)
+    # ---------------------------------------------------------
+    if args.phase == 1:
+        lr = 0.0005  # Moderate for Decoder
+    else:
+        lr = 0.0001  # Very Low for Fine-Tuning
+    
+    if args.lr: lr = args.lr
+        
+    optimizer_conf = {
+        'name': 'adamw', 'lr': lr, 'weight_decay': 1e-3,
+        'sched': {'name': 'CosineAnnealing', 'warmup_ratio': 0.1, 'min_lr': 1e-7}
+    }
+    # This will now succeed because trainer.max_epochs is accessible
+    model.setup_optimization(optimizer_conf)
+
+    # ---------------------------------------------------------
+    # 6. RUN TRAINING
+    # ---------------------------------------------------------
     trainer.fit(model)
 
     if local_rank == 0:

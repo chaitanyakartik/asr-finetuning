@@ -1,10 +1,3 @@
-{"audio_filepath": "/Users/chaitanyakartik/Projects/asr-finetuning/processed_data/Vaani/wavs/Vaani_0.wav", "text": "ಈ ಒಂದು ನೋಡುವಂತ ದೃಶ್ಯ ರಾಜ ಮಹಾರಾಜರ ಕಾವ್ಯದಲ್ಲಿ ಅನೇಕ.", "duration": 4.260875, "lang": "kn", "source": "vaani_dialect"}
-{"audio_filepath": "/Users/chaitanyakartik/Projects/asr-finetuning/processed_data/Vaani/wavs/Vaani_1.wav", "text": "ಇದು ಒಂದು ದೇವಸ್ಥಾನ ಇದೆ .ಇಲ್ಲಿ ದೇವಸ್ಥಾನದ ಎದುರು ಗಡೆ ಇರೋದು ದ್ವೀಪ ಸ್ತಮ್ಬಾ ಇದು.", "duration": 3.8186875, "lang": "kn", "source": "vaani_dialect"}
-{"audio_filepath": "/Users/chaitanyakartik/Projects/asr-finetuning/processed_data/Vaani/wavs/Vaani_2.wav", "text": "ಸರಕಾರದಿಂದ ನಗರಾಭಿವೃದ್ಧಿ ವತಿಯಿಂದ ಇಂತ ಚೇರ್ ಗಳನ್ನೂ ಅಳವಡಿಸಿರುತ್ತಾರೆ.", "duration": 4.739625, "lang": "kn", "source": "vaani_dialect"}
-{"audio_filepath": "/Users/chaitanyakartik/Projects/asr-finetuning/processed_data/Vaani/wavs/Vaani_3.wav", "text": "ನಮಗೆ ಬಹಳ ಮುಖ್ಯವಾದಂತ ಒಂದು ಕಲೆ.", "duration": 4.5226875, "lang": "kn", "source": "vaani_dialect"}
-{"audio_filepath": "/Users/chaitanyakartik/Projects/asr-finetuning/processed_data/Vaani/wavs/Vaani_4.wav", "text": "ಪಿಕ್ಚರ್ ಥಿಯೇಟರ್ ಖಾಲಿ ಐತಿ.", "duration": 1.7333125, "lang": "kn", "source": "vaani_dialect"}
-{"audio_filepath": "/Users/chaitanyakartik/Projects/asr-finetuning/processed_data/Vaani/wavs/Vaani_5.wav", "text": "ಉಹ್ ಗಂಡ ಹೆಂಡತಿ ಇದ್ದಾರೆ ಈ ಗಂಡ ಹೆಂಡತಿ--", "duration": 2.6470625, "lang": "kn", "source": "vaani_dialect"}
-{"audio_filepath": "/Users/chaitanyakartik/Projects/asr-finetuning/processed_data/Vaani/wavs/Vaani_6.wav", "text": "ಇದರ ಮೇಲೆ ಬಹಳ ಫೋರ್ಸ್ ಹಾಕಕ್ ಬರಂಗಿಲ್ಲ.", "duration": 2.3900625, "lang": "kn", "source": "vaani_dialect"}
-{"audio_filepath": "/Users/chaitanyakartik/Projects/asr-finetuning/processed_data/Vaani/wavs/Vaani_7.wav", "text": "ಅಲ್ಲೆಲ್ಲ ಹೆಣ್ಣು ಮಕ್ಕಳು ಗಂಡು ಮಕ್ಕಳು ಡ್ಯಾನ್ಸ್ ಮಾಡಾಕ್ತಾರಾ --", "duration": 2.74, "lang": "kn", "source": "vaani_dialect"}
-{"audio_filepath": "/Users/chaitanyakartik/Projects/asr-finetuning/processed_data/Vaani/wavs/Vaani_8.wav", "text": "ಆಹ್ ಆಯಕಟ್ಟಿನ ಸ್ಥಳದಲ್ಲಿ ನಾವು ನೊ ನೋಡತ್ತಾ ಇದ --", "duration": 2.5813125, "lang": "kn", "source": "vaani_dialect"}
-{"audio_filepath": "/Users/chaitanyakartik/Projects/asr-finetuning/processed_data/Vaani/wavs/Vaani_9.wav", "text": "ಅವರು ಪದೇ ಪದೇ ಬಟ್ಟೆ ಅಂಗಡಿಗೆ ಬಂದು --", "duration": 2.94525, "lang": "kn", "source": "vaani_dialect"}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa0675ee149f889bbede277fc5c61c42b3bc0efc9eb8ee058f72e273a4e316a6
+size 3005

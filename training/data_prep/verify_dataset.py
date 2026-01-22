@@ -63,7 +63,8 @@ def show_duration_distribution(all_durations):
     
     # Define buckets (in seconds)
     buckets = [
-        (0, 2, "0-2s"),
+        (0, 1.5, "0-1.5s"),
+	(1.5,2, "1.5-2s"),
         (2, 5, "2-5s"),
         (5, 10, "5-10s"),
         (10, 15, "10-15s"),
