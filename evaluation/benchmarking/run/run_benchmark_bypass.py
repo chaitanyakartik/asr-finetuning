@@ -3,6 +3,12 @@
 ASR Benchmark Runner (Single Manifest, Manual RNNT)
 
 Runs ASR evaluation on a single manifest using manual RNNT inference.
+
+python evaluation/benchmarking/run/run_benchmark_bypass.py \
+--model=training/models/kathbath_hybrid_h200_scaleup_phase2_final.nemo \
+--manifest=evaluation/benchmarking/curation/evaluation/benchmarking/data/v1/kn_clean_read.json \
+--output-dir=models/results_conf_100m_v2
+
 """
 
 import os
@@ -45,7 +51,6 @@ def parse_args():
     parser.add_argument("--batch-size", type=int, default=1,
                         help="Unused (kept for compatibility)")
     return parser.parse_args()
-
 
 # -------------------------
 # Manifest validation
