@@ -293,7 +293,11 @@ def run_training(args):
         exp_dir=os.path.join(PROJECT_ROOT, "training/experiments"),
         name=f"{args.exp_name}_phase{args.phase}",
         checkpoint_callback_params=exp_manager.CallbackParams(
+<<<<<<< HEAD
             monitor="val_wer", mode="min", save_top_k=-1, save_last=True, always_save_nemo=True
+=======
+            monitor="val_wer", mode="min", save_top_k=2, save_last=True, always_save_nemo=True
+>>>>>>> 7ef35a6 (feat: exploratory analysis on bytecode errors in preds)
         ),
         create_wandb_logger=True,
         wandb_logger_kwargs={"name": f"{args.exp_name}_p{args.phase}", "project": "kannada-asr-curriculum"}
@@ -336,3 +340,4 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     run_training(args)
+
