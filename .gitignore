@@ -56,3 +56,4 @@ results_*_tmp/
 events.out.tfevents.*
 lightning_logs.txt
 data/training/v2/iisc_mile/raw_extract/train/trans_files/*.txt
+kenlm/
