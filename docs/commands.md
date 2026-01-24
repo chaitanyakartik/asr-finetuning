@@ -21,3 +21,16 @@ python training/train_adv.py \
 /mnt/data/asr-finetuning/training/experiments/kathbath_hybrid_h200_scaleup_phase4/2026-01-23_02-31-05/checkpoints/kathbath_hybrid_h200_scaleup_phase4.nemo
 
 cp -v /mnt/data/asr-finetuning/training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo /mnt/data/kn_asr_nvidia/HybridRNNTCTC_100m_scaleup.nemo
+
+
+
+
+
+{
+  "timestamp": "2026-01-23T22:56:08.308475",
+  "metrics": {
+    "wer": 14.59,
+    "cer": 2.86,
+    "num_samples": 2062
+  }
+}
