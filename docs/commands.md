@@ -38,3 +38,8 @@ cp -v /mnt/data/asr-finetuning/training/models/kathbath_hybrid_h200_scaleup_phas
 
 source nemo-env/bin/activate
 python NeMo/tools/speech_data_explorer/data_explorer.py /Users/chaitanyakartik/Projects/asr-finetuning/predictions/conf_hybrid_trained_100m/predictions_ready.json
+
+
+
+cat *.json > combined.json
+cp 

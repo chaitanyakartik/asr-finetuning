@@ -8,3 +8,4 @@ data/training/**/*.json filter=lfs diff=lfs merge=lfs -text
 data/training/wiki_*.txt filter=lfs diff=lfs merge=lfs -text
 data/training/v2.1/*.txt filter=lfs diff=lfs merge=lfs -text
 models/**/predictions.json filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text

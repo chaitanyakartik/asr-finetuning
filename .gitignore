@@ -61,3 +61,7 @@ AI-ML/
 .DS_Store
 nemo_env/
 call_recording_analysis/drafted_ground_truth_gemini/audio_chunks/
+
+evaluation/benchmarking/data/v2/gok_call_recordings/transcriptions
+
+evaluation/benchmarking/data/v2/gok_call_recordings/audio_chunks

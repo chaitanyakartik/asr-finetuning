@@ -10,8 +10,8 @@ HF_DATASET_ID = "ai4bharat/Shrutilipi"
 HF_CONFIG = "kannada"
 
 ### Set to -1 for full download
-N_SAMPLES = 10  
-OUTPUT_DIR = "processed_data/Shrutilipi"
+N_SAMPLES = 50
+OUTPUT_DIR = "/Users/chaitanyakartik/Projects/asr-finetuning/evaluation/benchmarking/data/v2/Shrutilipi"
 WAV_DIR = os.path.join(OUTPUT_DIR, "wavs")
 
 # Ensure directories exist
@@ -33,7 +33,7 @@ def run_shrutilipi_pipeline():
         ds = load_dataset(
             HF_DATASET_ID, 
             HF_CONFIG, 
-            split="train", 
+            split="test", 
             streaming=True, 
             token=hf_token
         )

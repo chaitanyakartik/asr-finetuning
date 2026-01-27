@@ -7,7 +7,8 @@ Runs ASR evaluation on a single manifest using manual RNNT inference.
 python evaluation/benchmarking/run/run_benchmark_bypass.py \
 --model=training/models/kathbath_hybrid_h200_scaleup_phase2_final.nemo \
 --manifest=evaluation/benchmarking/curation/evaluation/benchmarking/data/v1/kn_clean_read.json \
---output-dir=models/results_conf_100m_v2
+--output-dir=models/results_conf_100m_v2 \
+--exp-name=conf_100m_v2
 
 """
 
@@ -50,6 +51,8 @@ def parse_args():
                         help="Directory to save results")
     parser.add_argument("--batch-size", type=int, default=1,
                         help="Unused (kept for compatibility)")
+    parser.add_argument("--exp-name", type=str, default="default_exp",
+                        help="Experiment name for report files")
     return parser.parse_args()
 
 # -------------------------
@@ -79,7 +82,7 @@ def validate_benchmark_manifest(manifest_path):
 # -------------------------
 # Manual RNNT inference
 # -------------------------
-def run_benchmark(model, manifest_path, output_dir):
+def run_benchmark(model, manifest_path, output_dir, exp_name):
     import librosa
     import torch
 
@@ -150,7 +153,7 @@ def run_benchmark(model, manifest_path, output_dir):
             })
 
     os.makedirs(output_dir, exist_ok=True)
-    predictions_path = os.path.join(output_dir, "predictions.json")
+    predictions_path = os.path.join(output_dir, f"predictions_{exp_name}.json")
 
     with open(predictions_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
@@ -181,10 +184,10 @@ def compute_metrics(predictions_path):
         "num_samples": len(results),
     }
 
-def generate_report(metrics, output_dir):
+def generate_report(metrics, output_dir, exp_name):
     """Generate benchmark report"""
     # Save JSON report
-    report_path = os.path.join(output_dir, 'benchmark_report.json')
+    report_path = os.path.join(output_dir, f'benchmark_report_{exp_name}.json')
     
     report = {
         'timestamp': datetime.now().isoformat(),
@@ -249,6 +252,7 @@ def main():
         model=model,
         manifest_path=args.manifest,
         output_dir=args.output_dir,
+        exp_name=args.exp_name
     )
 
     # Metrics
@@ -262,7 +266,7 @@ def main():
     # Save report to models directory
     models_dir = os.path.join(PROJECT_ROOT, "models")
     os.makedirs(models_dir, exist_ok=True)
-    generate_report(metrics, models_dir)
+    generate_report(metrics, models_dir, args.exp_name)
 
     print("\n✅ Benchmark complete")
     return 0

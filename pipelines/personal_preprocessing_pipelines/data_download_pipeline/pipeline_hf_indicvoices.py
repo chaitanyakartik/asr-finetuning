@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 DATASET_NAME = "IndicVoices"
 HF_DATASET_ID = "ai4bharat/IndicVoices"
 HF_CONFIG = "kannada"
-N_SAMPLES = 10  # Set to -1 for full download
-OUTPUT_DIR = "processed_data/IndicVoices"
+N_SAMPLES = 50  # Set to -1 for full download
+OUTPUT_DIR = "/Users/chaitanyakartik/Projects/asr-finetuning/evaluation/benchmarking/data/v2/IndicVoices"
 WAV_DIR = os.path.join(OUTPUT_DIR, "wavs")
 
 # Ensure directories exist
@@ -31,7 +31,7 @@ def run_indicvoices_pipeline():
         ds = load_dataset(
             HF_DATASET_ID, 
             HF_CONFIG, 
-            split="train", 
+            split="valid", 
             streaming=True, 
             token=hf_token
             # Note: Removed 'trust_remote_code' based on your previous logs
