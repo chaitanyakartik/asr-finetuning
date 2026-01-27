@@ -58,3 +58,6 @@ lightning_logs.txt
 data/training/v2/iisc_mile/raw_extract/train/trans_files/*.txt
 kenlm/
 AI-ML/
+.DS_Store
+nemo_env/
+call_recording_analysis/drafted_ground_truth_gemini/audio_chunks/
