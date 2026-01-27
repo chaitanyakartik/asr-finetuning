@@ -1,0 +1,13 @@
+pandas>=2.0.0
+openpyxl>=3.0.0
+tqdm>=4.65.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Audio processing (choose one):
+# Option 1: pydub (recommended for MP3, requires ffmpeg)
+pydub>=0.25.0
+
+# Option 2: librosa (alternative, no ffmpeg needed)
+# librosa>=0.10.0
+# soundfile>=0.12.0
