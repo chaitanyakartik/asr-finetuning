@@ -13,6 +13,8 @@ import requests
 from pathlib import Path
 from datetime import datetime
 from dotenv import load_dotenv
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from threading import Lock
 
 # Load environment variables from .env file
 load_dotenv()
@@ -93,11 +95,37 @@ def transcribe_with_sarvam(audio_path, api_key, model="saarika:v2.5", language_c
 # -------------------------
 # Benchmark
 # -------------------------
-def run_benchmark(manifest_path, api_key, model, language_code, output_dir):
+def transcribe_single(args):
+    """Helper function for concurrent transcription"""
+    idx, audio_path, truth, api_key, model, language_code = args
+    
+    # Check if audio file exists
+    if not os.path.exists(audio_path):
+        return {
+            "audio_filepath": audio_path,
+            "ground_truth": truth,
+            "prediction": "",
+            "index": idx,
+            "error": "File not found"
+        }
+    
+    # Transcribe
+    prediction = transcribe_with_sarvam(audio_path, api_key, model, language_code)
+    
+    return {
+        "audio_filepath": audio_path,
+        "ground_truth": truth,
+        "prediction": prediction,
+        "index": idx,
+    }
+
+
+def run_benchmark(manifest_path, api_key, model, language_code, output_dir, max_workers=5):
     print("🚀 Running inference with Sarvam API")
     print(f"   Manifest: {manifest_path}")
     print(f"   Model: {model}")
     print(f"   Language: {language_code}")
+    print(f"   Workers: {max_workers}")
     print(f"   Output: {output_dir}")
     
     if not os.path.exists(manifest_path):
@@ -121,33 +149,31 @@ def run_benchmark(manifest_path, api_key, model, language_code, output_dir):
     
     print(f"   Files to transcribe: {len(audio_files)}")
     
-    results = []
+    # Prepare tasks
+    tasks = [
+        (idx, audio_path, truth, api_key, model, language_code)
+        for idx, (audio_path, truth) in enumerate(zip(audio_files, ground_truths))
+    ]
     
-    for idx, (audio_path, truth) in enumerate(zip(audio_files, ground_truths)):
-        # Check if audio file exists
-        if not os.path.exists(audio_path):
-            print(f"   ⚠️  Audio file not found: {audio_path}")
-            results.append({
-                "audio_filepath": audio_path,
-                "ground_truth": truth,
-                "prediction": "",
-                "index": idx,
-                "error": "File not found"
-            })
-            continue
+    results = []
+    completed = 0
+    lock = Lock()
+    
+    # Process with concurrent workers
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {executor.submit(transcribe_single, task): task for task in tasks}
         
-        # Transcribe
-        prediction = transcribe_with_sarvam(audio_path, api_key, model, language_code)
-        
-        results.append({
-            "audio_filepath": audio_path,
-            "ground_truth": truth,
-            "prediction": prediction,
-            "index": idx,
-        })
-        
-        if (idx + 1) % 10 == 0:
-            print(f"   Processed {idx + 1}/{len(audio_files)}")
+        for future in as_completed(futures):
+            result = future.result()
+            results.append(result)
+            
+            with lock:
+                completed += 1
+                if completed % 10 == 0 or completed == len(tasks):
+                    print(f"   Processed {completed}/{len(tasks)}")
+    
+    # Sort results by index to maintain order
+    results.sort(key=lambda x: x["index"])
     
     # Save predictions
     os.makedirs(output_dir, exist_ok=True)
@@ -199,11 +225,15 @@ def generate_report(metrics, output_dir):
     
     # Save text report
     text_report_path = os.path.join(output_dir, 'report.txt')
-    wer_val = metrics.get('wer', 0)
-    cer_val = metrics.get('cer', 0)
+    wer_val = metrics.get('wer')
+    cer_val = metrics.get('cer')
     num_samples = metrics.get('num_samples', 0)
     
-    report_text = f"WER: {wer_val:.2f}% | CER: {cer_val:.2f}% | Samples: {num_samples}"
+    # Handle None values when jiwer is not available
+    if wer_val is None or cer_val is None:
+        report_text = f"WER: N/A | CER: N/A | Samples: {num_samples}"
+    else:
+        report_text = f"WER: {wer_val:.2f}% | CER: {cer_val:.2f}% | Samples: {num_samples}"
     
     with open(text_report_path, 'w', encoding='utf-8') as f:
         f.write(report_text + '\n')

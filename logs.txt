@@ -1,0 +1,1485 @@
+Last login: Mon Jan 26 17:31:23 on ttys000
+chaitanyakartik@Chaitanyas-MacBook-Air:~ $ ssh ubuntu@47.29.24.119
+Authorized uses only. All activity may be monitored and reported.
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-144-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue Jan 27 04:10:07 PM IST 2026
+
+  System load:    0.06              Processes:               372
+  Usage of /home: 43.5% of 4.99GB   Users logged in:         0
+  Memory usage:   4%                IPv4 address for enp3s0: 10.0.0.234
+  Swap usage:     0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+97 updates can be applied immediately.
+75 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+New release '24.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Authorized uses only. All activity may be monitored and reported.
+Last login: Sat Jan 24 13:53:36 2026 from 103.83.29.160
+ubuntu@bh-01:~$ ssh neurodx@10.0.0.147
+Authorized uses only. All activity may be monitored and reported.
+neurodx@10.0.0.147's password: 
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-56-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue Jan 27 04:10:16 PM IST 2026
+
+  System load:    0.98              Processes:               934
+  Usage of /home: 56.6% of 4.94GB   Users logged in:         1
+  Memory usage:   4%                IPv4 address for enp3s0: 10.0.0.147
+  Swap usage:     0%
+
+  => /var/log/audit is using 100.0% of 4.94GB
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+232 updates can be applied immediately.
+139 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+13 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+Last login: Sat Jan 24 13:53:43 2026 from 10.0.0.234
+(base) neurodx@h200-nvl-2x:~$ sudo su
+root@h200-nvl-2x:/home/neurodx# cd /mnt/data
+source asr-env/bin/activate 
+cd asr-finetuning
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# git pull
+remote: Enumerating objects: 260, done.
+remote: Counting objects: 100% (260/260), done.
+remote: Compressing objects: 100% (169/169), done.
+remote: Total 234 (delta 61), reused 230 (delta 57), pack-reused 0 (from 0)
+Receiving objects: 100% (234/234), 2.72 MiB | 3.08 MiB/s, done.
+Resolving deltas: 100% (61/61), completed with 20 local objects.
+From https://github.com/chaitanyakartik/asr-finetuning
+   a9d86c3..a2a7161  gpu-box    -> origin/gpu-box
+Updating a9d86c3..a2a7161
+error: The following untracked working tree files would be overwritten by merge:
+	scripts/test_whispr.py
+Please move or remove them before you merge.
+Aborting
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# rm -rf scripts/test_whispr.py
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# git pull
+Updating a9d86c3..a2a7161
+Username for 'https://github.com': chaitanyakartik
+Password for 'https://chaitanyakartik@github.com': 
+Filtering content: 100% (38/38), 122.53 MiB | 3.59 MiB/s, done.
+Fast-forward
+ .DS_Store                                                                                                   |   Bin 8196 -> 8196 bytes
+ .gitattributes                                                                                              |     1 +
+ .gitignore                                                                                                  |    10 +-
+ benchmark_results_conf16m/benchmark_report.json                                                             |     3 -
+ benchmark_results_conf16m/en_clean_read/predictions.json                                                    |     3 -
+ benchmark_results_conf16m/kn_clean_read/predictions.json                                                    |     3 -
+ benchmark_results_conf16m/kn_en_codeswitch/predictions.json                                                 |     3 -
+ call_recording_analysis/.env.example                                                                        |     7 +
+ call_recording_analysis/README.md                                                                           |   193 +
+ call_recording_analysis/audio_analysis.py                                                                   |   282 +
+ call_recording_analysis/audio_spreadsheet_correlation.json                                                  |     3 +
+ call_recording_analysis/department_summary.csv                                                              |    28 +
+ call_recording_analysis/detailed_audio_analysis.csv                                                         |   817 ++
+ call_recording_analysis/drafted_ground_truth_gemini/README.md                                               |    86 +
+ call_recording_analysis/drafted_ground_truth_gemini/manifests/214601_manifest.json                          |     3 +
+ call_recording_analysis/drafted_ground_truth_gemini/manifests/216172-_manifest.json                         |     3 +
+ call_recording_analysis/drafted_ground_truth_gemini/manifests/216233_manifest.json                          |     3 +
+ call_recording_analysis/drafted_ground_truth_gemini/manifests/228016_manifest.json                          |     3 +
+ call_recording_analysis/drafted_ground_truth_gemini/manifests/228368RDPR_manifest.json                      |     3 +
+ call_recording_analysis/drafted_ground_truth_gemini/manifests/230049-_manifest.json                         |     3 +
+ call_recording_analysis/drafted_ground_truth_gemini/manifests/manifest_master.json                          |     3 +
+ call_recording_analysis/drafted_ground_truth_gemini/scripts/create_manifest.py                              |    65 +
+ call_recording_analysis/drafted_ground_truth_gemini/scripts/process_batch_audio.py                          |   276 +
+ call_recording_analysis/drafted_ground_truth_gemini/scripts/split_audio.py                                  |    39 +
+ call_recording_analysis/drafted_ground_truth_gemini/scripts/transcribe_chunks.py                            |   136 +
+ call_recording_analysis/drafted_ground_truth_gemini/transcriptions/214601_transcriptions.json               |     3 +
+ call_recording_analysis/drafted_ground_truth_gemini/transcriptions/216172-_transcriptions.json              |     3 +
+ call_recording_analysis/drafted_ground_truth_gemini/transcriptions/216233_transcriptions.json               |     3 +
+ call_recording_analysis/drafted_ground_truth_gemini/transcriptions/228016_transcriptions.json               |     3 +
+ call_recording_analysis/drafted_ground_truth_gemini/transcriptions/228368RDPR_transcriptions.json           |     3 +
+ call_recording_analysis/drafted_ground_truth_gemini/transcriptions/230049-_transcriptions.json              |     3 +
+ call_recording_analysis/generate_report.py                                                                  |   441 +
+ call_recording_analysis/reports/analysis_report.md                                                          |   163 +
+ call_recording_analysis/reports/department_comparison.png                                                   |   Bin 0 -> 810178 bytes
+ call_recording_analysis/reports/duration_by_department_boxplot.png                                          |   Bin 0 -> 307381 bytes
+ call_recording_analysis/reports/duration_distribution.png                                                   |   Bin 0 -> 156158 bytes
+ call_recording_analysis/reports/file_size_distribution.png                                                  |   Bin 0 -> 100065 bytes
+ call_recording_analysis/reports/files_per_department.png                                                    |   Bin 0 -> 382072 bytes
+ call_recording_analysis/reports/sample_rate_distribution.png                                                |   Bin 0 -> 89322 bytes
+ call_recording_analysis/requirements.txt                                                                    |    20 +
+ call_recording_analysis/run_full_analysis.py                                                                |    85 +
+ call_recording_analysis/setup_and_run.sh                                                                    |    53 +
+ call_recording_analysis/spreadsheet_analysis.json                                                           |     3 +
+ call_recording_analysis/spreadsheet_analysis.py                                                             |   225 +
+ call_recording_analysis/spreadsheets_csv/Agriculture_Department_Untitled_spreadsheet.xlsx.csv               |    54 +
+ call_recording_analysis/spreadsheets_csv/Animal_Husbandary_and_Fisheries_Untitled_spreadsheet.xlsx.csv      |     6 +
+ call_recording_analysis/spreadsheets_csv/Backward_Classes_Welfare_Depart_Untitled_spreadsheet.xlsx.csv      |    13 +
+ call_recording_analysis/spreadsheets_csv/Commerce_and_Industries_Departm_Untitled_spreadsheet.xlsx.csv      |     9 +
+ call_recording_analysis/spreadsheets_csv/Department_of_Cooperation_Untitled_spreadsheet.xlsx.csv            |   132 +
+ call_recording_analysis/spreadsheets_csv/Department_of_School_Education__Untitled_spreadsheet.xlsx.csv      |    18 +
+ call_recording_analysis/spreadsheets_csv/Department_of_Social_Welfare_Untitled_spreadsheet.xlsx.csv         |    19 +
+ call_recording_analysis/spreadsheets_csv/Department_of_Women_and_Child_W_Untitled_spreadsheet.xlsx.csv      |    25 +
+ call_recording_analysis/spreadsheets_csv/Energy_Department_Untitled_spreadsheet.xlsx.csv                    |     9 +
+ call_recording_analysis/spreadsheets_csv/Food_and_Civil_Supplies_Department_Untitled_spreadsheet.xlsx.csv   |    13 +
+ call_recording_analysis/spreadsheets_csv/Forest,Ecology_and_Environment__Untitled_spreadsheet.xlsx.csv      |    26 +
+ call_recording_analysis/spreadsheets_csv/Health_and_Family_Welfare_Department_Untitled_spreadsheet.xlsx.csv |    22 +
+ call_recording_analysis/spreadsheets_csv/Higher_Education_Department_Untitled_spreadsheet.xlsx.csv          |     4 +
+ call_recording_analysis/spreadsheets_csv/Home_Department_Untitled_spreadsheet.xlsx.csv                      |    27 +
+ call_recording_analysis/spreadsheets_csv/Horticulture_and_Sericulture_De_Untitled_spreadsheet.xlsx.csv      |     2 +
+ call_recording_analysis/spreadsheets_csv/Housing_Department_Untitled_spreadsheet.xlsx.csv                   |    44 +
+ call_recording_analysis/spreadsheets_csv/Labour_Department_Untitled_spreadsheet.xlsx.csv                    |    24 +
+ call_recording_analysis/spreadsheets_csv/Medical_Education_Department_Untitled_spreadsheet.xlsx.csv         |     3 +
+ call_recording_analysis/spreadsheets_csv/Minorites_Welfare_Department_Untitled_spreadsheet.xlsx.csv         |     5 +
+ call_recording_analysis/spreadsheets_csv/Public_Works_Department_Untitled_spreadsheet.xlsx.csv              |    16 +
+ call_recording_analysis/spreadsheets_csv/RDPR_RDPR_CallCenter.xlsx.csv                                      |   247 +
+ call_recording_analysis/spreadsheets_csv/Revenue_Department_Revene_CallCenter.xlsx.csv                      |   122 +
+ call_recording_analysis/spreadsheets_csv/Scheduled_Tribes_Welfare_Depart_Untitled_spreadsheet.xlsx.csv      |     6 +
+ call_recording_analysis/spreadsheets_csv/Skill_Development,_Entrepreneur_Untitled_spreadsheet.xlsx.csv      |     4 +
+ call_recording_analysis/spreadsheets_csv/Transport_Department_Untitled_spreadsheet.xlsx.csv                 |    43 +
+ call_recording_analysis/spreadsheets_csv/Urban_Development__Department_UDD_CallCenter.xlsx.csv              |   335 +
+ call_recording_analysis/spreadsheets_csv/Water_Resources_Department_Untitled_spreadsheet.xlsx.csv           |     3 +
+ call_recording_analysis/summary_stats.json                                                                  |     3 +
+ call_recording_analysis/test_single_audio_comparision.py                                                    |   205 +
+ call_recording_analysis/transcription_comparison.json                                                       |     3 +
+ data/training/wiki_6gram.arpa                                                                               |     3 -
+ docs/ai_assistant_chats/gemini_chats_19th_jan.txt                                                           | 16633 +++++++++++++++++++++++++++++++++++++
+ docs/ai_assistant_chats/gemini_chats_22nd_jan.txt                                                           | 39584 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ docs/ai_assistant_chats/temp.txt                                                                            |     0
+ docs/commands.md                                                                                            |    45 +
+ docs/console_logs/console_23rd_jan                                                                          | 21926 +++++++++++++++++++++++++++++++++++++++++++++++++
+ docs/reports/model_v3_error_reports/bytecode_report.json                                                    |   410 +
+ docs/reports/model_v3_error_reports/claude.md                                                               |   361 +
+ docs/reports/model_v3_error_reports/gemini.md                                                               |   146 +
+ docs/reports/model_v3_error_reports/predictions.json                                                        | 12374 ++++++++++++++++++++++++++++
+ docs/reports/model_v3_error_reports/predictions_corrected.json                                              | 12374 ++++++++++++++++++++++++++++
+ docs/reports/model_v3_incomplete_bytecode/benchmark_corrected_v3.json                                       | 12374 ++++++++++++++++++++++++++++
+ docs/reports/model_v3_incomplete_bytecode/benchmark_incomplete_v3                                           | 12677 ++++++++++++++++++++++++++++
+ docs/reports/model_v3_incomplete_bytecode/benchmark_incomplete_v3.json                                      | 12375 ++++++++++++++++++++++++++++
+ docs/reports/model_v3_incomplete_bytecode/bytecode_correction_results.txt                                   |    45 +
+ docs/reports/model_v3_incomplete_bytecode/bytecode_corrections.json                                         |   233 +
+ docs/reports/model_v3_incomplete_bytecode/compute_overall_wer.py                                            |    75 +
+ docs/reports/model_v3_incomplete_bytecode/compute_wer_corrections.py                                        |    62 +
+ evaluation/benchmarking/data/v2.zip                                                                         |     3 +
+ evaluation/benchmarking/data/v2/Indicvoices/raw_metadata.json                                               |     3 +
+ evaluation/benchmarking/data/v2/Indicvoices/train_manifest.json                                             |     3 +
+ evaluation/benchmarking/data/v2/Kathbath/raw_metadata.json                                                  |     3 +
+ evaluation/benchmarking/data/v2/Kathbath/train_manifest.json                                                |     3 +
+ evaluation/benchmarking/data/v2/Vaani/raw_metadata.json                                                     |     3 +
+ evaluation/benchmarking/data/v2/Vaani/train_manifest.json                                                   |     3 +
+ evaluation/benchmarking/data/v2/gok_call_recordings/raw_metadata.json                                       |     3 +
+ evaluation/benchmarking/data/v2/gok_call_recordings/train_manifest.json                                     |     3 +
+ evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json                                           |     0
+ evaluation/benchmarking/data/v2/open_source_manifest.json                                                   |     0
+ evaluation/benchmarking/run/run_benchmark_bypass.py                                                         |    21 +-
+ evaluation/benchmarking/run/test_sarvam_benchmark.py                                                        |   271 +
+ models/export_benchmarks.zip                                                                                |     3 +
+ models/export_benchmarks/benchmark_report_ai4b_indicconf_100m.json                                          |     9 +
+ models/export_benchmarks/benchmark_report_ai4b_indicconf_600m.json                                          |     9 +
+ models/export_benchmarks/benchmark_report_sarvam.json                                                       |     9 +
+ models/export_benchmarks/results_conf_100m_scaleup_v1.txt                                                   |     1 +
+ models/export_benchmarks/results_conf_16m_kathbath.txt                                                      |     1 +
+ models/results_conf_100m_kathbath/results_conf_100m_kathbath.txt                                            |     1 +
+ models/results_conf_100m_v3/benchmark_report.json                                                           |     3 +
+ models/results_conf_100m_v3/report.txt                                                                      |     1 +
+ models/results_sarvam_api/benchmark_report.json                                                             |     9 +
+ models/results_sarvam_api/predictions.json                                                                  |    62 +
+ optimization/prediction_normalization/apply_normalization.py                                                |   230 +
+ optimization/prediction_normalization/compare_normalization_strategies.py                                   |   269 +
+ optimization/prediction_normalization/compare_normalization_strategies_v2.py                                |   269 +
+ optimization/prediction_normalization/corpus_analysis_report.txt                                            |    60 +
+ optimization/prediction_normalization/corpus_analyzer.py                                                    |   224 +
+ optimization/prediction_normalization/corpus_normalizer.py                                                  |   220 +
+ optimization/prediction_normalization/corpus_normalizer_conservative.py                                     |    81 +
+ optimization/prediction_normalization/normalization_rules.json                                              |     3 +
+ optimization/prediction_normalization/normalize_predictions.py                                              |   190 +
+ optimization/prediction_normalization/orthographic_style_guide.py                                           |   202 +
+ optimization/prediction_normalization/predictions1_predictions_normalized.json                              |     3 +
+ optimization/prediction_normalization/predictions1_predictions_report.json                                  |     3 +
+ optimization/prediction_normalization/predictions2_predictions-2_normalized.json                            |     3 +
+ optimization/prediction_normalization/predictions2_predictions-2_report.json                                |     3 +
+ optimization/prediction_normalization/predictions_normalized.json                                           |     3 +
+ optimization/prediction_normalization/vocabulary.json                                                       |     3 +
+ optimization/prediction_normalization/wer_improvement_report.json                                           |     3 +
+ optimization/proper_noun_handling/extract_from_predictions.py                                               |   273 +
+ optimization/proper_noun_handling/extract_proper_noun_variants.py                                           |   224 +
+ optimization/proper_noun_handling/mismatch_analysis.json                                                    |     3 +
+ optimization/proper_noun_handling/proper_noun_variants.json                                                 |     3 +
+ optimization/proper_noun_handling/test_combined_normalization.py                                            |   191 +
+ optimization/proper_noun_handling/test_proper_noun_normalization.py                                         |   127 +
+ pipelines/personal_preprocessing_pipelines/data_download_pipeline/pipeline_hf_indicvoices.py                |     6 +-
+ pipelines/personal_preprocessing_pipelines/data_download_pipeline/pipeline_hf_kathbath.py                   |     6 +-
+ pipelines/personal_preprocessing_pipelines/data_download_pipeline/pipeline_hf_shrutilipi.py                 |     6 +-
+ pipelines/personal_preprocessing_pipelines/data_download_pipeline/pipeline_hf_vaani.py                      |     6 +-
+ predictions/conf_hybrid_trained_100m/predictions_ready.json                                                 |     3 +
+ scripts/apply_kannada_normalization.py                                                                      |   235 +
+ scripts/data_processing/convert_gok_to_v2.py                                                                |   171 +
+ fetch_wiki.py => scripts/data_processing/fetch_wiki.py                                                      |     0
+ scripts/data_processing/fix_manifest.py                                                                     |    33 +
+ scripts/data_processing/regenerate_manifests.py                                                             |   196 +
+ scripts/data_processing/reorganize_gok_to_v2.py                                                             |   172 +
+ final_eval.py => scripts/evaluation/final_eval.py                                                           |     0
+ run_grid_search.py => scripts/evaluation/run_grid_search.py                                                 |     0
+ scripts/fix_bytecode_predictions.py                                                                         |   161 +
+ scripts/kannada_normalization.py                                                                            |   230 +
+ scripts/test_whispr.py                                                                                      |    94 +
+ temp.txt                                                                                                    |  1094 +++
+ training/train_adv.py                                                                                       |     5 +
+ 157 files changed, 151524 insertions(+), 34 deletions(-)
+ delete mode 100644 benchmark_results_conf16m/benchmark_report.json
+ delete mode 100644 benchmark_results_conf16m/en_clean_read/predictions.json
+ delete mode 100644 benchmark_results_conf16m/kn_clean_read/predictions.json
+ delete mode 100644 benchmark_results_conf16m/kn_en_codeswitch/predictions.json
+ create mode 100644 call_recording_analysis/.env.example
+ create mode 100644 call_recording_analysis/README.md
+ create mode 100644 call_recording_analysis/audio_analysis.py
+ create mode 100644 call_recording_analysis/audio_spreadsheet_correlation.json
+ create mode 100644 call_recording_analysis/department_summary.csv
+ create mode 100644 call_recording_analysis/detailed_audio_analysis.csv
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/README.md
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/manifests/214601_manifest.json
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/manifests/216172-_manifest.json
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/manifests/216233_manifest.json
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/manifests/228016_manifest.json
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/manifests/228368RDPR_manifest.json
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/manifests/230049-_manifest.json
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/manifests/manifest_master.json
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/scripts/create_manifest.py
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/scripts/process_batch_audio.py
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/scripts/split_audio.py
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/scripts/transcribe_chunks.py
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/transcriptions/214601_transcriptions.json
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/transcriptions/216172-_transcriptions.json
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/transcriptions/216233_transcriptions.json
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/transcriptions/228016_transcriptions.json
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/transcriptions/228368RDPR_transcriptions.json
+ create mode 100644 call_recording_analysis/drafted_ground_truth_gemini/transcriptions/230049-_transcriptions.json
+ create mode 100644 call_recording_analysis/generate_report.py
+ create mode 100644 call_recording_analysis/reports/analysis_report.md
+ create mode 100644 call_recording_analysis/reports/department_comparison.png
+ create mode 100644 call_recording_analysis/reports/duration_by_department_boxplot.png
+ create mode 100644 call_recording_analysis/reports/duration_distribution.png
+ create mode 100644 call_recording_analysis/reports/file_size_distribution.png
+ create mode 100644 call_recording_analysis/reports/files_per_department.png
+ create mode 100644 call_recording_analysis/reports/sample_rate_distribution.png
+ create mode 100644 call_recording_analysis/requirements.txt
+ create mode 100644 call_recording_analysis/run_full_analysis.py
+ create mode 100644 call_recording_analysis/setup_and_run.sh
+ create mode 100644 call_recording_analysis/spreadsheet_analysis.json
+ create mode 100644 call_recording_analysis/spreadsheet_analysis.py
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Agriculture_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Animal_Husbandary_and_Fisheries_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Backward_Classes_Welfare_Depart_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Commerce_and_Industries_Departm_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Department_of_Cooperation_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Department_of_School_Education__Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Department_of_Social_Welfare_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Department_of_Women_and_Child_W_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Energy_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Food_and_Civil_Supplies_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Forest,Ecology_and_Environment__Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Health_and_Family_Welfare_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Higher_Education_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Home_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Horticulture_and_Sericulture_De_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Housing_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Labour_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Medical_Education_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Minorites_Welfare_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Public_Works_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/RDPR_RDPR_CallCenter.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Revenue_Department_Revene_CallCenter.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Scheduled_Tribes_Welfare_Depart_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Skill_Development,_Entrepreneur_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Transport_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Urban_Development__Department_UDD_CallCenter.xlsx.csv
+ create mode 100644 call_recording_analysis/spreadsheets_csv/Water_Resources_Department_Untitled_spreadsheet.xlsx.csv
+ create mode 100644 call_recording_analysis/summary_stats.json
+ create mode 100644 call_recording_analysis/test_single_audio_comparision.py
+ create mode 100644 call_recording_analysis/transcription_comparison.json
+ delete mode 100644 data/training/wiki_6gram.arpa
+ create mode 100644 docs/ai_assistant_chats/gemini_chats_19th_jan.txt
+ create mode 100644 docs/ai_assistant_chats/gemini_chats_22nd_jan.txt
+ create mode 100644 docs/ai_assistant_chats/temp.txt
+ create mode 100644 docs/commands.md
+ create mode 100644 docs/console_logs/console_23rd_jan
+ create mode 100644 docs/reports/model_v3_error_reports/bytecode_report.json
+ create mode 100644 docs/reports/model_v3_error_reports/claude.md
+ create mode 100644 docs/reports/model_v3_error_reports/gemini.md
+ create mode 100644 docs/reports/model_v3_error_reports/predictions.json
+ create mode 100644 docs/reports/model_v3_error_reports/predictions_corrected.json
+ create mode 100644 docs/reports/model_v3_incomplete_bytecode/benchmark_corrected_v3.json
+ create mode 100644 docs/reports/model_v3_incomplete_bytecode/benchmark_incomplete_v3
+ create mode 100644 docs/reports/model_v3_incomplete_bytecode/benchmark_incomplete_v3.json
+ create mode 100644 docs/reports/model_v3_incomplete_bytecode/bytecode_correction_results.txt
+ create mode 100644 docs/reports/model_v3_incomplete_bytecode/bytecode_corrections.json
+ create mode 100644 docs/reports/model_v3_incomplete_bytecode/compute_overall_wer.py
+ create mode 100644 docs/reports/model_v3_incomplete_bytecode/compute_wer_corrections.py
+ create mode 100644 evaluation/benchmarking/data/v2.zip
+ create mode 100644 evaluation/benchmarking/data/v2/Indicvoices/raw_metadata.json
+ create mode 100644 evaluation/benchmarking/data/v2/Indicvoices/train_manifest.json
+ create mode 100644 evaluation/benchmarking/data/v2/Kathbath/raw_metadata.json
+ create mode 100644 evaluation/benchmarking/data/v2/Kathbath/train_manifest.json
+ create mode 100644 evaluation/benchmarking/data/v2/Vaani/raw_metadata.json
+ create mode 100644 evaluation/benchmarking/data/v2/Vaani/train_manifest.json
+ create mode 100644 evaluation/benchmarking/data/v2/gok_call_recordings/raw_metadata.json
+ create mode 100644 evaluation/benchmarking/data/v2/gok_call_recordings/train_manifest.json
+ create mode 100644 evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json
+ create mode 100644 evaluation/benchmarking/data/v2/open_source_manifest.json
+ create mode 100644 evaluation/benchmarking/run/test_sarvam_benchmark.py
+ create mode 100644 models/export_benchmarks.zip
+ create mode 100644 models/export_benchmarks/benchmark_report_ai4b_indicconf_100m.json
+ create mode 100644 models/export_benchmarks/benchmark_report_ai4b_indicconf_600m.json
+ create mode 100644 models/export_benchmarks/benchmark_report_sarvam.json
+ create mode 100644 models/export_benchmarks/results_conf_100m_scaleup_v1.txt
+ create mode 100644 models/export_benchmarks/results_conf_16m_kathbath.txt
+ create mode 100644 models/results_conf_100m_kathbath/results_conf_100m_kathbath.txt
+ create mode 100644 models/results_conf_100m_v3/benchmark_report.json
+ create mode 100644 models/results_conf_100m_v3/report.txt
+ create mode 100644 models/results_sarvam_api/benchmark_report.json
+ create mode 100644 models/results_sarvam_api/predictions.json
+ create mode 100644 optimization/prediction_normalization/apply_normalization.py
+ create mode 100644 optimization/prediction_normalization/compare_normalization_strategies.py
+ create mode 100644 optimization/prediction_normalization/compare_normalization_strategies_v2.py
+ create mode 100644 optimization/prediction_normalization/corpus_analysis_report.txt
+ create mode 100644 optimization/prediction_normalization/corpus_analyzer.py
+ create mode 100644 optimization/prediction_normalization/corpus_normalizer.py
+ create mode 100644 optimization/prediction_normalization/corpus_normalizer_conservative.py
+ create mode 100644 optimization/prediction_normalization/normalization_rules.json
+ create mode 100644 optimization/prediction_normalization/normalize_predictions.py
+ create mode 100644 optimization/prediction_normalization/orthographic_style_guide.py
+ create mode 100644 optimization/prediction_normalization/predictions1_predictions_normalized.json
+ create mode 100644 optimization/prediction_normalization/predictions1_predictions_report.json
+ create mode 100644 optimization/prediction_normalization/predictions2_predictions-2_normalized.json
+ create mode 100644 optimization/prediction_normalization/predictions2_predictions-2_report.json
+ create mode 100644 optimization/prediction_normalization/predictions_normalized.json
+ create mode 100644 optimization/prediction_normalization/vocabulary.json
+ create mode 100644 optimization/prediction_normalization/wer_improvement_report.json
+ create mode 100644 optimization/proper_noun_handling/extract_from_predictions.py
+ create mode 100644 optimization/proper_noun_handling/extract_proper_noun_variants.py
+ create mode 100644 optimization/proper_noun_handling/mismatch_analysis.json
+ create mode 100644 optimization/proper_noun_handling/proper_noun_variants.json
+ create mode 100644 optimization/proper_noun_handling/test_combined_normalization.py
+ create mode 100644 optimization/proper_noun_handling/test_proper_noun_normalization.py
+ create mode 100644 predictions/conf_hybrid_trained_100m/predictions_ready.json
+ create mode 100644 scripts/apply_kannada_normalization.py
+ create mode 100644 scripts/data_processing/convert_gok_to_v2.py
+ rename fetch_wiki.py => scripts/data_processing/fetch_wiki.py (100%)
+ create mode 100644 scripts/data_processing/fix_manifest.py
+ create mode 100644 scripts/data_processing/regenerate_manifests.py
+ create mode 100644 scripts/data_processing/reorganize_gok_to_v2.py
+ rename final_eval.py => scripts/evaluation/final_eval.py (100%)
+ rename run_grid_search.py => scripts/evaluation/run_grid_search.py (100%)
+ create mode 100644 scripts/fix_bytecode_predictions.py
+ create mode 100644 scripts/kannada_normalization.py
+ create mode 100644 scripts/test_whispr.py
+ create mode 100644 temp.txt
+Encountered 11 files that should have been pointers, but weren't:
+	docs/reports/model_v3_error_reports/bytecode_report.json
+	docs/reports/model_v3_error_reports/predictions.json
+	docs/reports/model_v3_error_reports/predictions_corrected.json
+	docs/reports/model_v3_incomplete_bytecode/benchmark_corrected_v3.json
+	docs/reports/model_v3_incomplete_bytecode/benchmark_incomplete_v3.json
+	docs/reports/model_v3_incomplete_bytecode/bytecode_corrections.json
+	models/export_benchmarks/benchmark_report_ai4b_indicconf_100m.json
+	models/export_benchmarks/benchmark_report_ai4b_indicconf_600m.json
+	models/export_benchmarks/benchmark_report_sarvam.json
+	models/results_sarvam_api/benchmark_report.json
+	models/results_sarvam_api/predictions.json
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# rm -rf evaluation/benchmarking/data/v2
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# rm -rf evaluation/benchmarking/data/v2
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# unzip evaluation/benchmarking/data/v2.zip
+Command 'unzip' not found, but can be installed with:
+apt install unzip
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# apt install unzip
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libdrm-nouveau2 libdrm-radeon1 libgl1-amber-dri libglapi-mesa libllvm19 libxcb-dri2-0 linux-headers-6.8.0-52 linux-headers-6.8.0-52-generic linux-image-6.8.0-52-generic linux-modules-6.8.0-52-generic
+  linux-modules-extra-6.8.0-52-generic linux-tools-6.8.0-52 linux-tools-6.8.0-52-generic
+Use 'sudo apt autoremove' to remove them.
+Suggested packages:
+  zip
+The following NEW packages will be installed:
+  unzip
+0 upgraded, 1 newly installed, 0 to remove and 251 not upgraded.
+Need to get 174 kB of archives.
+After this operation, 384 kB of additional disk space will be used.
+Get:1 http://100.64.144.92:8081/repository/ubuntu2404 noble-updates/main amd64 unzip amd64 6.0-28ubuntu4.1 [174 kB]
+Fetched 174 kB in 0s (9,231 kB/s)
+N: Ignoring file 'ubuntu.sources.bkp' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+Selecting previously unselected package unzip.
+(Reading database ... 211683 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-28ubuntu4.1_amd64.deb ...
+Unpacking unzip (6.0-28ubuntu4.1) ...
+Setting up unzip (6.0-28ubuntu4.1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Scanning processes...                                                                                                                                                                                         
+Scanning candidates...                                                                                                                                                                                        
+Scanning linux images...                                                                                                                                                                                      
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+
+Service restarts being deferred:
+ systemctl restart NetworkManager.service
+ /etc/needrestart/restart.d/dbus.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+N: Ignoring file 'ubuntu.sources.bkp' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+W: Download is performed unsandboxed as root as file '/var/cache/apt/archives/partial/unzip_6.0-28ubuntu4.1_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python scripts/data_processing/regenerate_manifests.py
+usage: regenerate_manifests.py [-h] [--dry-run] base_dir
+regenerate_manifests.py: error: the following arguments are required: base_dir
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python scripts/data_processing/regenerate_manifests.py valuation/benchmarking/data/v2 --dry-run
+❌ Directory not found: /mnt/data/asr-finetuning/valuation/benchmarking/data/v2
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls
+build  call_recording_analysis  data  docs  evaluation  kenlm  models  notebooks  optimization  pipelines  predictions  README.md  requirements.txt  scripts  temp.txt  training
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# unzip evaluation/benchmarking/data/v2.zip
+Archive:  evaluation/benchmarking/data/v2.zip
+   creating: v2/
+  inflating: __MACOSX/._v2           
+ extracting: v2/open_source_manifest.json  
+  inflating: __MACOSX/v2/._open_source_manifest.json  
+   creating: v2/Kathbath/
+  inflating: __MACOSX/v2/._Kathbath  
+   creating: v2/Vaani/
+  inflating: __MACOSX/v2/._Vaani     
+   creating: v2/Indicvoices/
+  inflating: __MACOSX/v2/._Indicvoices  
+   creating: v2/gok_call_recordings/
+  inflating: __MACOSX/v2/._gok_call_recordings  
+ extracting: v2/gok_call_recordings_manifest.json  
+  inflating: __MACOSX/v2/._gok_call_recordings_manifest.json  
+   creating: v2/Kathbath/wavs/
+  inflating: __MACOSX/v2/Kathbath/._wavs  
+  inflating: v2/Kathbath/train_manifest.json  
+  inflating: __MACOSX/v2/Kathbath/._train_manifest.json  
+  inflating: v2/Kathbath/raw_metadata.json  
+  inflating: __MACOSX/v2/Kathbath/._raw_metadata.json  
+   creating: v2/Vaani/wavs/
+  inflating: __MACOSX/v2/Vaani/._wavs  
+  inflating: v2/Vaani/train_manifest.json  
+  inflating: __MACOSX/v2/Vaani/._train_manifest.json  
+  inflating: v2/Vaani/raw_metadata.json  
+  inflating: __MACOSX/v2/Vaani/._raw_metadata.json  
+   creating: v2/Indicvoices/wavs/
+  inflating: __MACOSX/v2/Indicvoices/._wavs  
+  inflating: v2/Indicvoices/train_manifest.json  
+  inflating: __MACOSX/v2/Indicvoices/._train_manifest.json  
+  inflating: v2/Indicvoices/raw_metadata.json  
+  inflating: __MACOSX/v2/Indicvoices/._raw_metadata.json  
+   creating: v2/gok_call_recordings/wavs/
+  inflating: __MACOSX/v2/gok_call_recordings/._wavs  
+  inflating: v2/gok_call_recordings/train_manifest.json  
+  inflating: __MACOSX/v2/gok_call_recordings/._train_manifest.json  
+  inflating: v2/gok_call_recordings/raw_metadata.json  
+  inflating: __MACOSX/v2/gok_call_recordings/._raw_metadata.json  
+  inflating: v2/Kathbath/wavs/Kathbath_40.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_40.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_41.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_41.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_43.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_43.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_42.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_42.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_46.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_46.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_47.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_47.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_45.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_45.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_44.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_44.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_1.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_1.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_23.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_23.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_37.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_37.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_36.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_36.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_22.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_22.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_0.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_0.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_2.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_2.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_34.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_34.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_20.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_20.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_21.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_21.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_35.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_35.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_3.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_3.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_7.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_7.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_19.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_19.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_31.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_31.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_25.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_25.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_24.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_24.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_30.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_30.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_18.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_18.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_6.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_6.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_4.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_4.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_26.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_26.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_32.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_32.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_33.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_33.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_27.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_27.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_5.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_5.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_8.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_8.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_16.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_16.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_17.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_17.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_9.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_9.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_15.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_15.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_29.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_29.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_28.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_28.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_14.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_14.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_38.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_38.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_10.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_10.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_11.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_11.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_39.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_39.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_13.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_13.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_12.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_12.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_49.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_49.wav  
+  inflating: v2/Kathbath/wavs/Kathbath_48.wav  
+  inflating: __MACOSX/v2/Kathbath/wavs/._Kathbath_48.wav  
+  inflating: v2/Vaani/wavs/Vaani_8.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_8.wav  
+  inflating: v2/Vaani/wavs/Vaani_46.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_46.wav  
+  inflating: v2/Vaani/wavs/Vaani_47.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_47.wav  
+  inflating: v2/Vaani/wavs/Vaani_9.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_9.wav  
+  inflating: v2/Vaani/wavs/Vaani_45.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_45.wav  
+  inflating: v2/Vaani/wavs/Vaani_44.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_44.wav  
+  inflating: v2/Vaani/wavs/Vaani_40.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_40.wav  
+  inflating: v2/Vaani/wavs/Vaani_41.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_41.wav  
+  inflating: v2/Vaani/wavs/Vaani_43.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_43.wav  
+  inflating: v2/Vaani/wavs/Vaani_42.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_42.wav  
+  inflating: v2/Vaani/wavs/Vaani_19.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_19.wav  
+  inflating: v2/Vaani/wavs/Vaani_31.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_31.wav  
+  inflating: v2/Vaani/wavs/Vaani_25.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_25.wav  
+  inflating: v2/Vaani/wavs/Vaani_24.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_24.wav  
+  inflating: v2/Vaani/wavs/Vaani_30.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_30.wav  
+  inflating: v2/Vaani/wavs/Vaani_18.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_18.wav  
+  inflating: v2/Vaani/wavs/Vaani_26.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_26.wav  
+  inflating: v2/Vaani/wavs/Vaani_32.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_32.wav  
+  inflating: v2/Vaani/wavs/Vaani_33.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_33.wav  
+  inflating: v2/Vaani/wavs/Vaani_27.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_27.wav  
+  inflating: v2/Vaani/wavs/Vaani_23.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_23.wav  
+  inflating: v2/Vaani/wavs/Vaani_37.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_37.wav  
+  inflating: v2/Vaani/wavs/Vaani_36.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_36.wav  
+  inflating: v2/Vaani/wavs/Vaani_22.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_22.wav  
+  inflating: v2/Vaani/wavs/Vaani_34.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_34.wav  
+  inflating: v2/Vaani/wavs/Vaani_20.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_20.wav  
+  inflating: v2/Vaani/wavs/Vaani_21.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_21.wav  
+  inflating: v2/Vaani/wavs/Vaani_35.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_35.wav  
+  inflating: v2/Vaani/wavs/Vaani_38.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_38.wav  
+  inflating: v2/Vaani/wavs/Vaani_10.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_10.wav  
+  inflating: v2/Vaani/wavs/Vaani_11.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_11.wav  
+  inflating: v2/Vaani/wavs/Vaani_39.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_39.wav  
+  inflating: v2/Vaani/wavs/Vaani_13.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_13.wav  
+  inflating: v2/Vaani/wavs/Vaani_12.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_12.wav  
+  inflating: v2/Vaani/wavs/Vaani_16.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_16.wav  
+  inflating: v2/Vaani/wavs/Vaani_17.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_17.wav  
+  inflating: v2/Vaani/wavs/Vaani_15.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_15.wav  
+  inflating: v2/Vaani/wavs/Vaani_29.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_29.wav  
+  inflating: v2/Vaani/wavs/Vaani_28.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_28.wav  
+  inflating: v2/Vaani/wavs/Vaani_14.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_14.wav  
+  inflating: v2/Vaani/wavs/Vaani_1.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_1.wav  
+  inflating: v2/Vaani/wavs/Vaani_0.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_0.wav  
+  inflating: v2/Vaani/wavs/Vaani_2.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_2.wav  
+  inflating: v2/Vaani/wavs/Vaani_3.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_3.wav  
+  inflating: v2/Vaani/wavs/Vaani_7.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_7.wav  
+  inflating: v2/Vaani/wavs/Vaani_49.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_49.wav  
+  inflating: v2/Vaani/wavs/Vaani_48.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_48.wav  
+  inflating: v2/Vaani/wavs/Vaani_6.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_6.wav  
+  inflating: v2/Vaani/wavs/Vaani_4.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_4.wav  
+  inflating: v2/Vaani/wavs/Vaani_5.wav  
+  inflating: __MACOSX/v2/Vaani/wavs/._Vaani_5.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_42.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_42.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_2.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_2.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_3.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_3.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_43.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_43.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_41.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_41.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_1.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_1.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_0.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_0.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_40.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_40.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_44.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_44.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_4.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_4.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_5.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_5.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_45.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_45.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_47.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_47.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_7.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_7.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_6.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_6.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_46.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_46.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_21.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_21.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_35.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_35.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_34.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_34.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_20.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_20.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_36.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_36.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_22.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_22.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_23.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_23.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_37.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_37.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_33.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_33.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_27.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_27.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_26.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_26.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_32.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_32.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_24.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_24.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_30.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_30.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_18.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_18.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_19.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_19.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_31.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_31.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_25.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_25.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_28.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_28.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_14.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_14.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_15.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_15.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_29.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_29.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_17.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_17.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_16.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_16.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_12.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_12.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_13.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_13.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_11.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_11.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_39.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_39.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_38.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_38.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_10.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_10.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_48.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_48.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_8.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_8.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_9.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_9.wav  
+  inflating: v2/Indicvoices/wavs/IndicVoices_49.wav  
+  inflating: __MACOSX/v2/Indicvoices/wavs/._IndicVoices_49.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part25.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part25.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part31.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part31.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part19.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part19.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part08.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part08.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part09.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part09.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part18.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part18.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part30.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part30.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part24.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part24.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part32.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part32.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part26.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part26.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part27.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part27.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part33.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part33.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part23.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part23.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part22.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part22.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part36.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part36.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part08.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part08.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part20.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part20.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part34.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part34.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part19.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part19.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part18.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part18.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part35.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part35.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part21.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part21.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part09.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part09.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part12.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part12.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part06.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part06.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part03.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part03.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part17.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part17.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part16.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part16.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part02.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part02.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part03.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part03.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part16.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part16.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part02.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part02.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part07.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part07.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part13.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part13.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part05.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part05.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part11.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part11.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part14.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part14.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part01.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part01.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part15.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part15.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part14.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part14.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part01.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part01.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part15.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part15.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part10.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part10.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part04.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part04.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part14.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part14.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part11.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part11.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part05.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part05.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part04.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part04.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part10.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part10.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part11.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part11.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part05.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part05.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part04.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part04.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part10.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part10.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part15.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part15.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part01.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part01.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part17.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part17.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part03.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part03.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part06.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part06.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part12.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part12.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part13.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part13.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part07.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part07.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part06.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part06.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part12.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part12.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part13.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part13.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part07.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part07.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part02.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part02.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part16.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part16.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part18.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part18.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part24.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part24.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part09.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part09.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part08.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part08.wav  
+  inflating: v2/gok_call_recordings/wavs/228016_228016_part09.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228016_228016_part09.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part08.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part08.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part25.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part25.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part19.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part19.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part21.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part21.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part09.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part09.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part18.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part18.wav  
+  inflating: v2/gok_call_recordings/wavs/216233_216233_part19.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216233_216233_part19.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part08.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part08.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part20.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part20.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part22.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part22.wav  
+  inflating: v2/gok_call_recordings/wavs/230049-_230049-_part23.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._230049-_230049-_part23.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part04.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part04.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part10.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part10.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part01.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part01.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part15.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part15.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part14.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part14.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part11.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part11.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part05.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part05.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part13.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part13.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part07.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part07.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part16.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part16.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part02.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part02.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part03.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part03.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part17.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part17.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part06.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part06.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part12.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part12.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part16.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part16.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part02.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part02.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part13.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part13.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part07.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part07.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part06.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part06.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part12.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part12.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part03.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part03.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part17.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part17.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part29.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part29.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part01.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part01.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part15.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part15.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part04.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part04.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part10.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part10.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part11.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part11.wav  
+  inflating: v2/gok_call_recordings/wavs/228368RDPR_228368RDPR_part05.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._228368RDPR_228368RDPR_part05.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part14.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part14.wav  
+  inflating: v2/gok_call_recordings/wavs/216172-_216172-_part28.wav  
+  inflating: __MACOSX/v2/gok_call_recordings/wavs/._216172-_216172-_part28.wav  
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls
+build  call_recording_analysis  data  docs  evaluation  kenlm  __MACOSX  models  notebooks  optimization  pipelines  predictions  README.md  requirements.txt  scripts  temp.txt  training  v2
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# mv v2 valuation/benchmarking/data/v2
+mv: cannot move 'v2' to 'valuation/benchmarking/data/v2': No such file or directory
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# mv v2 valuation/benchmarking/data
+mv: cannot move 'v2' to 'valuation/benchmarking/data': No such file or directory
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls evaluation/benchmarking
+benchmarking_definitions.md  curation  data  run
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# mv v2 evaluation/benchmarking/data/
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python scripts/data_processing/regenerate_manifests.py valuation/benchmarking/data/v2 --dry-run
+❌ Directory not found: /mnt/data/asr-finetuning/valuation/benchmarking/data/v2
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls evaluation/benchmarking/data/
+v1  v2  v2.zip
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls evaluation/benchmarking/data/v2
+gok_call_recordings  gok_call_recordings_manifest.json  Indicvoices  Kathbath  open_source_manifest.json  Vaani
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python scripts/data_processing/regenerate_manifests.py evaluation/benchmarking/data/v2 --dry-run
+================================================================================
+Regenerating manifests in: /mnt/data/asr-finetuning/evaluation/benchmarking/data/v2
+Dry run: True
+================================================================================
+
+📁 Would process: Indicvoices
+
+📁 Would process: Kathbath
+
+📁 Would process: Vaani
+
+📁 Would process: gok_call_recordings
+
+================================================================================
+SUMMARY
+================================================================================
+Processed: 4
+Skipped:   0
+================================================================================
+
+💡 Run without --dry-run to actually generate manifests
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python scripts/data_processing/regenerate_manifests.py evaluation/benchmarking/data/v2
+================================================================================
+Regenerating manifests in: /mnt/data/asr-finetuning/evaluation/benchmarking/data/v2
+Dry run: False
+================================================================================
+
+📁 Processing: Indicvoices
+   Found 50 entries in raw_metadata.json
+   ✅ Generated train_manifest.json with 50 entries
+
+📁 Processing: Kathbath
+   Found 50 entries in raw_metadata.json
+   ✅ Generated train_manifest.json with 50 entries
+
+📁 Processing: Vaani
+   Found 50 entries in raw_metadata.json
+   ✅ Generated train_manifest.json with 50 entries
+
+📁 Processing: gok_call_recordings
+   Found 115 entries in raw_metadata.json
+   ✅ Generated train_manifest.json with 115 entries
+
+================================================================================
+SUMMARY
+================================================================================
+Processed: 4
+Skipped:   0
+================================================================================
+
+✅ All manifests regenerated!
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls evaluation/benchmarking/data/v2/Indicvoices/train_manifest.json
+evaluation/benchmarking/data/v2/Indicvoices/train_manifest.json
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# head evaluation/benchmarking/data/v2/Indicvoices/train_manifest.json
+{"audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v2/Indicvoices/wavs/IndicVoices_0.wav", "text": "ಹಲೋ", "duration": 0.449, "lang": "kn", "source": "natural"}
+{"audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v2/Indicvoices/wavs/IndicVoices_1.wav", "text": "ಹಾಂ ಇದ್ ಇದು ಬ್ಯಾಂಕ್ ಅಕೌಂಟ್ ಮಾಡಿಸ್ಬೇಕಾಗಿತ್ತು ಅದಕ್ಕೆ ಮಾಡಿದ್ದೀನಿ ಮೇಡಮ್", "duration": 4.67, "lang": "kn", "source": "natural"}
+{"audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v2/Indicvoices/wavs/IndicVoices_2.wav", "text": "ಇಲ್ಲ ನಂದು ನಮ್ಮಅಮ್ಮಂದು ನನ್ನ ತಂಗೀದು ಮಾಡಿಸ್ಬೇಕಾಗಿತ್ತು ಬ್ಯಾಂಕ್ ಅಕೌಂಟು ಅದಕ್ಕೆ ಯಾವ್ದು ಥರ ಏನು ಅಂತ ವಿಚಾರಿಸೋಣಂತ ಫೋನ್ ಮಾಡಿದೆ ಮೇಡಮ್", "duration": 8.032, "lang": "kn", "source": "natural"}
+{"audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v2/Indicvoices/wavs/IndicVoices_3.wav", "text": "ಹಾಂ", "duration": 0.352, "lang": "kn", "source": "natural"}
+{"audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v2/Indicvoices/wavs/IndicVoices_4.wav", "text": "ಹಾಂ ಮಾಡಿಸಿದ್ದೆ", "duration": 1.024, "lang": "kn", "source": "natural"}
+{"audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v2/Indicvoices/wavs/IndicVoices_5.wav", "text": "ಹಾಂ ಹೌದು ಮಾಡಬೇಕು ಅಂತಿರೋದಕ್ಕೆ", "duration": 1.601, "lang": "kn", "source": "natural"}
+{"audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v2/Indicvoices/wavs/IndicVoices_6.wav", "text": "ಹಾಂ ಏನೇನು ತಗೊಂಡ್ಬರ್ಬೇಕು ಹಾಂ", "duration": 2.175, "lang": "kn", "source": "natural"}
+{"audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v2/Indicvoices/wavs/IndicVoices_7.wav", "text": "ಅದೆ ಯಾ ಏನೇನು", "duration": 1.025, "lang": "kn", "source": "natural"}
+{"audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v2/Indicvoices/wavs/IndicVoices_8.wav", "text": "ಹಾಂ", "duration": 0.365, "lang": "kn", "source": "natural"}
+{"audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/data/v2/Indicvoices/wavs/IndicVoices_9.wav", "text": "ಹಾಂ", "duration": 0.473, "lang": "kn", "source": "natural"}
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# cat /Users/chaitanyakartik/Projects/asr-finetuning/evaluation/benchmarking/data/v2/Kathbath/train_manifest.json > /Users/chaitanyakartik/Projects/asr-finetuning/evaluation/benchmarking/data/v2/open_source_manifest.json
+bash: /Users/chaitanyakartik/Projects/asr-finetuning/evaluation/benchmarking/data/v2/open_source_manifest.json: No such file or directory
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls evaluation/benchmarking/data/v2
+gok_call_recordings  gok_call_recordings_manifest.json  Indicvoices  Kathbath  open_source_manifest.json  Vaani
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# cat evaluation/benchmarking/data/v2/Kathbath/train_manifest.json > evaluation/benchmarking/data/v2/open_source_manifest.json
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# cat evaluation/benchmarking/data/v2/Indicvoices/train_manifest.json > evaluation/benchmarking/data/v2/open_source_manifest.json
+cat evaluation/benchmarking/data/v2/Vaani/train_manifest.json > evaluation/benchmarking/data/v2/open_source_manifest.json
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# wc -l evaluation/benchmarking/data/v2/open_source_manifest.json
+50 evaluation/benchmarking/data/v2/open_source_manifest.json
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# cat evaluation/benchmarking/data/v2/Kathbath/train_manifest.json > evaluation/benchmarking/data/v2/open_source_manifest.json
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# cat evaluation/benchmarking/data/v2/Indicvoices/train_manifest.json >> evaluation/benchmarking/data/v2/open_source_manifest.json
+cat evaluation/benchmarking/data/v2/Vaani/train_manifest.json >> evaluation/benchmarking/data/v2/open_source_manifest.json
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# wc -l evaluation/benchmarking/data/v2/open_source_manifest.json
+150 evaluation/benchmarking/data/v2/open_source_manifest.json
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# cp evaluation/benchmarking/data/v2/gok_call_recordings/train_manifest.json /Users/chaitanyakartik/Projects/asr-finetuning/evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json
+cp: cannot create regular file '/Users/chaitanyakartik/Projects/asr-finetuning/evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json': No such file or directory
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# cp evaluation/benchmarking/data/v2/gok_call_recordings/train_manifest.json evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls training/models
+kathbath_hybrid_h200_phase1_final.nemo       kathbath_hybrid_h200_phase3_final.nemo             kathbath_hybrid_h200_scaleup_phase4_final.nemo
+kathbath_hybrid_h200_phase1_safe_final.nemo  kathbath_hybrid_h200_scaleup_p3_phase3_final.nemo  kathbath_v1_init_final.nemo
+kathbath_hybrid_h200_phase2_final.nemo       kathbath_hybrid_h200_scaleup_phase2_final.nemo     kathbath_v2_unfrozen_final.nemo
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python evaluation/benchmarking/run/run_benchmark_bypass.py \
+--model=training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo.nemo \
+--manifest=/Users/chaitanyakartik/Projects/asr-finetuning/evaluation/benchmarking/data/v2/open_source_manifest.json \
+--output-dir=models/test_data_v2_results/open_source_conf_100m_v3 \
+--exp-name=open_source_conf_100m_v3
+fused_indices_to_multihot has reached end of life. Please migrate to a non-experimental function.
+OneLogger: Setting error_handling_strategy to DISABLE_QUIETLY_AND_REPORT_METRIC_ERROR for rank (rank=0) with OneLogger disabled. To override: explicitly set error_handling_strategy parameter.
+No exporters were provided. This means that no telemetry data will be collected.
+================================================================================
+ASR BENCHMARK RUNNER (SINGLE MANIFEST)
+================================================================================
+Model:    training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo.nemo
+Manifest: /Users/chaitanyakartik/Projects/asr-finetuning/evaluation/benchmarking/data/v2/open_source_manifest.json
+Output:   models/test_data_v2_results/open_source_conf_100m_v3
+================================================================================
+❌ Manifest invalid: Manifest file not found
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python evaluation/benchmarking/run/run_benchmark_bypass.py \
+--model=training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo.nemo \
+--manifest=evaluation/benchmarking/data/v2/open_source_manifest.json \
+--output-dir=models/test_data_v2_results/open_source_conf_100m_v3 \
+--exp-name=open_source_conf_100m_v3
+fused_indices_to_multihot has reached end of life. Please migrate to a non-experimental function.
+OneLogger: Setting error_handling_strategy to DISABLE_QUIETLY_AND_REPORT_METRIC_ERROR for rank (rank=0) with OneLogger disabled. To override: explicitly set error_handling_strategy parameter.
+No exporters were provided. This means that no telemetry data will be collected.
+================================================================================
+ASR BENCHMARK RUNNER (SINGLE MANIFEST)
+================================================================================
+Model:    training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo.nemo
+Manifest: evaluation/benchmarking/data/v2/open_source_manifest.json
+Output:   models/test_data_v2_results/open_source_conf_100m_v3
+================================================================================
+✅ Manifest OK: Valid manifest with 150 entries
+
+🔧 Loading ASR model...
+❌ Failed to load model: Can't find /mnt/data/asr-finetuning/training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo.nemo
+Traceback (most recent call last):
+  File "/mnt/data/asr-finetuning/evaluation/benchmarking/run/run_benchmark_bypass.py", line 240, in main
+    model = nemo_asr.models.ASRModel.restore_from(args.model)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/asr-env/lib/python3.12/site-packages/nemo/core/classes/modelPT.py", line 495, in restore_from
+    raise FileNotFoundError(f"Can't find {restore_path}")
+FileNotFoundError: Can't find /mnt/data/asr-finetuning/training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo.nemo
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python evaluation/benchmarking/run/run_benchmark_bypass.py \
+--model=training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo \
+--manifest=evaluation/benchmarking/data/v2/open_source_manifest.json \
+--output-dir=models/test_data_v2_results/open_source_conf_100m_v3 \
+--exp-name=open_source_conf_100m_v3
+fused_indices_to_multihot has reached end of life. Please migrate to a non-experimental function.
+OneLogger: Setting error_handling_strategy to DISABLE_QUIETLY_AND_REPORT_METRIC_ERROR for rank (rank=0) with OneLogger disabled. To override: explicitly set error_handling_strategy parameter.
+No exporters were provided. This means that no telemetry data will be collected.
+================================================================================
+ASR BENCHMARK RUNNER (SINGLE MANIFEST)
+================================================================================
+Model:    training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo
+Manifest: evaluation/benchmarking/data/v2/open_source_manifest.json
+Output:   models/test_data_v2_results/open_source_conf_100m_v3
+================================================================================
+✅ Manifest OK: Valid manifest with 150 entries
+
+🔧 Loading ASR model...
+[NeMo I 2026-01-27 16:37:57 mixins:208] _setup_tokenizer: detected an aggregate tokenizer
+[NeMo I 2026-01-27 16:37:57 mixins:347] Tokenizer SentencePieceTokenizer initialized with 1024 tokens
+[NeMo I 2026-01-27 16:37:57 mixins:347] Tokenizer SentencePieceTokenizer initialized with 3000 tokens
+[NeMo I 2026-01-27 16:37:57 aggregate_tokenizer:73] Aggregate vocab size: 4024
+[NeMo W 2026-01-27 16:38:02 modelPT:188] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    manifest_filepath: data/training/v2.1/master_manifest.json
+    sample_rate: 16000
+    batch_size: 32
+    shuffle: true
+    num_workers: 16
+    pin_memory: true
+    use_start_end_token: false
+    min_duration: 3.0
+    max_duration: 20.0
+    prefetch_factor: 4
+    
+[NeMo W 2026-01-27 16:38:02 modelPT:195] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    manifest_filepath:
+    - /mnt/data/asr-finetuning/evaluation/benchmarking/data/v1/en_clean_read.json
+    - /mnt/data/asr-finetuning/evaluation/benchmarking/data/v1/kn_clean_read.json
+    sample_rate: 16000
+    batch_size: 32
+    shuffle: false
+    num_workers: 16
+    
+[NeMo W 2026-01-27 16:38:02 modelPT:202] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    manifest_filepath: null
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    num_workers: 8
+    pin_memory: true
+    use_start_end_token: false
+    
+[NeMo I 2026-01-27 16:38:04 rnnt_models:226] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo I 2026-01-27 16:38:04 rnnt_models:226] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo W 2026-01-27 16:38:04 label_looping_base:123] No conditional node support for Cuda.
+    Cuda graphs with while loops are disabled, decoding speed will be slower
+    Reason: Driver supports cuda toolkit version 12.4, but the driver needs to support at least 12,6. Please update your cuda driver.
+[NeMo I 2026-01-27 16:38:04 rnnt_models:226] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo W 2026-01-27 16:38:04 label_looping_base:123] No conditional node support for Cuda.
+    Cuda graphs with while loops are disabled, decoding speed will be slower
+    Reason: Driver supports cuda toolkit version 12.4, but the driver needs to support at least 12,6. Please update your cuda driver.
+[NeMo I 2026-01-27 16:38:06 save_restore_connector:285] Model EncDecHybridRNNTCTCBPEModel was successfully restored from /mnt/data/asr-finetuning/training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo.
+✅ Model loaded: EncDecHybridRNNTCTCBPEModel
+🚀 Running inference (manual RNNT path)
+   Manifest: evaluation/benchmarking/data/v2/open_source_manifest.json
+   Output:   models/test_data_v2_results/open_source_conf_100m_v3
+   Files to transcribe: 150
+   Processed 10/150
+   Processed 20/150
+   Processed 30/150
+   Processed 40/150
+   Processed 50/150
+   Processed 60/150
+   Processed 70/150
+   Processed 80/150
+   Processed 90/150
+   Processed 100/150
+   Processed 110/150
+   Processed 120/150
+   Processed 130/150
+   Processed 140/150
+   Processed 150/150
+✅ Inference complete
+📊 Computing metrics
+
+================================================================================
+RESULTS
+================================================================================
+{'wer': 35.58, 'cer': 15.09, 'num_samples': 150}
+
+📄 JSON report saved to: /mnt/data/asr-finetuning/models/benchmark_report_open_source_conf_100m_v3.json
+📄 Text report saved to: /mnt/data/asr-finetuning/models/report.txt
+
+✅ Benchmark complete
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls training/models
+kathbath_hybrid_h200_phase1_final.nemo       kathbath_hybrid_h200_phase3_final.nemo             kathbath_hybrid_h200_scaleup_phase4_final.nemo
+kathbath_hybrid_h200_phase1_safe_final.nemo  kathbath_hybrid_h200_scaleup_p3_phase3_final.nemo  kathbath_v1_init_final.nemo
+kathbath_hybrid_h200_phase2_final.nemo       kathbath_hybrid_h200_scaleup_phase2_final.nemo     kathbath_v2_unfrozen_final.nemo
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python evaluation/benchmarking/run/run_benchmark_bypass.py \
+--model=training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo \
+--manifest=evaluation/benchmarking/data/v2/open_source_manifest.json \
+--output-dir=models/test_data_v2_results/call_recordings_conf_100m_v3 \
+--exp-name=call_recordings_conf_100m_v3
+fused_indices_to_multihot has reached end of life. Please migrate to a non-experimental function.
+OneLogger: Setting error_handling_strategy to DISABLE_QUIETLY_AND_REPORT_METRIC_ERROR for rank (rank=0) with OneLogger disabled. To override: explicitly set error_handling_strategy parameter.
+No exporters were provided. This means that no telemetry data will be collected.
+================================================================================
+ASR BENCHMARK RUNNER (SINGLE MANIFEST)
+================================================================================
+Model:    training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo
+Manifest: evaluation/benchmarking/data/v2/open_source_manifest.json
+Output:   models/test_data_v2_results/call_recordings_conf_100m_v3
+================================================================================
+✅ Manifest OK: Valid manifest with 150 entries
+
+🔧 Loading ASR model...
+[NeMo I 2026-01-27 16:41:16 mixins:208] _setup_tokenizer: detected an aggregate tokenizer
+[NeMo I 2026-01-27 16:41:16 mixins:347] Tokenizer SentencePieceTokenizer initialized with 1024 tokens
+[NeMo I 2026-01-27 16:41:16 mixins:347] Tokenizer SentencePieceTokenizer initialized with 3000 tokens
+[NeMo I 2026-01-27 16:41:16 aggregate_tokenizer:73] Aggregate vocab size: 4024
+[NeMo W 2026-01-27 16:41:20 modelPT:188] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    manifest_filepath: data/training/v2.1/master_manifest.json
+    sample_rate: 16000
+    batch_size: 32
+    shuffle: true
+    num_workers: 16
+    pin_memory: true
+    use_start_end_token: false
+    min_duration: 3.0
+    max_duration: 20.0
+    prefetch_factor: 4
+    
+[NeMo W 2026-01-27 16:41:20 modelPT:195] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    manifest_filepath:
+    - /mnt/data/asr-finetuning/evaluation/benchmarking/data/v1/en_clean_read.json
+    - /mnt/data/asr-finetuning/evaluation/benchmarking/data/v1/kn_clean_read.json
+    sample_rate: 16000
+    batch_size: 32
+    shuffle: false
+    num_workers: 16
+    
+[NeMo W 2026-01-27 16:41:20 modelPT:202] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    manifest_filepath: null
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    num_workers: 8
+    pin_memory: true
+    use_start_end_token: false
+    
+[NeMo I 2026-01-27 16:41:22 rnnt_models:226] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo I 2026-01-27 16:41:22 rnnt_models:226] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo W 2026-01-27 16:41:22 label_looping_base:123] No conditional node support for Cuda.
+    Cuda graphs with while loops are disabled, decoding speed will be slower
+    Reason: Driver supports cuda toolkit version 12.4, but the driver needs to support at least 12,6. Please update your cuda driver.
+[NeMo I 2026-01-27 16:41:23 rnnt_models:226] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo W 2026-01-27 16:41:23 label_looping_base:123] No conditional node support for Cuda.
+    Cuda graphs with while loops are disabled, decoding speed will be slower
+    Reason: Driver supports cuda toolkit version 12.4, but the driver needs to support at least 12,6. Please update your cuda driver.
+[NeMo I 2026-01-27 16:41:24 save_restore_connector:285] Model EncDecHybridRNNTCTCBPEModel was successfully restored from /mnt/data/asr-finetuning/training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo.
+✅ Model loaded: EncDecHybridRNNTCTCBPEModel
+🚀 Running inference (manual RNNT path)
+   Manifest: evaluation/benchmarking/data/v2/open_source_manifest.json
+   Output:   models/test_data_v2_results/call_recordings_conf_100m_v3
+   Files to transcribe: 150
+   Processed 10/150
+   Processed 20/150
+   Processed 30/150
+   Processed 40/150
+   Processed 50/150
+   Processed 60/150
+   Processed 70/150
+   Processed 80/150
+   Processed 90/150
+   Processed 100/150
+   Processed 110/150
+   Processed 120/150
+   Processed 130/150
+   Processed 140/150
+   Processed 150/150
+✅ Inference complete
+📊 Computing metrics
+
+================================================================================
+RESULTS
+================================================================================
+{'wer': 35.58, 'cer': 15.09, 'num_samples': 150}
+
+📄 JSON report saved to: /mnt/data/asr-finetuning/models/benchmark_report_call_recordings_conf_100m_v3.json
+📄 Text report saved to: /mnt/data/asr-finetuning/models/report.txt
+
+✅ Benchmark complete
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python evaluation/benchmarking/run/run_benchmark_bypass.py \
+--model=training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo \
+--manifest=evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json \
+--output-dir=models/test_data_v2_results/call_recordings_conf_100m_v3 \
+--exp-name=call_recordings_conf_100m_v3
+fused_indices_to_multihot has reached end of life. Please migrate to a non-experimental function.
+OneLogger: Setting error_handling_strategy to DISABLE_QUIETLY_AND_REPORT_METRIC_ERROR for rank (rank=0) with OneLogger disabled. To override: explicitly set error_handling_strategy parameter.
+No exporters were provided. This means that no telemetry data will be collected.
+================================================================================
+ASR BENCHMARK RUNNER (SINGLE MANIFEST)
+================================================================================
+Model:    training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo
+Manifest: evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json
+Output:   models/test_data_v2_results/call_recordings_conf_100m_v3
+================================================================================
+✅ Manifest OK: Valid manifest with 115 entries
+
+🔧 Loading ASR model...
+[NeMo I 2026-01-27 16:44:32 mixins:208] _setup_tokenizer: detected an aggregate tokenizer
+[NeMo I 2026-01-27 16:44:32 mixins:347] Tokenizer SentencePieceTokenizer initialized with 1024 tokens
+[NeMo I 2026-01-27 16:44:32 mixins:347] Tokenizer SentencePieceTokenizer initialized with 3000 tokens
+[NeMo I 2026-01-27 16:44:32 aggregate_tokenizer:73] Aggregate vocab size: 4024
+[NeMo W 2026-01-27 16:44:36 modelPT:188] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    manifest_filepath: data/training/v2.1/master_manifest.json
+    sample_rate: 16000
+    batch_size: 32
+    shuffle: true
+    num_workers: 16
+    pin_memory: true
+    use_start_end_token: false
+    min_duration: 3.0
+    max_duration: 20.0
+    prefetch_factor: 4
+    
+[NeMo W 2026-01-27 16:44:36 modelPT:195] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    manifest_filepath:
+    - /mnt/data/asr-finetuning/evaluation/benchmarking/data/v1/en_clean_read.json
+    - /mnt/data/asr-finetuning/evaluation/benchmarking/data/v1/kn_clean_read.json
+    sample_rate: 16000
+    batch_size: 32
+    shuffle: false
+    num_workers: 16
+    
+[NeMo W 2026-01-27 16:44:36 modelPT:202] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    manifest_filepath: null
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    num_workers: 8
+    pin_memory: true
+    use_start_end_token: false
+    
+[NeMo I 2026-01-27 16:44:38 rnnt_models:226] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo I 2026-01-27 16:44:38 rnnt_models:226] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo W 2026-01-27 16:44:38 label_looping_base:123] No conditional node support for Cuda.
+    Cuda graphs with while loops are disabled, decoding speed will be slower
+    Reason: Driver supports cuda toolkit version 12.4, but the driver needs to support at least 12,6. Please update your cuda driver.
+[NeMo I 2026-01-27 16:44:39 rnnt_models:226] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo W 2026-01-27 16:44:39 label_looping_base:123] No conditional node support for Cuda.
+    Cuda graphs with while loops are disabled, decoding speed will be slower
+    Reason: Driver supports cuda toolkit version 12.4, but the driver needs to support at least 12,6. Please update your cuda driver.
+[NeMo I 2026-01-27 16:44:40 save_restore_connector:285] Model EncDecHybridRNNTCTCBPEModel was successfully restored from /mnt/data/asr-finetuning/training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo.
+✅ Model loaded: EncDecHybridRNNTCTCBPEModel
+🚀 Running inference (manual RNNT path)
+   Manifest: evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json
+   Output:   models/test_data_v2_results/call_recordings_conf_100m_v3
+   Files to transcribe: 115
+   Processed 10/115
+   Processed 20/115
+   Processed 30/115
+   Processed 40/115
+   Processed 50/115
+   Processed 60/115
+   Processed 70/115
+   Processed 80/115
+   Processed 90/115
+   Processed 100/115
+   Processed 110/115
+✅ Inference complete
+📊 Computing metrics
+
+================================================================================
+RESULTS
+================================================================================
+{'wer': 86.83, 'cer': 65.77, 'num_samples': 115}
+
+📄 JSON report saved to: /mnt/data/asr-finetuning/models/benchmark_report_call_recordings_conf_100m_v3.json
+📄 Text report saved to: /mnt/data/asr-finetuning/models/report.txt
+
+✅ Benchmark complete
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# 

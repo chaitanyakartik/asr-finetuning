@@ -182,7 +182,7 @@ def main():
     # Save report to models directory
     models_dir = os.path.join(PROJECT_ROOT, "models")
     os.makedirs(models_dir, exist_ok=True)
-    generate_report(metrics, models_dir)
+    generate_report(metrics, args.output_dir)
     
     print("\n✅ Benchmark run complete!")
     return 0

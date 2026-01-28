@@ -1,0 +1,1 @@
+WER: 65.76% | CER: 32.58% | Samples: 85/115 | Success Rate: 73.91%
