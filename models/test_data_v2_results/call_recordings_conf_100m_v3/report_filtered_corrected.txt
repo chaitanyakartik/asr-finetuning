@@ -1,0 +1,4 @@
+Model: conf_100m_v3
+Samples: 115/115 (excluded 0)
+WER: 86.65% | CER: 65.03%
+Bytecode corrections: 8
