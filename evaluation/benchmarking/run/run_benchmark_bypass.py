@@ -108,20 +108,26 @@ def run_benchmark(model, manifest_path, output_dir, exp_name):
 
     for idx, (audio_path, truth) in enumerate(zip(audio_files, ground_truths)):
         try:
+            #Transcribe bypass done here
+            # 1. Load raw audio
+
             audio, _ = librosa.load(audio_path, sr=16000)
 
             audio_tensor = torch.tensor(audio, dtype=torch.float32).unsqueeze(0).to(device)
             audio_len = torch.tensor([audio_tensor.shape[1]], dtype=torch.long).to(device)
+            # 2. Preprocessor: raw audio → acoustic features
 
             processed, processed_len = model.preprocessor(
                 input_signal=audio_tensor,
                 length=audio_len,
             )
+            # 3. Encoder: features → encoded representations
 
             encoded, encoded_len = model.encoder(
                 audio_signal=processed,
                 length=processed_len,
             )
+            # 4. Decoder: encoded → text predictions
 
             with torch.no_grad():
                 hyps = model.decoding.rnnt_decoder_predictions_tensor(

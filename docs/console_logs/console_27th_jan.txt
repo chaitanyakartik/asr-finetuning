@@ -1482,4 +1482,660 @@ RESULTS
 📄 Text report saved to: /mnt/data/asr-finetuning/models/report.txt
 
 ✅ Benchmark complete
-(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# 
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls training/models
+kathbath_hybrid_h200_phase1_final.nemo       kathbath_hybrid_h200_phase3_final.nemo             kathbath_hybrid_h200_scaleup_phase4_final.nemo
+kathbath_hybrid_h200_phase1_safe_final.nemo  kathbath_hybrid_h200_scaleup_p3_phase3_final.nemo  kathbath_v1_init_final.nemo
+kathbath_hybrid_h200_phase2_final.nemo       kathbath_hybrid_h200_scaleup_phase2_final.nemo     kathbath_v2_unfrozen_final.nemo
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls models
+benchmark_report_call_recordings_conf_100m_v3.json  export_benchmarks.zip                         results_a14b_indicconf_600m         results_conf_100m_v3             test_600m.py
+benchmark_report.json                               indicconformer_stt_kn_hybrid_rnnt_large.nemo  results_ai4b_indicconf_100m         results_conf_100m_v3_incomplete  test_data_v2_results
+benchmark_report_open_source_conf_100m_v3.json      models                                        results_conf_100m_kathbath          results_conf_16m_kathbath
+download_model.py                                   README.md                                     results_conf_100m_scaleup_v2_final  results_kenlm_v1
+export_benchmarks                                   report.txt                                    results_conf_100m_v2                results_sarvam_api
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls models/test_data_v2_results
+call_recordings_conf_100m_v3  open_source_conf_100m_v3
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# nano models/test_600.py
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python /mnt/data/asr-finetuning/evaluation/benchmarking/run/run_benchmark_ai4b.py \
+--model /mnt/data/asr-finetuning/models/indicconformer_stt_kn_hybrid_rnnt_large.nemo \
+--manifest evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json \
+--output-dir models/test_data_v2_results/call_recordings_ai4b_100m \
+--decoder rnnt \
+--lang-id kn^C
+(asr-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# deactivate
+root@h200-nvl-2x:/mnt/data/asr-finetuning# source ai4b-env/bin/activate 
+bash: ai4b-env/bin/activate: No such file or directory
+root@h200-nvl-2x:/mnt/data/asr-finetuning# cd ..
+root@h200-nvl-2x:/mnt/data# source ai4b-env/bin/activate 
+(ai4b-env) root@h200-nvl-2x:/mnt/data# cd asr-finetuning
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python /mnt/data/asr-finetuning/evaluation/benchmarking/run/run_benchmark_ai4b.py \
+--model /mnt/data/asr-finetuning/models/indicconformer_stt_kn_hybrid_rnnt_large.nemo \
+--manifest evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json \
+--output-dir models/test_data_v2_results/call_recordings_ai4b_100m \
+--decoder rnnt \
+--lang-id kn
+/mnt/data/ai4b-env/lib/python3.12/site-packages/lightning_fabric/__init__.py:40: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+0it [00:00, ?it/s]
+================================================================================
+ASR BENCHMARK RUNNER (AI4Bharat)
+================================================================================
+Model: /mnt/data/asr-finetuning/models/indicconformer_stt_kn_hybrid_rnnt_large.nemo
+Decoder: rnnt | Lang ID: kn
+================================================================================
+
+🔧 Loading ASR model...
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] _setup_tokenizer: detected an aggregate tokenizer
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:06 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:07 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:07 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:01:07 nemo_logging:381] Aggregate vocab size: 5632
+[NeMo W 2026-01-27 17:01:15 nemo_logging:393] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    manifest_filepath:
+    - /nlsasfs/home/ai4bharat/ai4bharat-pr/speechteam/indicasr_v3/manifests/nemo/vistaar_v3/train/train_kannada.json
+    sample_rate: 16000
+    batch_size: 8
+    shuffle: false
+    num_workers: 16
+    pin_memory: true
+    max_duration: 30.0
+    min_duration: 0.2
+    is_tarred: false
+    tarred_audio_filepaths: null
+    shuffle_n: 2048
+    bucketing_strategy: synced_randomized
+    bucketing_batch_size: null
+    is_concat: true
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 1.5
+    return_language_id: true
+    
+[NeMo W 2026-01-27 17:01:15 nemo_logging:393] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    manifest_filepath:
+    - /nlsasfs/home/ai4bharat/ai4bharat-pr/speechteam/indicasr_v3/manifests/nemo/vistaar_v3/valid_datasetwise/valid_kannada_indicvoices.json
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 8
+    return_language_id: true
+    pin_memory: true
+    
+[NeMo W 2026-01-27 17:01:15 nemo_logging:393] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    manifest_filepath: null
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 8
+    pin_memory: true
+    
+[NeMo I 2026-01-27 17:01:15 nemo_logging:381] PADDING: 0
+[NeMo W 2026-01-27 17:01:16 nemo_logging:393] /mnt/data/ai4b-env/lib/python3.12/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+      warnings.warn(
+    
+[NeMo I 2026-01-27 17:01:17 nemo_logging:381] Vocab size for each language: 256
+[NeMo I 2026-01-27 17:01:17 nemo_logging:381] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo I 2026-01-27 17:01:17 nemo_logging:381] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo I 2026-01-27 17:01:20 nemo_logging:381] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo I 2026-01-27 17:01:20 nemo_logging:381] Creating masks for multi-softmax layer.
+[NeMo I 2026-01-27 17:01:20 nemo_logging:381] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo W 2026-01-27 17:01:21 nemo_logging:393] /mnt/data/repos/ai4bharat-nemo-repo/nemo/core/connectors/save_restore_connector.py:585: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+      return torch.load(model_weights, map_location='cpu')
+    
+[NeMo I 2026-01-27 17:01:22 nemo_logging:381] Model EncDecHybridRNNTCTCBPEModel was successfully restored from /mnt/data/asr-finetuning/models/indicconformer_stt_kn_hybrid_rnnt_large.nemo.
+   ℹ️  Decoder set to: rnnt
+   ✅ Model loaded: EncDecHybridRNNTCTCBPEModel
+   🚀 Running inference: gok_call_recordings_manifest.json
+      Files to transcribe: 115
+Transcribing:   0%|                                                                                                                                                                   | 0/115 [00:00<?, ?it/s][NeMo W 2026-01-27 17:01:22 nemo_logging:393] /mnt/data/repos/ai4bharat-nemo-repo/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+Transcribing: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 115/115 [01:14<00:00,  1.54it/s]
+      ✅ Transcription complete
+      WER: 92.12% | CER: 79.91%
+
+📄 JSON report saved to: /mnt/data/asr-finetuning/models/benchmark_report.json
+📄 Text report saved to: /mnt/data/asr-finetuning/models/report.txt
+
+✅ Benchmark run complete!
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python /mnt/data/asr-finetuning/evaluation/benchmarking/run/run_benchmark_ai4b.py \
+--model /mnt/data/asr-finetuning/models/indicconformer_stt_kn_hybrid_rnnt_large.nemo \
+--manifest evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json \
+--output-dir models/test_data_v2_results/call_recordings_ai4b_100m \
+--decoder rnnt \
+--lang-id kn
+/mnt/data/ai4b-env/lib/python3.12/site-packages/lightning_fabric/__init__.py:40: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+================================================================================
+ASR BENCHMARK RUNNER (AI4Bharat)
+================================================================================
+Model: /mnt/data/asr-finetuning/models/indicconformer_stt_kn_hybrid_rnnt_large.nemo
+Decoder: rnnt | Lang ID: kn
+================================================================================
+
+🔧 Loading ASR model...
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] _setup_tokenizer: detected an aggregate tokenizer
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:02:56 nemo_logging:381] Aggregate vocab size: 5632
+^C[NeMo E 2026-01-27 17:02:58 nemo_logging:405] Model instantiation failed!
+    Target class:	nemo.collections.asr.models.hybrid_rnnt_ctc_bpe_models.EncDecHybridRNNTCTCBPEModel
+    Error(s):	'NoneType' object has no attribute '_invalidate_flags_cache'
+        full_key: vocabulary
+        object_type=None
+        full_key: joint.vocabulary
+        object_type=dict
+    Traceback (most recent call last):
+      File "/mnt/data/repos/ai4bharat-nemo-repo/nemo/core/classes/common.py", line 502, in from_config_dict
+        instance = imported_cls(cfg=config, trainer=trainer)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/mnt/data/repos/ai4bharat-nemo-repo/nemo/collections/asr/models/hybrid_rnnt_ctc_bpe_models.py", line 94, in __init__
+        super().__init__(cfg=cfg, trainer=trainer)
+      File "/mnt/data/repos/ai4bharat-nemo-repo/nemo/collections/asr/models/hybrid_rnnt_ctc_models.py", line 43, in __init__
+        cfg = model_utils.convert_model_config_to_dict_config(cfg)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/mnt/data/repos/ai4bharat-nemo-repo/nemo/utils/model_utils.py", line 431, in convert_model_config_to_dict_config
+        config = OmegaConf.create(config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/omegaconf.py", line 178, in create
+        return OmegaConf._create_impl(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/omegaconf.py", line 900, in _create_impl
+        format_and_raise(node=None, key=None, value=None, msg=str(e), cause=e)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/_utils.py", line 819, in format_and_raise
+        _raise(ex, cause)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/_utils.py", line 797, in _raise
+        raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/omegaconf.py", line 861, in _create_impl
+        return DictConfig(
+               ^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 111, in __init__
+        format_and_raise(node=None, key=key, value=None, cause=ex, msg=str(ex))
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/_utils.py", line 819, in format_and_raise
+        _raise(ex, cause)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/_utils.py", line 797, in _raise
+        raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 109, in __init__
+        self._set_value(content, flags=flags)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 647, in _set_value
+        raise e
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 644, in _set_value
+        self._set_value_impl(value, flags)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 690, in _set_value_impl
+        self.__setitem__(k, v)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 314, in __setitem__
+        self._format_and_raise(key=key, value=value, cause=e)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/base.py", line 231, in _format_and_raise
+        format_and_raise(
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/_utils.py", line 819, in format_and_raise
+        _raise(ex, cause)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/_utils.py", line 797, in _raise
+        raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 308, in __setitem__
+        self.__set_impl(key=key, value=value)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 318, in __set_impl
+        self._set_item_impl(key, value)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/basecontainer.py", line 620, in _set_item_impl
+        self._wrap_value_and_set(key, value, target_type_hint)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/basecontainer.py", line 628, in _wrap_value_and_set
+        wrapped = _maybe_wrap(
+                  ^^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/omegaconf.py", line 1105, in _maybe_wrap
+        return _node_wrap(
+               ^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/omegaconf.py", line 1004, in _node_wrap
+        node = DictConfig(
+               ^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 111, in __init__
+        format_and_raise(node=None, key=key, value=None, cause=ex, msg=str(ex))
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/_utils.py", line 819, in format_and_raise
+        _raise(ex, cause)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/_utils.py", line 797, in _raise
+        raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 109, in __init__
+        self._set_value(content, flags=flags)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 647, in _set_value
+        raise e
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 644, in _set_value
+        self._set_value_impl(value, flags)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 690, in _set_value_impl
+        self.__setitem__(k, v)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 310, in __setitem__
+        self._format_and_raise(
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/base.py", line 231, in _format_and_raise
+        format_and_raise(
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/_utils.py", line 899, in format_and_raise
+        _raise(ex, cause)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/_utils.py", line 797, in _raise
+        raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 308, in __setitem__
+        self.__set_impl(key=key, value=value)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/dictconfig.py", line 318, in __set_impl
+        self._set_item_impl(key, value)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/basecontainer.py", line 620, in _set_item_impl
+        self._wrap_value_and_set(key, value, target_type_hint)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/basecontainer.py", line 628, in _wrap_value_and_set
+        wrapped = _maybe_wrap(
+                  ^^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/omegaconf.py", line 1105, in _maybe_wrap
+        return _node_wrap(
+               ^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/omegaconf.py", line 1017, in _node_wrap
+        node = ListConfig(
+               ^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/listconfig.py", line 82, in __init__
+        format_and_raise(node=None, key=key, value=None, cause=ex, msg=str(ex))
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/_utils.py", line 899, in format_and_raise
+        _raise(ex, cause)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/_utils.py", line 797, in _raise
+        raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/listconfig.py", line 80, in __init__
+        self._set_value(value=content, flags=flags)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/listconfig.py", line 618, in _set_value
+        raise e
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/listconfig.py", line 614, in _set_value
+        self._set_value_impl(value, flags)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/listconfig.py", line 657, in _set_value_impl
+        with flag_override(self, ["struct", "readonly"], False):
+      File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+        self.gen.throw(value)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/omegaconf.py", line 968, in flag_override
+        config._set_flag(names, prev_states)
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/base.py", line 178, in _set_flag
+        self._invalidate_flags_cache()
+      File "/mnt/data/ai4b-env/lib/python3.12/site-packages/omegaconf/base.py", line 790, in _invalidate_flags_cache
+        item._invalidate_flags_cache()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    omegaconf.errors.ConfigKeyError: 'NoneType' object has no attribute '_invalidate_flags_cache'
+        full_key: vocabulary
+        object_type=None
+        full_key: joint.vocabulary
+        object_type=dict
+    
+   ❌ Failed to load model: Can't instantiate abstract class ASRModel without an implementation for abstract methods 'setup_training_data', 'setup_validation_data'
+^C
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# rm rm evaluation/benchmarking/run/run_benchmark_ai4b.py
+rm: cannot remove 'rm': No such file or directory
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# rm evaluation/benchmarking/run/run_benchmark_ai4b.py
+rm: cannot remove 'evaluation/benchmarking/run/run_benchmark_ai4b.py': No such file or directory
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls evaluation/benchmarking/run/run_benchmark_ai4b.py
+ls: cannot access 'evaluation/benchmarking/run/run_benchmark_ai4b.py': No such file or directory
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# evaluation/benchmarking/run
+bash: evaluation/benchmarking/run: Is a directory
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# ls evaluation/benchmarking/run
+benchmark_results_20260118_114113  benchmark_results_20260118_115059  benchmark_results_20260118_120510  benchmark_results_20260118_121452  run_benchmark_bypass.py  test_sarvam_benchmark.py
+benchmark_results_20260118_114539  benchmark_results_20260118_115447  benchmark_results_20260118_120809  benchmark_results_20260118_122026  run_benchmark_kenlm.py
+benchmark_results_20260118_114720  benchmark_results_20260118_115846  benchmark_results_20260118_121130  benchmark_results_20260118_122326  run_benchmark.py
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# nano evaluation/benchmarking/run/run_benchmark_ai4b.py
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python /mnt/data/asr-finetuning/evaluation/benchmarking/run/run_benchmark_ai4b.py --model /mnt/data/asr-finetuning/models/indicconformer_stt_kn_hybrid_rnnt_large.nemo --manifest evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json --output-dir models/test_data_v2_results/call_recordings_ai4b_100m --decoder rnnt --lang-id kn
+/mnt/data/ai4b-env/lib/python3.12/site-packages/lightning_fabric/__init__.py:40: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+================================================================================
+ASR BENCHMARK RUNNER (AI4Bharat)
+================================================================================
+Model: /mnt/data/asr-finetuning/models/indicconformer_stt_kn_hybrid_rnnt_large.nemo
+Decoder: rnnt | Lang ID: kn
+================================================================================
+
+🔧 Loading ASR model...
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] _setup_tokenizer: detected an aggregate tokenizer
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:07:28 nemo_logging:381] Aggregate vocab size: 5632
+[NeMo W 2026-01-27 17:07:34 nemo_logging:393] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    manifest_filepath:
+    - /nlsasfs/home/ai4bharat/ai4bharat-pr/speechteam/indicasr_v3/manifests/nemo/vistaar_v3/train/train_kannada.json
+    sample_rate: 16000
+    batch_size: 8
+    shuffle: false
+    num_workers: 16
+    pin_memory: true
+    max_duration: 30.0
+    min_duration: 0.2
+    is_tarred: false
+    tarred_audio_filepaths: null
+    shuffle_n: 2048
+    bucketing_strategy: synced_randomized
+    bucketing_batch_size: null
+    is_concat: true
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 1.5
+    return_language_id: true
+    
+[NeMo W 2026-01-27 17:07:34 nemo_logging:393] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    manifest_filepath:
+    - /nlsasfs/home/ai4bharat/ai4bharat-pr/speechteam/indicasr_v3/manifests/nemo/vistaar_v3/valid_datasetwise/valid_kannada_indicvoices.json
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 8
+    return_language_id: true
+    pin_memory: true
+    
+[NeMo W 2026-01-27 17:07:34 nemo_logging:393] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    manifest_filepath: null
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 8
+    pin_memory: true
+    
+[NeMo I 2026-01-27 17:07:34 nemo_logging:381] PADDING: 0
+[NeMo W 2026-01-27 17:07:35 nemo_logging:393] /mnt/data/ai4b-env/lib/python3.12/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+      warnings.warn(
+    
+[NeMo I 2026-01-27 17:07:36 nemo_logging:381] Vocab size for each language: 256
+[NeMo I 2026-01-27 17:07:36 nemo_logging:381] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo I 2026-01-27 17:07:36 nemo_logging:381] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo I 2026-01-27 17:07:38 nemo_logging:381] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo I 2026-01-27 17:07:38 nemo_logging:381] Creating masks for multi-softmax layer.
+[NeMo I 2026-01-27 17:07:38 nemo_logging:381] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo W 2026-01-27 17:07:38 nemo_logging:393] /mnt/data/repos/ai4bharat-nemo-repo/nemo/core/connectors/save_restore_connector.py:585: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+      return torch.load(model_weights, map_location='cpu')
+    
+[NeMo I 2026-01-27 17:07:39 nemo_logging:381] Model EncDecHybridRNNTCTCBPEModel was successfully restored from /mnt/data/asr-finetuning/models/indicconformer_stt_kn_hybrid_rnnt_large.nemo.
+   ℹ️  Decoder set to: rnnt
+   ✅ Model loaded: EncDecHybridRNNTCTCBPEModel
+   🚀 Running inference: gok_call_recordings_manifest.json
+      Files to transcribe: 115
+Transcribing:   0%|                                                                                                                                                                   | 0/115 [00:00<?, ?it/s][NeMo W 2026-01-27 17:07:39 nemo_logging:393] /mnt/data/repos/ai4bharat-nemo-repo/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+Transcribing: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 115/115 [01:10<00:00,  1.63it/s]
+      ✅ Transcription complete
+      WER: 92.12% | CER: 79.91%
+
+📄 JSON report saved to: models/test_data_v2_results/call_recordings_ai4b_100m/benchmark_report.json
+📄 Text report saved to: models/test_data_v2_results/call_recordings_ai4b_100m/report.txt
+
+✅ Benchmark run complete!
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# python /mnt/data/asr-finetuning/evaluation/benchmarking/run/run_benchmark_ai4b.py \
+--model /mnt/data/asr-finetuning/models/indicconformer_stt_kn_hybrid_rnnt_large.nemo \
+--manifest evaluation/benchmarking/data/v2/open_source_manifest.json \
+--output-dir models/test_data_v2_results/open_source_ai4b_100m \
+--decoder rnnt \
+--lang-id kn
+/mnt/data/ai4b-env/lib/python3.12/site-packages/lightning_fabric/__init__.py:40: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+================================================================================
+ASR BENCHMARK RUNNER (AI4Bharat)
+================================================================================
+Model: /mnt/data/asr-finetuning/models/indicconformer_stt_kn_hybrid_rnnt_large.nemo
+Decoder: rnnt | Lang ID: kn
+================================================================================
+
+🔧 Loading ASR model...
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] _setup_tokenizer: detected an aggregate tokenizer
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Tokenizer SentencePieceTokenizer initialized with 256 tokens
+[NeMo I 2026-01-27 17:09:14 nemo_logging:381] Aggregate vocab size: 5632
+[NeMo W 2026-01-27 17:09:20 nemo_logging:393] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    manifest_filepath:
+    - /nlsasfs/home/ai4bharat/ai4bharat-pr/speechteam/indicasr_v3/manifests/nemo/vistaar_v3/train/train_kannada.json
+    sample_rate: 16000
+    batch_size: 8
+    shuffle: false
+    num_workers: 16
+    pin_memory: true
+    max_duration: 30.0
+    min_duration: 0.2
+    is_tarred: false
+    tarred_audio_filepaths: null
+    shuffle_n: 2048
+    bucketing_strategy: synced_randomized
+    bucketing_batch_size: null
+    is_concat: true
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 1.5
+    return_language_id: true
+    
+[NeMo W 2026-01-27 17:09:20 nemo_logging:393] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    manifest_filepath:
+    - /nlsasfs/home/ai4bharat/ai4bharat-pr/speechteam/indicasr_v3/manifests/nemo/vistaar_v3/valid_datasetwise/valid_kannada_indicvoices.json
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 8
+    return_language_id: true
+    pin_memory: true
+    
+[NeMo W 2026-01-27 17:09:20 nemo_logging:393] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    manifest_filepath: null
+    sample_rate: 16000
+    batch_size: 16
+    shuffle: false
+    use_start_end_token: false
+    num_workers: 8
+    pin_memory: true
+    
+[NeMo I 2026-01-27 17:09:20 nemo_logging:381] PADDING: 0
+[NeMo W 2026-01-27 17:09:22 nemo_logging:393] /mnt/data/ai4b-env/lib/python3.12/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+      warnings.warn(
+    
+[NeMo I 2026-01-27 17:09:22 nemo_logging:381] Vocab size for each language: 256
+[NeMo I 2026-01-27 17:09:22 nemo_logging:381] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo I 2026-01-27 17:09:22 nemo_logging:381] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo I 2026-01-27 17:09:24 nemo_logging:381] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo I 2026-01-27 17:09:24 nemo_logging:381] Creating masks for multi-softmax layer.
+[NeMo I 2026-01-27 17:09:24 nemo_logging:381] Using RNNT Loss : warprnnt_numba
+    Loss warprnnt_numba_kwargs: {'fastemit_lambda': 0.0, 'clamp': -1.0}
+[NeMo W 2026-01-27 17:09:25 nemo_logging:393] /mnt/data/repos/ai4bharat-nemo-repo/nemo/core/connectors/save_restore_connector.py:585: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+      return torch.load(model_weights, map_location='cpu')
+    
+[NeMo I 2026-01-27 17:09:25 nemo_logging:381] Model EncDecHybridRNNTCTCBPEModel was successfully restored from /mnt/data/asr-finetuning/models/indicconformer_stt_kn_hybrid_rnnt_large.nemo.
+   ℹ️  Decoder set to: rnnt
+   ✅ Model loaded: EncDecHybridRNNTCTCBPEModel
+   🚀 Running inference: open_source_manifest.json
+      Files to transcribe: 150
+Transcribing:   0%|                                                                                                                                                                   | 0/150 [00:00<?, ?it/s][NeMo W 2026-01-27 17:09:25 nemo_logging:393] /mnt/data/repos/ai4bharat-nemo-repo/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+Transcribing: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 150/150 [00:33<00:00,  4.53it/s]
+      ✅ Transcription complete
+      WER: 32.82% | CER: 10.73%
+
+📄 JSON report saved to: models/test_data_v2_results/open_source_ai4b_100m/benchmark_report.json
+📄 Text report saved to: models/test_data_v2_results/open_source_ai4b_100m/report.txt
+
+✅ Benchmark run complete!
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# git status
+On branch gpu-box
+Your branch is up to date with 'origin/gpu-box'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   evaluation/benchmarking/data/v2/Indicvoices/train_manifest.json
+	modified:   evaluation/benchmarking/data/v2/Kathbath/train_manifest.json
+	modified:   evaluation/benchmarking/data/v2/Vaani/train_manifest.json
+	modified:   evaluation/benchmarking/data/v2/gok_call_recordings/train_manifest.json
+	modified:   evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json
+	modified:   evaluation/benchmarking/data/v2/open_source_manifest.json
+	modified:   evaluation/benchmarking/run/run_benchmark_ai4b.py
+	modified:   models/benchmark_report.json
+	modified:   models/report.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	__MACOSX/
+	models/benchmark_report_call_recordings_conf_100m_v3.json
+	models/benchmark_report_open_source_conf_100m_v3.json
+	models/test_600.py
+	models/test_data_v2_results/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# git push models/test_data_v2_results/
+fatal: 'models/test_data_v2_results/' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# git add models/test_data_v2_results/
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# git status
+On branch gpu-box
+Your branch is up to date with 'origin/gpu-box'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   models/test_data_v2_results/call_recordings_ai4b_100m/benchmark_report.json
+	new file:   models/test_data_v2_results/call_recordings_ai4b_100m/report.txt
+	new file:   models/test_data_v2_results/call_recordings_ai4b_100m/results/predictions.json
+	new file:   models/test_data_v2_results/call_recordings_conf_100m_v3/predictions_call_recordings_conf_100m_v3.json
+	new file:   models/test_data_v2_results/open_source_ai4b_100m/benchmark_report.json
+	new file:   models/test_data_v2_results/open_source_ai4b_100m/report.txt
+	new file:   models/test_data_v2_results/open_source_ai4b_100m/results/predictions.json
+	new file:   models/test_data_v2_results/open_source_conf_100m_v3/predictions_open_source_conf_100m_v3.json
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   evaluation/benchmarking/data/v2/Indicvoices/train_manifest.json
+	modified:   evaluation/benchmarking/data/v2/Kathbath/train_manifest.json
+	modified:   evaluation/benchmarking/data/v2/Vaani/train_manifest.json
+	modified:   evaluation/benchmarking/data/v2/gok_call_recordings/train_manifest.json
+	modified:   evaluation/benchmarking/data/v2/gok_call_recordings_manifest.json
+	modified:   evaluation/benchmarking/data/v2/open_source_manifest.json
+	modified:   evaluation/benchmarking/run/run_benchmark_ai4b.py
+	modified:   models/benchmark_report.json
+	modified:   models/report.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	__MACOSX/
+	models/benchmark_report_call_recordings_conf_100m_v3.json
+	models/benchmark_report_open_source_conf_100m_v3.json
+	models/test_600.py
+
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# git commit -m "tested models on v2 data"
+[gpu-box d61714d] tested models on v2 data
+ 8 files changed, 20 insertions(+)
+ create mode 100644 models/test_data_v2_results/call_recordings_ai4b_100m/benchmark_report.json
+ create mode 100644 models/test_data_v2_results/call_recordings_ai4b_100m/report.txt
+ create mode 100644 models/test_data_v2_results/call_recordings_ai4b_100m/results/predictions.json
+ create mode 100644 models/test_data_v2_results/call_recordings_conf_100m_v3/predictions_call_recordings_conf_100m_v3.json
+ create mode 100644 models/test_data_v2_results/open_source_ai4b_100m/benchmark_report.json
+ create mode 100644 models/test_data_v2_results/open_source_ai4b_100m/report.txt
+ create mode 100644 models/test_data_v2_results/open_source_ai4b_100m/results/predictions.json
+ create mode 100644 models/test_data_v2_results/open_source_conf_100m_v3/predictions_open_source_conf_100m_v3.json
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# git push origin gpu-box
+Username for 'https://github.com': chaitanyakartik
+Password for 'https://chaitanyakartik@github.com': 
+Username for 'https://github.com': chaitanyakartik
+Password for 'https://chaitanyakartik@github.com': 
+Uploading LFS objects: 100% (6/6), 401 KB | 0 B/s, done.                                                                                                                                                      
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 48 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (18/18), 1.79 KiB | 914.00 KiB/s, done.
+Total 18 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/chaitanyakartik/asr-finetuning
+   a2a7161..d61714d  gpu-box -> gpu-box
+(ai4b-env) root@h200-nvl-2x:/mnt/data/asr-finetuning# 
+

@@ -98,3 +98,12 @@ python /mnt/data/asr-finetuning/evaluation/benchmarking/run/run_benchmark_ai4b.p
 .venv/bin/python evaluation/benchmarking/run/test_sarvam_benchmark.py \
   --manifest evaluation/benchmarking/data/v2/open_source_manifest.json \
   --output-dir models/open_source_sarvam
+
+
+
+
+
+
+
+
+python inference/asr_server.py
