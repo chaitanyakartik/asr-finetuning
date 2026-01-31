@@ -1,0 +1,500 @@
+2026-01-19 14:28:00,472 [Rank 2299291] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 14:28:34,077 [Rank 2299291] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 14:32:32,862 [Rank 2304457] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 14:32:37,206 [Rank 2304457] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 14:34:39,999 [Rank 2305140] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 14:34:44,320 [Rank 2305140] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 14:34:46,871 [Rank 2305140] Training on: training/manifests/kannada_train_manifest.json
+2026-01-19 14:40:00,570 [Rank 2306465] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 14:40:04,832 [Rank 2306465] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 14:40:07,384 [Rank 2306465] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 14:40:12,433 [Rank 2306465] 📅 Scheduler: 1053 steps/epoch * 25 epochs = 26325 total
+2026-01-19 14:46:17,659 [Rank 2312933] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 14:46:21,978 [Rank 2312933] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 14:46:24,518 [Rank 2312933] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 14:46:29,568 [Rank 2312933] 📅 Scheduler: 1053 steps/epoch * 25 epochs = 26325 total
+2026-01-19 14:50:14,598 [Rank 2316129] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 14:50:18,971 [Rank 2316129] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 14:50:21,509 [Rank 2316129] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 14:50:26,571 [Rank 2316129] 📅 Scheduler: 1053 steps/epoch * 25 epochs = 26325 total
+2026-01-19 14:52:53,933 [Rank 2318193] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 14:52:58,266 [Rank 2318193] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 14:53:00,829 [Rank 2318193] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 14:53:05,934 [Rank 2318193] 📅 Scheduler: 1053 steps/epoch * 25 epochs = 26325 total
+2026-01-19 14:56:09,698 [Rank 2320023] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 14:56:14,049 [Rank 2320023] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 14:56:16,612 [Rank 2320023] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 14:56:21,684 [Rank 2320023] 📅 Scheduler: 1053 steps/epoch * 25 epochs = 26325 total
+2026-01-19 15:04:31,507 [Rank 2327627] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 15:04:35,845 [Rank 2327627] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 15:04:38,405 [Rank 2327627] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 15:04:43,470 [Rank 2327627] 📅 Scheduler: 1053 steps/epoch * 25 epochs = 26325 total
+2026-01-19 15:07:09,190 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,191 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,197 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,197 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,197 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,197 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,197 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,197 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,199 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,199 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,200 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,200 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,200 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,200 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,200 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,200 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,200 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,200 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,200 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,200 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,203 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,204 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,204 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,204 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,204 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,204 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,205 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,208 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,209 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,209 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,209 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,209 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,211 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,213 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,218 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,219 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,220 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,220 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,220 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,220 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,220 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,220 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,220 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,221 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,221 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,221 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,221 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,221 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,221 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,221 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,221 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,221 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,222 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,223 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,224 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,224 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,224 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,236 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,236 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,236 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,236 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,236 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,236 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,236 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,236 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,236 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,236 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,237 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,238 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,239 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,240 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,241 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,242 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,243 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,244 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,245 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,245 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,245 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,245 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,245 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,245 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,245 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,245 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,245 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,245 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,246 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,247 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,247 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,247 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,247 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,247 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,247 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,247 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,247 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,247 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,247 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,247 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,247 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,248 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,249 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,250 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,251 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,252 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,253 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,254 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,255 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,256 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,257 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,258 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,259 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,260 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,261 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,261 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:07:09,261 [Rank 2327627] socket.send() raised exception.
+2026-01-19 15:14:25,151 [Rank 2333464] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 15:14:29,490 [Rank 2333464] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 15:14:32,052 [Rank 2333464] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 15:14:37,148 [Rank 2333464] 📅 Scheduler: 1053 steps/epoch * 25 epochs = 26325 total
+2026-01-19 15:25:56,503 [Rank 2342347] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 15:26:00,812 [Rank 2342347] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 15:26:03,379 [Rank 2342347] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 15:26:08,486 [Rank 2342347] 📅 Scheduler: 264 steps/epoch * 25 epochs = 6600 total
+2026-01-19 15:28:28,000 [Rank 2347383] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 15:28:33,944 [Rank 2347383] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 15:28:37,454 [Rank 2347383] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 15:28:43,772 [Rank 2347383] 📅 Scheduler: 264 steps/epoch * 25 epochs = 6600 total
+2026-01-19 15:35:46,178 [Rank 2358015] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 15:35:50,692 [Rank 2358015] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 15:35:53,258 [Rank 2358015] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 15:35:58,397 [Rank 2358015] 📅 Scheduler: 264 steps/epoch * 25 epochs = 6600 total
+2026-01-19 15:45:22,579 [Rank 2369933] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 15:45:27,018 [Rank 2369933] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 15:45:29,582 [Rank 2369933] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 15:45:34,712 [Rank 2369933] 📅 Scheduler: 66 steps/epoch * 25 epochs = 1650 total
+2026-01-19 15:49:49,374 [Rank 2376103] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 15:49:54,295 [Rank 2376103] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 15:49:56,868 [Rank 2376103] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 15:50:02,043 [Rank 2376103] 📅 Scheduler: 132 steps/epoch * 25 epochs = 3300 total
+2026-01-19 15:52:17,143 [Rank 2382937] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 15:52:23,476 [Rank 2382937] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 15:52:27,107 [Rank 2382937] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 15:52:33,580 [Rank 2382937] 📅 Scheduler: 264 steps/epoch * 25 epochs = 6600 total
+2026-01-19 16:12:00,414 [Rank 2404859] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 16:12:05,392 [Rank 2404859] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 16:12:07,971 [Rank 2404859] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 16:12:13,145 [Rank 2404859] 📅 Scheduler: 176 steps/epoch * 25 epochs = 4400 total
+2026-01-19 16:19:57,673 [Rank 2415487] >>> STARTING FRESH: Loading English FastConformer Hybrid Large
+2026-01-19 16:20:02,344 [Rank 2415487] UNKNOWN --> MULTILINGUAL Surgery (Hybrid)
+2026-01-19 16:20:04,917 [Rank 2415487] Encoder Frozen. Training Decoders only.
+2026-01-19 16:20:04,917 [Rank 2415487] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 16:20:10,064 [Rank 2415487] 📅 Scheduler: 176 steps/epoch * 25 epochs = 4400 total

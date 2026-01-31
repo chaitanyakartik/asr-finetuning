@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 DATASET_NAME = "Kathbath"
 HF_DATASET_ID = "ai4bharat/kathbath"
 HF_CONFIG = "kannada"  # Verified in your previous inspection
-N_SAMPLES = 10         # Set to -1 for full download
+N_SAMPLES = -1         # Set to -1 for full download
 BENCHMARK_NAME = "kn_clean_read"  # Name for the benchmark
 OUTPUT_DIR = "test_data/Kathbath"
 WAV_DIR = os.path.join(OUTPUT_DIR, "wavs")

@@ -1,0 +1,45 @@
+2026-01-18 21:07:53,679 [INFO] >>> STARTING FRESH: Loading English Base Model
+2026-01-18 21:10:13,399 [INFO] >>> STARTING FRESH: Loading English Base Model
+2026-01-18 21:10:17,293 [INFO] UNKNOWN --> MULTILINGUAL Surgery
+2026-01-18 21:16:34,672 [INFO] >>> STARTING FRESH: Loading English Base Model
+2026-01-18 21:16:37,597 [INFO] UNKNOWN --> MULTILINGUAL Surgery
+2026-01-18 21:18:01,317 [INFO] >>> STARTING FRESH: Loading English Base Model
+2026-01-18 21:18:04,245 [INFO] UNKNOWN --> MULTILINGUAL Surgery
+2026-01-18 21:18:04,846 [INFO] Encoder Frozen. Training Decoder only.
+2026-01-18 21:18:04,846 [INFO] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-18 21:22:47,356 [INFO] >>> STARTING FRESH: Loading English Base Model
+2026-01-18 21:22:50,249 [INFO] UNKNOWN --> MULTILINGUAL Surgery
+2026-01-18 21:22:50,845 [INFO] Encoder Frozen. Training Decoder only.
+2026-01-18 21:22:50,845 [INFO] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-18 21:22:55,141 [INFO] 🔧 Checking tags in en_clean_read.json...
+2026-01-18 21:22:55,141 [INFO] 🔧 Checking tags in kn_clean_read.json...
+2026-01-18 21:22:55,312 [INFO] 📅 Scheduler Config: 4211 steps/epoch * 20 epochs = 84220 total steps
+2026-01-18 21:24:19,396 [INFO] >>> STARTING FRESH: Loading English Base Model
+2026-01-18 21:24:22,299 [INFO] UNKNOWN --> MULTILINGUAL Surgery
+2026-01-18 21:24:22,896 [INFO] Encoder Frozen. Training Decoder only.
+2026-01-18 21:24:22,896 [INFO] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-18 21:24:27,201 [INFO] 🔧 Checking tags in en_clean_read.json...
+2026-01-18 21:24:27,202 [INFO] 🔧 Checking tags in kn_clean_read.json...
+2026-01-18 21:24:27,375 [INFO] 📅 Scheduler Config: 4211 steps/epoch * 20 epochs = 84220 total steps
+2026-01-18 21:35:53,069 [INFO] >>> STARTING FRESH: Loading English Base Model
+2026-01-18 21:35:56,920 [INFO] UNKNOWN --> MULTILINGUAL Surgery
+2026-01-18 21:35:57,533 [INFO] Encoder Frozen. Training Decoder only.
+2026-01-18 21:35:57,533 [INFO] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-18 21:36:02,985 [INFO] 🔧 Checking tags in en_clean_read.json...
+2026-01-18 21:36:02,986 [INFO] 🔧 Checking tags in kn_clean_read.json...
+2026-01-18 21:36:03,171 [INFO] 📅 Scheduler Config: 4211 steps/epoch * 20 epochs = 84220 total steps
+2026-01-18 21:54:43,468 [INFO] >>> STARTING FRESH: Loading English Base Model
+2026-01-18 21:54:46,582 [INFO] UNKNOWN --> MULTILINGUAL Surgery
+2026-01-18 21:54:47,179 [INFO] Encoder Frozen. Training Decoder only.
+2026-01-18 21:54:47,179 [INFO] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-18 21:54:51,670 [INFO] 🔧 Checking tags in en_clean_read.json...
+2026-01-18 21:54:51,671 [INFO] 🔧 Checking tags in kn_clean_read.json...
+2026-01-18 21:54:51,845 [INFO] 📅 Scheduler Config: 4211 steps/epoch * 20 epochs = 84220 total steps
+2026-01-19 01:39:46,585 [INFO] ✅ Training Done. Model saved: /mnt/data/asr-finetuning/training/models/kathbath_v1_init_final.nemo
+2026-01-19 05:18:03,477 [INFO] >>> CONTINUING: Loading Checkpoint /mnt/data/asr-finetuning/training/experiments/kathbath_v1_init/2026-01-18_21-54-51/checkpoints/kathbath_v1_init.nemo
+2026-01-19 05:18:07,537 [INFO] Unfreezing Encoder for End-to-End Fine-tuning
+2026-01-19 05:18:07,539 [INFO] Training on: data/processed_data/Kathbath/train_manifest.json
+2026-01-19 05:18:12,241 [INFO] 🔧 Checking tags in en_clean_read.json...
+2026-01-19 05:18:12,242 [INFO] 🔧 Checking tags in kn_clean_read.json...
+2026-01-19 05:18:12,466 [INFO] 📅 Scheduler Config: 4211 steps/epoch * 15 epochs = 63165 total steps
+2026-01-19 09:44:57,793 [INFO] ✅ Training Done. Model saved: /mnt/data/asr-finetuning/training/models/kathbath_v2_unfrozen_final.nemo

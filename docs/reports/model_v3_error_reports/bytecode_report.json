@@ -1,0 +1,410 @@
+{
+  "total_samples": 2062,
+  "corrections_made": 54,
+  "correction_rate": "2.62%",
+  "bytecode_patterns_fixed": [
+    "<0xE0><0xB2><0x94>",
+    "<0xE0><0xB2><0x8A>",
+    "<0xE0><0xB2><0x8E>",
+    "<0xE0><0xB2><0x90>",
+    "<0xE0><0xB2><0xA2>",
+    "<0xE0><0xB2><0x9D>",
+    "<0xE0><0xB2><0x8B>"
+  ],
+  "metrics": {
+    "original": {
+      "wer": 14.59,
+      "cer": 2.86
+    },
+    "corrected": {
+      "wer": 14.39,
+      "cer": 2.31
+    },
+    "improvement": {
+      "wer_absolute": 0.2,
+      "cer_absolute": 0.55,
+      "wer_relative_percent": 1.37,
+      "cer_relative_percent": 19.29
+    }
+  },
+  "corrections_detail": [
+    {
+      "index": 51,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_51.wav",
+      "ground_truth": "ಶಿಯೋಮಿ ಡಿವೈಸ್ ಗಳು ಫ್ಲ್ಯಾಶ್ ಸೇಲ್ ನಲ್ಲಿ ಮಾರಾಟವಾಗುತ್ತದೆ ಮತ್ತು ಬಹಳ ಬೇಗನೆ ಔಟ್ ಆಫ್ ಸ್ಟಾಕ್ ಆಗಿ ಬಿಡುತ್ತದೆ",
+      "prediction_original": " ಶಿಯೋಮಿ ಡಿವೈಸ್ಗಳು ಫ್ಲಾಶ್ ಸೇಲ್ನಲ್ಲಿ ಮಾರಾಟವಾಗುತ್ತದೆ ಮತ್ತು ಬಹಳ ಬೇಗನೆ <0xE0><0xB2><0x94>ಟ್ ಆಫ್ ಸ್ಟಾಕ್ ಆಗಿಬಿಡುತ್ತದೆ",
+      "prediction_corrected": " ಶಿಯೋಮಿ ಡಿವೈಸ್ಗಳು ಫ್ಲಾಶ್ ಸೇಲ್ನಲ್ಲಿ ಮಾರಾಟವಾಗುತ್ತದೆ ಮತ್ತು ಬಹಳ ಬೇಗನೆ ಔಟ್ ಆಫ್ ಸ್ಟಾಕ್ ಆಗಿಬಿಡುತ್ತದೆ"
+    },
+    {
+      "index": 53,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_53.wav",
+      "ground_truth": "ನಾನು ಎಲ್ಲಾ ಕಾರ್ಯಕರ್ತರಂತೆ ಟೊಂಕ ಕಟ್ಟಿ ನಿಂತು ಬಿಜೆಪಿ ಅಭ್ಯರ್ಥಿಯನ್ನು ಗೆಲ್ಲಿಸುತ್ತೇನೆ ಎಂದು ಅಮರನಾಥ ಎಲ್ಲ ಊಹಾಪೋಹಗಳಿಗೆ ತೆರೆ ಎಳೆದಿದ್ದಾರೆ",
+      "prediction_original": " ನಾನು ಎಲ್ಲಾ ಕಾರ್ಯಕರ್ತರಂತೆ ಟೊಂಕ ಕಟ್ಟಿ ನಿಂತು ಬಿಜೆಪಿ ಅಭ್ಯರ್ಥಿಯನ್ನು ಗೆಲ್ಲಿಸುತ್ತೇನೆ ಎಂದು ಅಮರನಾಥ್ ಎಲ್ಲಾ <0xE0><0xB2><0x8A>ಹಾಪೋಹಗಳಿಗೆ ತೆರೆ ಎಳೆದಿದ್ದಾರೆ",
+      "prediction_corrected": " ನಾನು ಎಲ್ಲಾ ಕಾರ್ಯಕರ್ತರಂತೆ ಟೊಂಕ ಕಟ್ಟಿ ನಿಂತು ಬಿಜೆಪಿ ಅಭ್ಯರ್ಥಿಯನ್ನು ಗೆಲ್ಲಿಸುತ್ತೇನೆ ಎಂದು ಅಮರನಾಥ್ ಎಲ್ಲಾ ಊಹಾಪೋಹಗಳಿಗೆ ತೆರೆ ಎಳೆದಿದ್ದಾರೆ"
+    },
+    {
+      "index": 59,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_59.wav",
+      "ground_truth": "ಬೆಟ್ಟಗುಡ್ಡಗಳ ನಡುವಿನ ಈ ಕೆರೆಯ ನೀರು ಗಿಡಮೂಲಿಕೆಗಳ ಅಡಿಯಲ್ಲಿ ಹರಿದು ಬಂದು ಔಷಧಿ ಗುಣವನ್ನು ಒಳಗೊಂಡು ಸಿಹಿ ನೀರು ಲಭಿಸುತ್ತಿತ್ತು",
+      "prediction_original": " ಬೆಟ್ಟಗುಟ್ಟಗಳ ನಡುವಿನ ಈ ಕೆರೆಯ ನೀರು ಗಿಡಮೂಲಿಕೆಗಳ ಅಡಿಯಲ್ಲಿ ಹರಿದು ಬಂದು <0xE0><0xB2><0x94>ಷಧಿ ಗುಣವನ್ನು ಒಳಗೊಂಡು ಸಿಹಿನೀರು ಲಭಿಸುತ್ತಿತ್ತು",
+      "prediction_corrected": " ಬೆಟ್ಟಗುಟ್ಟಗಳ ನಡುವಿನ ಈ ಕೆರೆಯ ನೀರು ಗಿಡಮೂಲಿಕೆಗಳ ಅಡಿಯಲ್ಲಿ ಹರಿದು ಬಂದು ಔಷಧಿ ಗುಣವನ್ನು ಒಳಗೊಂಡು ಸಿಹಿನೀರು ಲಭಿಸುತ್ತಿತ್ತು"
+    },
+    {
+      "index": 62,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_62.wav",
+      "ground_truth": "ಆದರೆ ಅದೇ ಆತನ ಕಡೆಯ ದಿನ ಆಗುತ್ತದೆ ಎಂದು ಯಾರೊಬ್ಬರೂ ಊಹಿಸಿರಲಿಲ್ಲ",
+      "prediction_original": " ಆದರೆ ಅದೇ ಆತನ ಕಡೆಯ ದಿನ ಆಗುತ್ತದೆ ಎಂದು ಯಾರೊಬ್ಬರೂ <0xE0><0xB2><0x8A>ಹಿಸಿರಲಿಲ್ಲ",
+      "prediction_corrected": " ಆದರೆ ಅದೇ ಆತನ ಕಡೆಯ ದಿನ ಆಗುತ್ತದೆ ಎಂದು ಯಾರೊಬ್ಬರೂ ಊಹಿಸಿರಲಿಲ್ಲ"
+    },
+    {
+      "index": 65,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_65.wav",
+      "ground_truth": "ಆದರೆ ಇತ್ತೀಚಿನ ವರ್ಷಗಳಲ್ಲಿ ಮಳೆ ಕೊರತೆಯಿಂದ ರಾಗಿ ಬೆಳೆ ಕುಂಠಿತವಾಗಿ ಊಟಕ್ಕೂ ರಾಗಿಯನ್ನು ಕೊಳ್ಳುವ ಪರಿಸ್ಥಿತಿ ಬಂದಿದೆ",
+      "prediction_original": " ಆದರೆ ಇತ್ತೀಚಿನ ವರ್ಷಗಳಲ್ಲಿ ಮಳೆ ಕೊರತೆಯಿಂದ ರಾಗಿ ಬೆಳೆ ಕುಂಠಿತವಾಗಿ <0xE0><0xB2><0x8A>ಟಕ್ಕೂ ರಾಗಿಯನ್ನು ಕೊಳ್ಳುವ ಪರಿಸ್ಥಿತಿ ಬಂದಿದೆ",
+      "prediction_corrected": " ಆದರೆ ಇತ್ತೀಚಿನ ವರ್ಷಗಳಲ್ಲಿ ಮಳೆ ಕೊರತೆಯಿಂದ ರಾಗಿ ಬೆಳೆ ಕುಂಠಿತವಾಗಿ ಊಟಕ್ಕೂ ರಾಗಿಯನ್ನು ಕೊಳ್ಳುವ ಪರಿಸ್ಥಿತಿ ಬಂದಿದೆ"
+    },
+    {
+      "index": 66,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_66.wav",
+      "ground_truth": "ಅಗಾಧ ಔಷಧಿಯ ಗುಣ ಹೊಂದಿದ ಈ ಹಣ್ಣು ತಿನ್ನಲು ತುಂಬಾ ರುಚಿ",
+      "prediction_original": " ಅಗಾಧ <0xE0><0xB2><0x94>ಷಧಿಯ ಗುಣ ಹೊಂದಿದ ಈ ಹಣ್ಣು ತಿನ್ನಲು ತುಂಬಾ ರುಚಿ",
+      "prediction_corrected": " ಅಗಾಧ ಔಷಧಿಯ ಗುಣ ಹೊಂದಿದ ಈ ಹಣ್ಣು ತಿನ್ನಲು ತುಂಬಾ ರುಚಿ"
+    },
+    {
+      "index": 224,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_224.wav",
+      "ground_truth": "ಪರಿಗಣಿಸಿ ಹೋಲಿಸಿದರೆ ಉದಾಹರಣೆಗಳು ಸ್ಕಿಜೋಫ್ರೇನಿಯಾದೊಂದಿಗೆ ಜನರ ವಿಭಿನ್ನ ಪರಿಕಲ್ಪನೆಗಳಲ್ಲಿ ಬೇರ್ಪಟ್ಟ ಗ್ರಹಿಕೆ ಮತ್ತು ತುಂಬಾ ಅಮೂರ್ತ ಸಂಗತಿಗಳನ್ನು ಕಾಣಬಹುದು",
+      "prediction_original": " ಪರಿಗಣಿಸಿ ಹೋಲಿಸಿದರೆ ಉದಾಹರಣೆಗಳು ಸ್ಕಿ<0xE0><0xB2><0x9D>ೊಫ್ರೇನಿಯಾದೊಂದಿಗೆ ಜನರ ವಿಭಿನ್ನ ಪರಿಕಲ್ಪನೆಗಳಲ್ಲಿ ಬೇರ್ಪಟ್ಟ ಗ್ರಹಿಕೆ ಮತ್ತು ತುಂಬಾ ಅಮೂರ್ತ ಸಂಗತಿಗಳನ್ನು ಕಾಣಬಹುದು",
+      "prediction_corrected": " ಪರಿಗಣಿಸಿ ಹೋಲಿಸಿದರೆ ಉದಾಹರಣೆಗಳು ಸ್ಕಿಝೊಫ್ರೇನಿಯಾದೊಂದಿಗೆ ಜನರ ವಿಭಿನ್ನ ಪರಿಕಲ್ಪನೆಗಳಲ್ಲಿ ಬೇರ್ಪಟ್ಟ ಗ್ರಹಿಕೆ ಮತ್ತು ತುಂಬಾ ಅಮೂರ್ತ ಸಂಗತಿಗಳನ್ನು ಕಾಣಬಹುದು"
+    },
+    {
+      "index": 235,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_235.wav",
+      "ground_truth": "ಕ್ಷಣದಲ್ಲಿ ಸಂಜೀವನ ಪರ್ವತಕ್ಕೆ ಹಾರಿಹೊಗಿ ಅಲ್ಲಿಂದ ಮೂಲಿಕೆಗಳನ್ನು ಔಷಧಿಗಳನ್ನೂ ತರಿಸಿ ಲಕ್ಷ್ಮಣನನ್ನೂ ಸೈನ್ಯವನ್ನೂ ಉಜ್ಜೀವನಗೊಳಿಸುತ್ತಾನೆ",
+      "prediction_original": " ಕ್ಷಣದಲ್ಲಿ ಸಂಜೀವನ ಪರ್ವತಕ್ಕೆ ಹಾರಿಹೋಗಿ ಅಲ್ಲಿಂದ ಮೋಲಿಕೆಗಳನ್ನು <0xE0><0xB2><0x94>ಷಧಿಗಳನ್ನು ತರಿಸಿ ಲಕ್ಷ್ಮಣನನ್ನು ಸೈನ್ಯವನ್ನು ಉಜ್ಜೀವನಗೊಳಿಸುತ್ತಾನೆ",
+      "prediction_corrected": " ಕ್ಷಣದಲ್ಲಿ ಸಂಜೀವನ ಪರ್ವತಕ್ಕೆ ಹಾರಿಹೋಗಿ ಅಲ್ಲಿಂದ ಮೋಲಿಕೆಗಳನ್ನು ಔಷಧಿಗಳನ್ನು ತರಿಸಿ ಲಕ್ಷ್ಮಣನನ್ನು ಸೈನ್ಯವನ್ನು ಉಜ್ಜೀವನಗೊಳಿಸುತ್ತಾನೆ"
+    },
+    {
+      "index": 316,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_316.wav",
+      "ground_truth": "ಏನೇ ಆದರೂ ನಮ್ಮಿಬ್ಬರೆದೆಯಲ್ಲು ಗಾಢವಾದ ವೇದನೆ ಉಳಿದು ಬಿಡುವುದರಲ್ಲಿ ಅನುಮಾನವೇ ಇಲ್ಲ",
+      "prediction_original": " ಏನೇ ಆದರೂ ನಮ್ಮಿಬ್ಬರೆಲ್ಲೂ ಗಾ<0xE0><0xB2><0xA2>ವಾದ ವೇದನೆ ಉಳಿದು ಬಿಡುವುದರಲ್ಲಿ ಅನುಮಾನವೇ ಇಲ್ಲ",
+      "prediction_corrected": " ಏನೇ ಆದರೂ ನಮ್ಮಿಬ್ಬರೆಲ್ಲೂ ಗಾಢವಾದ ವೇದನೆ ಉಳಿದು ಬಿಡುವುದರಲ್ಲಿ ಅನುಮಾನವೇ ಇಲ್ಲ"
+    },
+    {
+      "index": 397,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_397.wav",
+      "ground_truth": "ಚೆನ್ನೈನ ರವಿಕುಮಾರ್ಗೆ ತಮ್ಮ ರಾಜ್ಯದಲ್ಲಿ ದಲಿತರ ಮೇಲೆ ನಡೆದ ದೌರ್ಜನ್ಯ ಗಾಢವಾಗಿ ತಟ್ಟಿದಂತಿತ್ತು",
+      "prediction_original": " ಚೆನ್ನೈನ ರವಿಕುಮಾರ್ ಗೆ ತಮ್ಮ ರಾಜ್ಯದಲ್ಲಿ ದಲಿತರ ಮೇಲೆ ನಡೆದ ಸೌಜನ್ಯ ಗಾ<0xE0><0xB2><0xA2>ವಾಗಿ ತಟ್ಟಿದಂತಿತ್ತು",
+      "prediction_corrected": " ಚೆನ್ನೈನ ರವಿಕುಮಾರ್ ಗೆ ತಮ್ಮ ರಾಜ್ಯದಲ್ಲಿ ದಲಿತರ ಮೇಲೆ ನಡೆದ ಸೌಜನ್ಯ ಗಾಢವಾಗಿ ತಟ್ಟಿದಂತಿತ್ತು"
+    },
+    {
+      "index": 414,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_414.wav",
+      "ground_truth": "ಮೇಲಾಗಿ ಈ ಮಸೂಟ ಊರಲ್ಲಿ ಮೆರವಣಿಗೆಯಾಗಿ ಬರುತ್ತದೆಯಾದ್ದರಿಂದ ಹೆಣ್ಣಿನ ಮನೆತನ ಸಂಸ್ಕಾರವನ್ನು ಊರವರು ಈ ಮಸೂಟದ ಆಧಾರದ ಮೇಲೆಯೇ ಅಳೆಯುತ್ತಿರುತ್ತಾರೆ",
+      "prediction_original": " ಮೇಲಾಗಿ ಈ ಮಾಸೂಟ <0xE0><0xB2><0x8A>ರಲ್ಲಿ ಮೆರವಣಿಗೆಯಾಗಿ ಬರುತ್ತದೆಯಾದ್ದರಿಂದ ಹೆಣ್ಣಿನ ಮನೆತನ ಸಂಸ್ಕಾರವನ್ನು <0xE0><0xB2><0x8A>ರವರು ಈ ಮಾಸೂಟದ ಆಧಾರದ ಮೇಲೆ ಅಳೆಯುತ್ತಿರುತ್ತಾರೆ",
+      "prediction_corrected": " ಮೇಲಾಗಿ ಈ ಮಾಸೂಟ ಊರಲ್ಲಿ ಮೆರವಣಿಗೆಯಾಗಿ ಬರುತ್ತದೆಯಾದ್ದರಿಂದ ಹೆಣ್ಣಿನ ಮನೆತನ ಸಂಸ್ಕಾರವನ್ನು ಊರವರು ಈ ಮಾಸೂಟದ ಆಧಾರದ ಮೇಲೆ ಅಳೆಯುತ್ತಿರುತ್ತಾರೆ"
+    },
+    {
+      "index": 415,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_415.wav",
+      "ground_truth": "ಮಧ್ಯಾಹ್ನ ಊಟದ ಬಳಿಕ ಮಕ್ಕಳ ಆಸಕ್ತಿ ಫಾರ್ಮ್ಸ್ ನ ದನಗಳತ್ತ ಸರಿಯಿತು",
+      "prediction_original": " ಮಧ್ಯಾಹ್ನ <0xE0><0xB2><0x8A>ಟದ ಬಳಿಕ ಮಕ್ಕಳ ಆಸಕ್ತಿ ಫಾರ್ಮ್ಸ್ ನ ದನಗಳತ್ತ ಸರಿಯಿತು",
+      "prediction_corrected": " ಮಧ್ಯಾಹ್ನ ಊಟದ ಬಳಿಕ ಮಕ್ಕಳ ಆಸಕ್ತಿ ಫಾರ್ಮ್ಸ್ ನ ದನಗಳತ್ತ ಸರಿಯಿತು"
+    },
+    {
+      "index": 585,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_585.wav",
+      "ground_truth": "ಊರ ದಾನಿಗಳ ಸಂಪರ್ಕಿಸಿದ ಶಾಲಾ ಹಿತರಕ್ಷಣಾ ಸಮಿತಿ ಒಂದು ನಿರ್ಧಾರಕ್ಕೆ ಬಂದಿತು",
+      "prediction_original": " <0xE0><0xB2><0x8A>ರ ದಾನಿಗಳ ಸಂಪರ್ಕಿಸಿದ ಶಾಲಾ ಹಿತರಕ್ಷಣಾ ಸಮಿತಿ ಒಂದು ನಿರ್ಧಾರಕ್ಕೆ ಬಂದಿತು",
+      "prediction_corrected": " ಊರ ದಾನಿಗಳ ಸಂಪರ್ಕಿಸಿದ ಶಾಲಾ ಹಿತರಕ್ಷಣಾ ಸಮಿತಿ ಒಂದು ನಿರ್ಧಾರಕ್ಕೆ ಬಂದಿತು"
+    },
+    {
+      "index": 597,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_597.wav",
+      "ground_truth": "ನೀವು ಅವರ ಪೋಷಕರಿಂದ ಆನುವಂಶಿಕವಾಗಿ ಮಾಡಿದೆ ಎಂದು ಋಣಾತ್ಮಕ ಆಹಾರ ಬಗ್ಗೆ ಮರೆಯಬೇಡಿ",
+      "prediction_original": " ನೀವು ಅವರ ಪೋಷಕರಿಂದ ಅನುವಂಶಿಕವಾಗಿ ಮಾಡಿದೆ ಎಂದು <0xE0><0xB2><0x8B>ಣಾತ್ಮಕ ಆಹಾರ ಬಗ್ಗೆ ಮರೆಯಬೇಡಿ",
+      "prediction_corrected": " ನೀವು ಅವರ ಪೋಷಕರಿಂದ ಅನುವಂಶಿಕವಾಗಿ ಮಾಡಿದೆ ಎಂದು ಋಣಾತ್ಮಕ ಆಹಾರ ಬಗ್ಗೆ ಮರೆಯಬೇಡಿ"
+    },
+    {
+      "index": 598,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_598.wav",
+      "ground_truth": "ಲೆಂಟ್ನ ಗಂಭೀರವಾದ ನಲವತ್ತು ದಿನಗಳಿಂದ ಚರ್ಚ್ ಮರುಭೂಮಿಯಲ್ಲಿ ಯೇಸುವಿನ ನಿಗೂಢತೆಗೆ ಪ್ರತಿವರ್ಷ ತನ್ನನ್ನು ಒಂದಾಗಿಸುತ್ತದೆ",
+      "prediction_original": " ಲೆಂಟ್ನ ಗಂಭೀರವಾದ ನಲವತ್ತು ದಿನಗಳಿಂದ ಚರ್ಚ್ ಮರುಭೂಮಿಯಲ್ಲಿ ಯೇಸುವಿನ ನಿಗೂ<0xE0><0xB2><0xA2>ತೆಗೆ ಪ್ರತಿ ವರ್ಷ ತನ್ನನ್ನು ಒಂದಾಗಿಸುತ್ತದೆ",
+      "prediction_corrected": " ಲೆಂಟ್ನ ಗಂಭೀರವಾದ ನಲವತ್ತು ದಿನಗಳಿಂದ ಚರ್ಚ್ ಮರುಭೂಮಿಯಲ್ಲಿ ಯೇಸುವಿನ ನಿಗೂಢತೆಗೆ ಪ್ರತಿ ವರ್ಷ ತನ್ನನ್ನು ಒಂದಾಗಿಸುತ್ತದೆ"
+    },
+    {
+      "index": 640,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_640.wav",
+      "ground_truth": "ಮರುಕ್ಷಣದಲ್ಲೇ ವಾರಿಯರ್ಸ್ ಆಲ್ ಔಟ್ ಆಗಿ ಆರು ಪಾಯಿಂಟ್ಗಳ ಹಿನ್ನಡೆ ಅನುಭವಿಸಿತು",
+      "prediction_original": " ಮರು ಕ್ಷಣದಲ್ಲೇ ವಾರಿಯರ್ಸ್ ಆಲ್ <0xE0><0xB2><0x94>ಟ್ ಆಗಿ ಆರು ಪಾಯಿಂಟ್ಗಳ ಹಿನ್ನಡೆ ಅನುಭವಿಸಿತು",
+      "prediction_corrected": " ಮರು ಕ್ಷಣದಲ್ಲೇ ವಾರಿಯರ್ಸ್ ಆಲ್ ಔಟ್ ಆಗಿ ಆರು ಪಾಯಿಂಟ್ಗಳ ಹಿನ್ನಡೆ ಅನುಭವಿಸಿತು"
+    },
+    {
+      "index": 694,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_694.wav",
+      "ground_truth": "ಆದುದರಿಂದ ಅಮೃತದಂತಹ ಹಾಲಿನಿಂದಾಗಿ ಈ ತಳಿಗೆ ಅಮೃತಮಹಲ್ ಎಂಬ ಹೆಸರು ಬಂದಿರಬಹುದೆಂಬ ಊಹೆ ಅವರದು",
+      "prediction_original": " ಆದುದರಿಂದ ಅಮೃತದಂತಹ ಹಾಲಿನಿಂದಾಗಿ ಈ ತಳಿಗೆ ಅಮೃತಮಹಲ್ ಎಂಬ ಹೆಸರು ಬಂದಿರಬಹುದೆಂಬ <0xE0><0xB2><0x8A>ಹೆ ಅವರದು",
+      "prediction_corrected": " ಆದುದರಿಂದ ಅಮೃತದಂತಹ ಹಾಲಿನಿಂದಾಗಿ ಈ ತಳಿಗೆ ಅಮೃತಮಹಲ್ ಎಂಬ ಹೆಸರು ಬಂದಿರಬಹುದೆಂಬ ಊಹೆ ಅವರದು"
+    },
+    {
+      "index": 707,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_707.wav",
+      "ground_truth": "ಓರಿಯಂಟಲ್ ಔಷಧಿ ಇದು ಮಸಾಲೆ ಏಲಕ್ಕಿ ದೇಹದಿಂದ ಲೋಳೆಯ ತೆಗೆದುಹಾಕಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ ನಂಬಲಾಗಿದೆ",
+      "prediction_original": " ಓರಿಯಂಟಲ್ <0xE0><0xB2><0x94>ಷಧಿ ಇದು ಮಸಾಲೆಯ ಏಲಕ್ಕಿ ದೇಹದಿಂದ ಲೋಳೆಯ ತೆಗೆದುಹಾಕಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ ನಂಬಲಾಗಿದೆ",
+      "prediction_corrected": " ಓರಿಯಂಟಲ್ ಔಷಧಿ ಇದು ಮಸಾಲೆಯ ಏಲಕ್ಕಿ ದೇಹದಿಂದ ಲೋಳೆಯ ತೆಗೆದುಹಾಕಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ ನಂಬಲಾಗಿದೆ"
+    },
+    {
+      "index": 760,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_760.wav",
+      "ground_truth": "ಕಣ್ಣುಗಳ ದೈನಂದಿನ ಮೇಕಪ್ ಕಣ್ಣಿನ ರೆಪ್ಪೆಯ ಪರಿಸ್ಥಿತಿಯನ್ನು ಋಣಾತ್ಮಕವಾಗಿ ಪರಿಣಾಮ ಬೀರುತ್ತದೆ ಎಂಬುದು ಯಾವುದೇ ರಹಸ್ಯವಲ್ಲ",
+      "prediction_original": " ಕಣ್ಣುಗಳ ದೈನಂದಿನ ಮೇಕಪ್ ಕಣ್ಣಿನ ರೆಪ್ಪೆಯ ಪರಿಸ್ಥಿತಿ <0xE0><0xB2><0x8B>ಣಾತ್ಮಕವಾಗಿ ಪರಿಣಾಮ ಬೀರುತ್ತದೆ ಎಂಬುದು ಯಾವುದೇ ರಹಸ್ಯವಲ್ಲ",
+      "prediction_corrected": " ಕಣ್ಣುಗಳ ದೈನಂದಿನ ಮೇಕಪ್ ಕಣ್ಣಿನ ರೆಪ್ಪೆಯ ಪರಿಸ್ಥಿತಿ ಋಣಾತ್ಮಕವಾಗಿ ಪರಿಣಾಮ ಬೀರುತ್ತದೆ ಎಂಬುದು ಯಾವುದೇ ರಹಸ್ಯವಲ್ಲ"
+    },
+    {
+      "index": 826,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_826.wav",
+      "ground_truth": "ಇತ್ತೀಚಿಗೆ ಆಡಳಿತರೂಡ ಕಾಂಗ್ರೆಸ್ ಪಕ್ಷದ ಅಧ್ಯಕ್ಷರ ನೇಮಕಾತಿಯ ವೇಳೆ ಅನುಸರಿಸಿದ ಕಾರ್ಯತಂತ್ರ ಬಿಜೆಪಿಯನ್ನು ನಿದ್ದೇಗೆಡೆಸಿದೆ",
+      "prediction_original": " ಇತ್ತೀಚೆಗೆ ಆಡಳಿತಾರೂ<0xE0><0xB2><0xA2> ಕಾಂಗ್ರೆಸ್ ಪಕ್ಷದ ಅಧ್ಯಕ್ಷರ ನೇಮಕಾತಿಯ ವೇಳೆ ಅನುಸರಿಸಿದ ಕಾರ್ಯತಂತ್ರ ಬಿಜೆಪಿಯನ್ನು ನಿದ್ದೆಗೆಡಿಸಿದೆ",
+      "prediction_corrected": " ಇತ್ತೀಚೆಗೆ ಆಡಳಿತಾರೂಢ ಕಾಂಗ್ರೆಸ್ ಪಕ್ಷದ ಅಧ್ಯಕ್ಷರ ನೇಮಕಾತಿಯ ವೇಳೆ ಅನುಸರಿಸಿದ ಕಾರ್ಯತಂತ್ರ ಬಿಜೆಪಿಯನ್ನು ನಿದ್ದೆಗೆಡಿಸಿದೆ"
+    },
+    {
+      "index": 870,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_870.wav",
+      "ground_truth": "ಅನಿಲ ಔಟ್ಲೆಟ್ ಮತ್ತು ಶುಷ್ಕಕಾರಿಯಿಂದ ಸರಬರಾಜು ಮೆದುಗೊಳವೆ ತೆಗೆದುಹಾಕಿ ಮತ್ತು ಶುಷ್ಕಕಾರಿಯ ಡ್ರಮ್ನೊಳಗೆ ಶೇಖರಿಸಿ",
+      "prediction_original": " ಅನಿಲ <0xE0><0xB2><0x94>ಟ್ಲೆಟ್ ಮತ್ತು ಶುಷ್ಕಕಾರಿಯಿಂದ ಸರಬರಾಜು ಮೆದುಗೊಳವೆ ತೆಗೆದುಹಾಕಿ ಮತ್ತು ಶುಷ್ಕಕಾರಿಯ ಡ್ರಮ್ನೊಳಗೆ ಶೇಖರಿಸಿ",
+      "prediction_corrected": " ಅನಿಲ ಔಟ್ಲೆಟ್ ಮತ್ತು ಶುಷ್ಕಕಾರಿಯಿಂದ ಸರಬರಾಜು ಮೆದುಗೊಳವೆ ತೆಗೆದುಹಾಕಿ ಮತ್ತು ಶುಷ್ಕಕಾರಿಯ ಡ್ರಮ್ನೊಳಗೆ ಶೇಖರಿಸಿ"
+    },
+    {
+      "index": 879,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_879.wav",
+      "ground_truth": "ದೀರ್ಘಕಾಲದ ಎದೆಗೆಮ್ಮು ಬೆಳಗ್ಗೆ ಕಫ ವಿಸರ್ಜನೆ ಸುಗಮಗೊಳಿಸಲು ಮಲಗುವ ವೇಳೆ ಔಷಧದ ಎರಡು ಮಾತ್ರೆಗಳು ನೇಮಕ",
+      "prediction_original": " ದೀರ್ಘಕಾಲದ ಎದೆಗೆಮ್ಮು ಬೆಳಿಗ್ಗೆ ಕಫ ವಿಸರ್ಜನೆ ಸುಗಮಗೊಳಿಸಲು ಮಲಗುವ ವೇಳೆ <0xE0><0xB2><0x94>ಷಧದ ಎರಡು ಮಾತ್ರೆಗಳು ನೇಮಕ",
+      "prediction_corrected": " ದೀರ್ಘಕಾಲದ ಎದೆಗೆಮ್ಮು ಬೆಳಿಗ್ಗೆ ಕಫ ವಿಸರ್ಜನೆ ಸುಗಮಗೊಳಿಸಲು ಮಲಗುವ ವೇಳೆ ಔಷಧದ ಎರಡು ಮಾತ್ರೆಗಳು ನೇಮಕ"
+    },
+    {
+      "index": 895,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_895.wav",
+      "ground_truth": "ತಕ್ಷಣ ಕಾರ್ಯಪ್ರೌವೃತ್ತರಾದ ಶಿವಮೊಗ್ಗ ಪೊಲೀಸ್ ಉಡುಪಿ ಜಿಲ್ಲೆಯ ಪೊಲೀಸರ ಸಹಕಾರ ಪಡೆದುಕೊಂಡು ಮಣಿಪಾಲ್ ಆಸ್ಪತ್ರೆವರೆಗೂ ಜೀರೋ ಟ್ರಾಫಿಕ್ ವ್ಯವಸ್ಥೆ ಕಲ್ಪಿಸಿತು",
+      "prediction_original": " ತಕ್ಷಣ ಕಾರ್ಯಪ್ರವೃತ್ತರಾದ ಶಿವಮೊಗ್ಗ ಪೊಲೀಸ್ ಉಡುಪಿ ಜಿಲ್ಲೆಯ ಪೊಲೀಸರ ಸಹಕಾರ ಪಡೆದುಕೊಂಡು ಮಣಿಪಾಲ ಆಸ್ಪತ್ರೆವರೆಗೂ <0xE0><0xB2><0x9D>ೀರೋ ಟ್ರಾಫಿಕ್ ವ್ಯವಸ್ಥೆ ಕಲ್ಪಿಸಿತು",
+      "prediction_corrected": " ತಕ್ಷಣ ಕಾರ್ಯಪ್ರವೃತ್ತರಾದ ಶಿವಮೊಗ್ಗ ಪೊಲೀಸ್ ಉಡುಪಿ ಜಿಲ್ಲೆಯ ಪೊಲೀಸರ ಸಹಕಾರ ಪಡೆದುಕೊಂಡು ಮಣಿಪಾಲ ಆಸ್ಪತ್ರೆವರೆಗೂ ಝೀರೋ ಟ್ರಾಫಿಕ್ ವ್ಯವಸ್ಥೆ ಕಲ್ಪಿಸಿತು"
+    },
+    {
+      "index": 1028,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1028.wav",
+      "ground_truth": "ಶಿವರಾಮ ರೈ ನೇತ್ರತ್ವದಲ್ಲಿ ಮಕ್ಕಳ ಉಚಿತ ವೈದ್ಯಕೀಯ ತಪಾಸಣಾ ಶಿಬಿರದೊಂದಿಗೆ ಉಚಿತ ಔಷಧಿಗಳನ್ನು ವಿತರಿಸಲಾಯಿತು",
+      "prediction_original": " ಶಿವರಾಮ ರೈ ನೇತೃತ್ವದಲ್ಲಿ ಮಕ್ಕಳ ಉಚಿತ ವೈದ್ಯಕೀಯ ತಪಾಸಣಾ ಶಿಬಿರದೊಂದಿಗೆ ಉಚಿತ <0xE0><0xB2><0x94>ಷಧಿಗಳನ್ನು ವಿತರಿಸಲಾಯಿತು",
+      "prediction_corrected": " ಶಿವರಾಮ ರೈ ನೇತೃತ್ವದಲ್ಲಿ ಮಕ್ಕಳ ಉಚಿತ ವೈದ್ಯಕೀಯ ತಪಾಸಣಾ ಶಿಬಿರದೊಂದಿಗೆ ಉಚಿತ ಔಷಧಿಗಳನ್ನು ವಿತರಿಸಲಾಯಿತು"
+    },
+    {
+      "index": 1046,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1046.wav",
+      "ground_truth": "ತಿರುವನಂತಪುರದಲ್ಲಿ ಇಂದು ಬೆಳಿಗ್ಗೆ ಕರೆದ ಪತ್ರಿಕಾಗೋಷ್ಠಿ ಯಲ್ಲಿ ಔಷಧಿ ಅಧ್ಯಕ್ಷ ಸ್ಥಾನಕ್ಕೆ ರಾಜೀನಾಮೆ ನೀಡುವುದಾಗಿ ಬಹಿರಂಗವಾಗಿ ತಿಳಿಸಿದ್ದಾರೆ",
+      "prediction_original": " ತಿರುವನಂತಪುರದಲ್ಲಿ ಇಂದು ಬೆಳಿಗ್ಗೆ ಕರೆದ ಪತ್ರಿಕಾಗೋಷ್ಠಿಯಲ್ಲಿ <0xE0><0xB2><0x94>ಷಧಿ ಅಧ್ಯಕ್ಷ ಸ್ಥಾನಕ್ಕೆ ರಾಜೀನಾಮೆ ನೀಡುವುದಾಗಿ ಬಹಿರಂಗವಾಗಿ ತಿಳಿಸಿದ್ದಾರೆ",
+      "prediction_corrected": " ತಿರುವನಂತಪುರದಲ್ಲಿ ಇಂದು ಬೆಳಿಗ್ಗೆ ಕರೆದ ಪತ್ರಿಕಾಗೋಷ್ಠಿಯಲ್ಲಿ ಔಷಧಿ ಅಧ್ಯಕ್ಷ ಸ್ಥಾನಕ್ಕೆ ರಾಜೀನಾಮೆ ನೀಡುವುದಾಗಿ ಬಹಿರಂಗವಾಗಿ ತಿಳಿಸಿದ್ದಾರೆ"
+    },
+    {
+      "index": 1064,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1064.wav",
+      "ground_truth": "ನೀವು ಆರೈಕೆಯ ಹೊಸ ಎಪಿಸೋಡ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಿದಾಗ ನೀವು ಈ ಹಳೆಯ ಔದ್ಯೋಗಿಕ ಚಿಕಿತ್ಸೆ ಟಿಪ್ಪಣಿಗಳನ್ನು ತರಬಹುದು",
+      "prediction_original": " ನೀವು ಆರೈಕೆಯ ಹೊಸ ಎಪಿಸೋಡನ್ನು ಪ್ರಾರಂಭಿಸಿದಾಗ ನೀವು ಈ ಹಳೆಯ <0xE0><0xB2><0x94>ದ್ಯೋಗಿಕ ಚಿಕಿತ್ಸೆ ಟಿಪ್ಪಣಿಗಳನ್ನು ತರಬಹುದು",
+      "prediction_corrected": " ನೀವು ಆರೈಕೆಯ ಹೊಸ ಎಪಿಸೋಡನ್ನು ಪ್ರಾರಂಭಿಸಿದಾಗ ನೀವು ಈ ಹಳೆಯ ಔದ್ಯೋಗಿಕ ಚಿಕಿತ್ಸೆ ಟಿಪ್ಪಣಿಗಳನ್ನು ತರಬಹುದು"
+    },
+    {
+      "index": 1075,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1075.wav",
+      "ground_truth": "ಅಹಿಂದ ಲೆಕ್ಕಾಚಾರದಲ್ಲೇ ಮುಂದುವರಿದಿರುವ ರಾಜ್ಯ ಸರಕಾರದ ವಿರುದ್ಧ ಆಡಳಿತರೂಢ ಕಾಂಗ್ರೆಸ್ ಪಕ್ಷದೊಳಗೇ ಅಸಮಾಧಾನ ಭುಗಿಲೆದ್ದಿದೆ",
+      "prediction_original": " ಅಹಿಂದ ಲೆಕ್ಕಾಚಾರದಲ್ಲೇ ಮುಂದುವರಿದಿರುವ ರಾಜ್ಯ ಸರಕಾರದ ವಿರುದ್ಧ ಆಡಳಿತಾರೂ<0xE0><0xB2><0xA2> ಕಾಂಗ್ರೆಸ್ ಪಕ್ಷದೊಳಗೇ ಅಸಮಾಧಾನ ಮುಗಿಲೆದ್ದಿದೆ",
+      "prediction_corrected": " ಅಹಿಂದ ಲೆಕ್ಕಾಚಾರದಲ್ಲೇ ಮುಂದುವರಿದಿರುವ ರಾಜ್ಯ ಸರಕಾರದ ವಿರುದ್ಧ ಆಡಳಿತಾರೂಢ ಕಾಂಗ್ರೆಸ್ ಪಕ್ಷದೊಳಗೇ ಅಸಮಾಧಾನ ಮುಗಿಲೆದ್ದಿದೆ"
+    },
+    {
+      "index": 1085,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1085.wav",
+      "ground_truth": "ಆ ಮೂಲಕ ಮುಂದಿನ ದಿನಗಳಲ್ಲಿ ರಮೇಶ್ ಜಾರಕಿಹೊಳಿ ಕಾಂಗ್ರೆಸ್ ಪಕ್ಷ ತೊರೆದು ಬಿಜೆಪಿ ಸೇರುತ್ತಾರೆಂಬ ಊಹಾಪೋಹಗಳು ಮತ್ತಷ್ಟು ದೃಢಪಟ್ಟಿವೆ",
+      "prediction_original": " ಆ ಮೂಲಕ ಮುಂದಿನ ದಿನಗಳಲ್ಲಿ ರಮೇಶ್ ಜಾರಕಿಹೊಳಿ ಕಾಂಗ್ರೆಸ್ ಪಕ್ಷ ತೊರೆದು ಬಿಜೆಪಿ ಸೇರುತ್ತಾರೆಂಬ <0xE0><0xB2><0x8A>ಹಾಪೋಹಗಳು ಮತ್ತಷ್ಟು ದೃ<0xE0><0xB2><0xA2>ಪಟ್ಟಿವೆ",
+      "prediction_corrected": " ಆ ಮೂಲಕ ಮುಂದಿನ ದಿನಗಳಲ್ಲಿ ರಮೇಶ್ ಜಾರಕಿಹೊಳಿ ಕಾಂಗ್ರೆಸ್ ಪಕ್ಷ ತೊರೆದು ಬಿಜೆಪಿ ಸೇರುತ್ತಾರೆಂಬ ಊಹಾಪೋಹಗಳು ಮತ್ತಷ್ಟು ದೃಢಪಟ್ಟಿವೆ"
+    },
+    {
+      "index": 1141,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1141.wav",
+      "ground_truth": "ರೋಗನಿರೋಧತೆಯನ್ನು ಜೀವಿರೋಧಿ ಮತ್ತು ಬೆಳ್ಳಿ ಆಂಟಿವೈರಲ್ ಗುಣಲಕ್ಷಣಗಳು ಔಷಧ ತನ್ನ ವ್ಯಾಪಕ ಬಳಕೆಯ ಕೊಡುಗೆ ನೀಡಿದ್ದಾರೆ",
+      "prediction_original": " ರೋಗನಿರೋಧಕತೆಯನ್ನು ಜೀವಿರೋಧಿ ಮತ್ತು ಬೆಳ್ಳಿ ಆ್ಯಂಟಿವೈರಲ್ ಗುಣಲಕ್ಷಣಗಳು <0xE0><0xB2><0x94>ಷಧ ತನ್ನ ವ್ಯಾಪಕ ಬಳಕೆಯ ಕೊಡುಗೆ ನೀಡಿದ್ದಾರೆ",
+      "prediction_corrected": " ರೋಗನಿರೋಧಕತೆಯನ್ನು ಜೀವಿರೋಧಿ ಮತ್ತು ಬೆಳ್ಳಿ ಆ್ಯಂಟಿವೈರಲ್ ಗುಣಲಕ್ಷಣಗಳು ಔಷಧ ತನ್ನ ವ್ಯಾಪಕ ಬಳಕೆಯ ಕೊಡುಗೆ ನೀಡಿದ್ದಾರೆ"
+    },
+    {
+      "index": 1174,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1174.wav",
+      "ground_truth": "ಮುಂದಿನ ದಿನಗಳಲ್ಲಿ ಪಕ್ಷ ಸಂಘಟನೆ ಜೊತೆಗೆ ಭವಿಷ್ಯದಲ್ಲಿ ಪಕ್ಷವನ್ನು ಜಿಲ್ಲೆಯಲ್ಲಿ ಸದೃಢಗೊಳಿಸುವ ನಿಟ್ಟಿನಲ್ಲಿ ಎಲ್ಲ ರೀತಿ ಪ್ರಯತ್ನ ನಡೆಸಲಾಗುವುದು ಎಂದರು",
+      "prediction_original": " ಮುಂದಿನ ದಿನಗಳಲ್ಲಿ ಪಕ್ಷ ಸಂಘಟನೆಯ ಜೊತೆಗೆ ಭವಿಷ್ಯದಲ್ಲಿ ಪಕ್ಷವನ್ನು ಜಿಲ್ಲೆಯಲ್ಲಿ ಸದೃ<0xE0><0xB2><0xA2>ಗೊಳಿಸುವ ನಿಟ್ಟಿನಲ್ಲಿ ಎಲ್ಲಾ ರೀತಿ ಪ್ರಯತ್ನ ನಡೆಸಲಾಗುವುದು ಎಂದರು",
+      "prediction_corrected": " ಮುಂದಿನ ದಿನಗಳಲ್ಲಿ ಪಕ್ಷ ಸಂಘಟನೆಯ ಜೊತೆಗೆ ಭವಿಷ್ಯದಲ್ಲಿ ಪಕ್ಷವನ್ನು ಜಿಲ್ಲೆಯಲ್ಲಿ ಸದೃಢಗೊಳಿಸುವ ನಿಟ್ಟಿನಲ್ಲಿ ಎಲ್ಲಾ ರೀತಿ ಪ್ರಯತ್ನ ನಡೆಸಲಾಗುವುದು ಎಂದರು"
+    },
+    {
+      "index": 1186,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1186.wav",
+      "ground_truth": "ಎಲ್ಲಾ ವರ್ಷಗಳಲ್ಲಿ ಚಲನಚಿತ್ರಗಳಲ್ಲಿ ನಾನು ಹೊಂದಿದ್ದ ಸಂಪೂರ್ಣ ಅತ್ಯುತ್ತಮ ಸಮಯವೆಂದರೆ ಝೊಂಬಿಯಾಂಡ್ ಅನ್ನು ನೋಡುವುದು",
+      "prediction_original": " ಎಲ್ಲಾ ವರ್ಷಗಳಲ್ಲಿ ಚಲನಚಿತ್ರಗಳಲ್ಲಿ ನಾನು ಹೊಂದಿದ ಸಂಪೂರ್ಣ ಅತ್ಯುತ್ತಮ ಸಮಯವೆಂದರೆ <0xE0><0xB2><0x9D>ೋಂಬಿಯಾಂಡ್ ಅನ್ನು ನೋಡುವುದು",
+      "prediction_corrected": " ಎಲ್ಲಾ ವರ್ಷಗಳಲ್ಲಿ ಚಲನಚಿತ್ರಗಳಲ್ಲಿ ನಾನು ಹೊಂದಿದ ಸಂಪೂರ್ಣ ಅತ್ಯುತ್ತಮ ಸಮಯವೆಂದರೆ ಝೋಂಬಿಯಾಂಡ್ ಅನ್ನು ನೋಡುವುದು"
+    },
+    {
+      "index": 1204,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1204.wav",
+      "ground_truth": "ಅವತ್ತಿನಿಂದ ಆ ಮೂವರಲ್ಲಿ ಯಾರ ಮುಖ ಊರಲ್ಲಿ ಕಂಡರೂ ಪ್ರಿನ್ಸಿಪಾಲರು ತಪ್ಪದೆ ನಮಸ್ಕಾರ ಮಾಡುತ್ತಾರೆ",
+      "prediction_original": " ಅವತ್ತಿನಿಂದ ಆ ಮೂವರಲ್ಲಿ ಯಾರ ಮುಖ <0xE0><0xB2><0x8A>ರಲ್ಲಿ ಕಂಡರೂ ಪ್ರಿನ್ಸಿಪಾಲರು ತಪ್ಪದೇ ನಮಸ್ಕಾರ ಮಾಡುತ್ತಾರೆ",
+      "prediction_corrected": " ಅವತ್ತಿನಿಂದ ಆ ಮೂವರಲ್ಲಿ ಯಾರ ಮುಖ ಊರಲ್ಲಿ ಕಂಡರೂ ಪ್ರಿನ್ಸಿಪಾಲರು ತಪ್ಪದೇ ನಮಸ್ಕಾರ ಮಾಡುತ್ತಾರೆ"
+    },
+    {
+      "index": 1249,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1249.wav",
+      "ground_truth": "ಬಣ್ಣ ಬಣ್ಣದ ಬಟ್ಟೆ ಹಾಕಿಕೊಂಡು ಹಗಲೆಲ್ಲಾ ಊರೂರು ಸುತ್ತಿ ಬರುವ ಮೂರನೇ",
+      "prediction_original": " ಬಣ್ಣ ಬಣ್ಣದ ಬಟ್ಟೆ ಹಾಕಿಕೊಂಡು ಹಗಲೆಲ್ಲ <0xE0><0xB2><0x8A>ರೂರು ಸುತ್ತಿ ಬರುವ ಮೂರನೇ",
+      "prediction_corrected": " ಬಣ್ಣ ಬಣ್ಣದ ಬಟ್ಟೆ ಹಾಕಿಕೊಂಡು ಹಗಲೆಲ್ಲ ಊರೂರು ಸುತ್ತಿ ಬರುವ ಮೂರನೇ"
+    },
+    {
+      "index": 1280,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1280.wav",
+      "ground_truth": "ಪೂರ್ವ ಉತ್ತರ ಅಮೆರಿಕಾದಲ್ಲಿ ವೈಟ್ ಪೈನ್ ಅತಿ ಎತ್ತರದ ಸ್ಥಳೀಯ ಕೋನಿಫರ್ ಆಗಿದೆ",
+      "prediction_original": " <0xE0><0xB2><0x8A>ರು ಉತ್ತರ ಅಮೆರಿಕದಲ್ಲಿ ವೈಟ್ ಪೈನ್ ಅತಿ ಎತ್ತರದ ಸ್ಥಳೀಯ ಕೋನಿಫರ್ ಆಗಿದೆ",
+      "prediction_corrected": " ಊರು ಉತ್ತರ ಅಮೆರಿಕದಲ್ಲಿ ವೈಟ್ ಪೈನ್ ಅತಿ ಎತ್ತರದ ಸ್ಥಳೀಯ ಕೋನಿಫರ್ ಆಗಿದೆ"
+    },
+    {
+      "index": 1450,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1450.wav",
+      "ground_truth": "ಪಾಲಿಜ್ಯೂಸ್ ಔಷಧ ವು ಇದನ್ನು ಕುಡಿದವರಿಗೆ ಸುಮಾರು ಒಂದು ಗಂಟೆಗಳ ಕಾಲ ತನ್ನ ಬಳಿ ಯಾರೋ ಇರುವಂತಹ ಭಾವನೆಯನ್ನು ಉಂಟುಮಾಡುತ್ತದೆ",
+      "prediction_original": " ಪಾಲಿಜಿಯಸ್ <0xE0><0xB2><0x94>ಷಧವು ಇದನ್ನು ಕುಡಿದವರಿಗೆ ಸುಮಾರು ಒಂದು ಗಂಟೆಗಳ ಕಾಲ ತನ್ನ ಬಳಿ ಯಾರೋ ಇರುವಂತಹ ಭಾವನೆಯನ್ನು ಉಂಟುಮಾಡುತ್ತದೆ",
+      "prediction_corrected": " ಪಾಲಿಜಿಯಸ್ ಔಷಧವು ಇದನ್ನು ಕುಡಿದವರಿಗೆ ಸುಮಾರು ಒಂದು ಗಂಟೆಗಳ ಕಾಲ ತನ್ನ ಬಳಿ ಯಾರೋ ಇರುವಂತಹ ಭಾವನೆಯನ್ನು ಉಂಟುಮಾಡುತ್ತದೆ"
+    },
+    {
+      "index": 1460,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1460.wav",
+      "ground_truth": "ಮೆಟ್ಟುಪಾಳಯಂನಿಂದ ಊಟಿಗೆ ಬೆಟ್ಟಪ್ರದೇಶದ ರೈಲು ವ್ಯವಸ್ಥೆಯನ್ನು ಒದಗಿಸುವ ಪ್ರಯಾಸದಾಯಕ ಕಾರ್ಯವನ್ನು ರಾವ್ ಬಹಾದುರ್ ಬೆಲ್ಲೀ ಗೌಡರ್ ನಿರ್ವಹಿಸಿದನು",
+      "prediction_original": " ಮೆಟ್ಟುಪಾಳ್ಯಂನಿಂದ <0xE0><0xB2><0x8A>ಟಿಗೆ ಬೆಟ್ಟ ಪ್ರದೇಶದ ರೈಲು ವ್ಯವಸ್ಥೆಯನ್ನು ಒದಗಿಸುವ ಪ್ರಾಯಸದಾಯಕ ಕಾರ್ಯವನ್ನು ರಾವುದರ್ ಬೆಳ್ಳಿ ಗೌಡರ್ ನಿರ್ವಹಿಸಿದನು",
+      "prediction_corrected": " ಮೆಟ್ಟುಪಾಳ್ಯಂನಿಂದ ಊಟಿಗೆ ಬೆಟ್ಟ ಪ್ರದೇಶದ ರೈಲು ವ್ಯವಸ್ಥೆಯನ್ನು ಒದಗಿಸುವ ಪ್ರಾಯಸದಾಯಕ ಕಾರ್ಯವನ್ನು ರಾವುದರ್ ಬೆಳ್ಳಿ ಗೌಡರ್ ನಿರ್ವಹಿಸಿದನು"
+    },
+    {
+      "index": 1467,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1467.wav",
+      "ground_truth": "ಅಥವಾ ಹಣಕಾಸು ವರದಿಗಳನ್ನು ದೃಢೀಕರಿಸುತ್ತವೆ ಆದರೆ ಸಂಸ್ಥೆಯ ಆಂತರಿಕ ನಿಯಂತ್ರಣಗಳು ಮುಖ್ಯವಾಗಿ ಗಮನ ಇಲ್ಲ ಆಂತರಿಕ ಲೆಕ್ಕ ಪರಿಶೋಧಕರು ನೇಮಿಸಿಕೊಳ್ಳುತ್ತಾರೆ",
+      "prediction_original": " ಅಥವಾ ಹಣಕಾಸು ವರದಿಗಳನ್ನು ದೃ<0xE0><0xB2><0xA2>ೀಕರಿಸುತ್ತವೆ ಆದರೆ ಸಂಸ್ಥೆಯ ಆಂತರಿಕ ನಿಯಂತ್ರಣಗಳು ಮುಖ್ಯವಾಗಿ ಗಮನ ಇಲ್ಲ ಆಂತರಿಕ ಲೆಕ್ಕಪರಿಶೋಧಕರು ನೇಮಿಸಿಕೊಳ್ಳುತ್ತಾರೆ",
+      "prediction_corrected": " ಅಥವಾ ಹಣಕಾಸು ವರದಿಗಳನ್ನು ದೃಢೀಕರಿಸುತ್ತವೆ ಆದರೆ ಸಂಸ್ಥೆಯ ಆಂತರಿಕ ನಿಯಂತ್ರಣಗಳು ಮುಖ್ಯವಾಗಿ ಗಮನ ಇಲ್ಲ ಆಂತರಿಕ ಲೆಕ್ಕಪರಿಶೋಧಕರು ನೇಮಿಸಿಕೊಳ್ಳುತ್ತಾರೆ"
+    },
+    {
+      "index": 1512,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1512.wav",
+      "ground_truth": "ಈ ಚಿತ್ರದಲ್ಲಿ ರಮೇಶ್ ಅರವಿಂದ್ ಎಸ್ ನಾರಾಯಣ್ ಮೋಹನ್ ಪ್ರೇಮಾ ತಾರಾ ಮತ್ತು ಊರ್ವಶಿ ಪ್ರಮುಖ ಪಾತ್ರಗಳಲ್ಲಿ ನಟಿಸಿದ್ದಾರೆ",
+      "prediction_original": " ಈ ಚಿತ್ರದಲ್ಲಿ ರಮೇಶ್ ಅರವಿಂದ್ ಎಸ್ ನಾರಾಯಣ್ ಮೋಹನ್ ಪ್ರೇಮಾ ತಾರಾ ಮತ್ತು <0xE0><0xB2><0x8A>ರ್ವಶಿ ಪ್ರಮುಖ ಪಾತ್ರಗಳಲ್ಲಿ ನಟಿಸಿದ್ದಾರೆ",
+      "prediction_corrected": " ಈ ಚಿತ್ರದಲ್ಲಿ ರಮೇಶ್ ಅರವಿಂದ್ ಎಸ್ ನಾರಾಯಣ್ ಮೋಹನ್ ಪ್ರೇಮಾ ತಾರಾ ಮತ್ತು ಊರ್ವಶಿ ಪ್ರಮುಖ ಪಾತ್ರಗಳಲ್ಲಿ ನಟಿಸಿದ್ದಾರೆ"
+    },
+    {
+      "index": 1523,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1523.wav",
+      "ground_truth": "ಈ ಊರಿನ ಖಾಜಿ ಮುಂಬಯಿಗೆ ಮುಂಬಯಿ ಫ್ಯಾಶನ್ ಈ ಊರಿಗೆ ಈ ಸಂದರ್ಭದಲ್ಲಿ ವಿನಿಮಯವಾಗುವುದುಂಟು",
+      "prediction_original": " ಈ <0xE0><0xB2><0x8A>ರಿನ ಖಾಜಿ ಮುಂಬಯಿಗೆ ಮುಂಬೈ ಫ್ಯಾಷನ್ ಈ <0xE0><0xB2><0x8A>ರಿಗೆ ಈ ಸಂದರ್ಭದಲ್ಲಿ ವಿನಿಮಯವಾಗುವುದುಂಟು",
+      "prediction_corrected": " ಈ ಊರಿನ ಖಾಜಿ ಮುಂಬಯಿಗೆ ಮುಂಬೈ ಫ್ಯಾಷನ್ ಈ ಊರಿಗೆ ಈ ಸಂದರ್ಭದಲ್ಲಿ ವಿನಿಮಯವಾಗುವುದುಂಟು"
+    },
+    {
+      "index": 1524,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1524.wav",
+      "ground_truth": "ಫರ್ಡಿನ್ಯಾಂಡ್ ತನ್ನ ಪ್ರಥಮ ಕ್ರೀಡಾಋತುವಿನಲ್ಲೇ ಮ್ಯಾಂಚೆಸ್ಟರ್ ಯುನೈಟೆಡ್ ಪರ ಪ್ರೀಮಿಯರ್ ಲೀಗ್ ಪ್ರಶಸ್ತಿಯಲ್ಲಿ ಜಯಗಳಿಸಿದ",
+      "prediction_original": " ಫರ್ಡಿನ್ಯಾಂಡ್ ತನ್ನ ಪ್ರಥಮ ಕ್ರೀಡಾ <0xE0><0xB2><0x8B>ತುವಿನಲ್ಲೇ ಮ್ಯಾಂಚೆಸ್ಟರ್ ಯುನೈಟೆಡ್ ಪರ ಪ್ರೀಮಿಯರ್ ಲೀಗ್ ಪ್ರಶಸ್ತಿಯಲ್ಲಿ ಜಯಗಳಿಸಿದ",
+      "prediction_corrected": " ಫರ್ಡಿನ್ಯಾಂಡ್ ತನ್ನ ಪ್ರಥಮ ಕ್ರೀಡಾ ಋತುವಿನಲ್ಲೇ ಮ್ಯಾಂಚೆಸ್ಟರ್ ಯುನೈಟೆಡ್ ಪರ ಪ್ರೀಮಿಯರ್ ಲೀಗ್ ಪ್ರಶಸ್ತಿಯಲ್ಲಿ ಜಯಗಳಿಸಿದ"
+    },
+    {
+      "index": 1549,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1549.wav",
+      "ground_truth": "ನಿಧಾನದಿಂದ ಮಧ್ಯಮ ಮಟ್ಟದ ವ್ಯಾಕುಲತೆಗೆ ಪ್ರಾಥಮಿಕ ಔಷಧಿಯಾಗಿ ಬಸ್ಪಿರಾನ್ ಬಸ್ಪಾರ್ ನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ಬಳಸಲಾಗುತ್ತದೆ",
+      "prediction_original": " ನಿಧಾನದಿಂದ ಮಧ್ಯಮ ಮಟ್ಟದ ವ್ಯಾಕುಲತೆಗೆ ಪ್ರಾಥಮಿಕ <0xE0><0xB2><0x94>ಷಧಿಯಾಗಿ ಬಾಸ್ಪಿರಾನ್ ಬಾಲ್ ನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ಬಳಸಲಾಗುತ್ತದೆ",
+      "prediction_corrected": " ನಿಧಾನದಿಂದ ಮಧ್ಯಮ ಮಟ್ಟದ ವ್ಯಾಕುಲತೆಗೆ ಪ್ರಾಥಮಿಕ ಔಷಧಿಯಾಗಿ ಬಾಸ್ಪಿರಾನ್ ಬಾಲ್ ನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ಬಳಸಲಾಗುತ್ತದೆ"
+    },
+    {
+      "index": 1553,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1553.wav",
+      "ground_truth": "ಇತ್ತೀಚಿನ ವರ್ಷಗಳಲ್ಲಿ ಇದು ಒಂದು ವಾರ ಕಾಲ ಗ್ರೂಪ್ಗುಂಪುಹಂತವಾಗಿ ನಡೆಯಿತು ಮತ್ತು ಅದರ ಹಿಂದೆಯೇ ನಾಕ್ ಔಟ್ ಹಂತಗಳು ನಡೆದವು",
+      "prediction_original": " ಇತ್ತೀಚಿನ ವರ್ಷಗಳಲ್ಲಿ ಐದು ಒಂದು ವಾರ ಕಾಲ ಗ್ರೂಪ್ ಗುಂಪು ಹಂತವಾಗಿ ನಡೆಯಿತು ಮತ್ತು ಅದರ ಹಿಂದೆಯೇ ನಾಕ್<0xE0><0xB2><0x94>ಟ್ ಹಂತಗಳು ನಡೆದವು",
+      "prediction_corrected": " ಇತ್ತೀಚಿನ ವರ್ಷಗಳಲ್ಲಿ ಐದು ಒಂದು ವಾರ ಕಾಲ ಗ್ರೂಪ್ ಗುಂಪು ಹಂತವಾಗಿ ನಡೆಯಿತು ಮತ್ತು ಅದರ ಹಿಂದೆಯೇ ನಾಕ್ಔಟ್ ಹಂತಗಳು ನಡೆದವು"
+    },
+    {
+      "index": 1569,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1569.wav",
+      "ground_truth": "ಪ್ರೌಢ ತರಗತಿಯ ಪರೀಕ್ಷೆಗೆ ಹೋಗುವ ಬದಲು ಮೆಚ್ಚಿನ ಸಿನಿಮಾ ನೋಡಲು ಹೋಗಿದ್ದ",
+      "prediction_original": " ಪ್ರೌ<0xE0><0xB2><0xA2> ತರಗತಿಯ ಪರೀಕ್ಷೆಗೆ ಹೋಗುವ ಬದಲು ಮೆಚ್ಚಿನ ಸಿನಿಮಾ ನೋಡಲು ಹೋಗಿದ್ದ",
+      "prediction_corrected": " ಪ್ರೌಢ ತರಗತಿಯ ಪರೀಕ್ಷೆಗೆ ಹೋಗುವ ಬದಲು ಮೆಚ್ಚಿನ ಸಿನಿಮಾ ನೋಡಲು ಹೋಗಿದ್ದ"
+    },
+    {
+      "index": 1609,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1609.wav",
+      "ground_truth": "ಒಮ್ಮೆ ತನ್ನ ಕೈಯಿಂದ ಕೊಲೆಯಾದವನ ಪ್ರತಿಮೆಯ ಬಳಿ ಬಂದಾಗ ಆ ಪ್ರತಿಮೆಯ ಶಿರಸ್ಸು ಚಲಿಸುವುದನ್ನು ಕಂಡು ಅದನ್ನು ಊಟಕ್ಕೆ ಕರೆಯುತ್ತಾನೆ",
+      "prediction_original": " ಒಮ್ಮೆ ತನ್ನ ಕೈಯಿಂದ ಕೊಲೆಯಾದವನ ಪ್ರತಿಮೆಯ ಬಳಿ ಬಂದಾಗ ಆ ಪ್ರತಿಮೆಯ ಶಿರಸು ಚಲಿಸುವುದನ್ನು ಕಂಡು ಅದನ್ನು <0xE0><0xB2><0x8A>ಟಕ್ಕೆ ಕರೆಯುತ್ತಾನೆ",
+      "prediction_corrected": " ಒಮ್ಮೆ ತನ್ನ ಕೈಯಿಂದ ಕೊಲೆಯಾದವನ ಪ್ರತಿಮೆಯ ಬಳಿ ಬಂದಾಗ ಆ ಪ್ರತಿಮೆಯ ಶಿರಸು ಚಲಿಸುವುದನ್ನು ಕಂಡು ಅದನ್ನು ಊಟಕ್ಕೆ ಕರೆಯುತ್ತಾನೆ"
+    },
+    {
+      "index": 1650,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1650.wav",
+      "ground_truth": "ಅದರ ನಂತರ ಔಷಧೀಯ ಕ್ರಮಗಳಿಗೆ ನೀವು ಅದರ ಮುಂದಿನ ಫಲಿತಾಂಶದ ಆಧಾರದ ಮೇಲೆ ಕ್ರಮ ಕೈಗೊಳ್ಳಬೇಕು",
+      "prediction_original": " ಅದರ ನಂತರ <0xE0><0xB2><0x94>ಷಧಿಯ ಕ್ರಮಗಳಿಗೆ ನೀವು ಅದರ ಮುಂದಿನ ಫಲಿತಾಂಶದ ಆಧಾರದ ಮೇಲೆ ಕ್ರಮ ಕೈಗೊಳ್ಳಬೇಕು",
+      "prediction_corrected": " ಅದರ ನಂತರ ಔಷಧಿಯ ಕ್ರಮಗಳಿಗೆ ನೀವು ಅದರ ಮುಂದಿನ ಫಲಿತಾಂಶದ ಆಧಾರದ ಮೇಲೆ ಕ್ರಮ ಕೈಗೊಳ್ಳಬೇಕು"
+    },
+    {
+      "index": 1687,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1687.wav",
+      "ground_truth": "ಈ ಕಾರುಗಳು ದೃಢ ವಿಶ್ವಾಸಾರ್ಹ ಮತ್ತು ಒಳ್ಳೆಯ ಮೌಲ್ಯದ್ದು ಎಂದು ಪರಿಗಣಿಸಲಾಯಿತು",
+      "prediction_original": " ಈ ಕಾರುಗಳು ದೃ<0xE0><0xB2><0xA2> ವಿಶ್ವಾಸಾರ್ಹ ಮತ್ತು ಒಳ್ಳೆಯ ಮೌಲ್ಯದ್ದು ಎಂದು ಪರಿಗಣಿಸಲಾಯಿತು",
+      "prediction_corrected": " ಈ ಕಾರುಗಳು ದೃಢ ವಿಶ್ವಾಸಾರ್ಹ ಮತ್ತು ಒಳ್ಳೆಯ ಮೌಲ್ಯದ್ದು ಎಂದು ಪರಿಗಣಿಸಲಾಯಿತು"
+    },
+    {
+      "index": 1715,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1715.wav",
+      "ground_truth": "ಎರಿಕ್ ವರ್ಕರ್ ಮತ್ತು ಫೈಸಲ್ ಅಹ್ಮದ್ ಅಭಿವೃದ್ಧಿಶೀಲ ರಾಷ್ಟ್ರಗಳಲ್ಲಿ ಎನ್ಜಿಒಗಳ ಬಗ್ಗೆ ಮೂರು ಟೀಕೆಗಳನ್ನು ಮಾಡಿದರು",
+      "prediction_original": " ಹೆರಿಕ್ ವರ್ಕರ್ ಮತ್ತು ಫೈ<0xE0><0xB2><0x9D>ಲ್ ಅಹಮ್ಮದ್ ಅಭಿವೃದ್ಧಿಶೀಲ ರಾಷ್ಟ್ರಗಳಲ್ಲಿ ಎನ್ಜಿಒಗಳ ಬಗ್ಗೆ ಮೂರು ಟೀಕೆಗಳನ್ನು ಮಾಡಿದರು",
+      "prediction_corrected": " ಹೆರಿಕ್ ವರ್ಕರ್ ಮತ್ತು ಫೈಝಲ್ ಅಹಮ್ಮದ್ ಅಭಿವೃದ್ಧಿಶೀಲ ರಾಷ್ಟ್ರಗಳಲ್ಲಿ ಎನ್ಜಿಒಗಳ ಬಗ್ಗೆ ಮೂರು ಟೀಕೆಗಳನ್ನು ಮಾಡಿದರು"
+    },
+    {
+      "index": 1732,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1732.wav",
+      "ground_truth": "ಭೀಮನು ಯೋಚಿಸಿ ಹೇಳುತ್ತಾನೆ ಊಟಕ್ಕೆ ಮತ್ತು ಬಾಯಾರಿಕೆಗೆ ಏನೂ ಅಗತ್ಯವಿಲ್ಲ",
+      "prediction_original": " ಭೀಮನು ಯೋಚಿಸಿ ಹೇಳುತ್ತಾನೆ <0xE0><0xB2><0x8A>ಟಕ್ಕೆ ಮತ್ತು ಬಾಯಾರಿಕೆಗೆ ಏನೂ ಅಗತ್ಯವಿಲ್ಲ",
+      "prediction_corrected": " ಭೀಮನು ಯೋಚಿಸಿ ಹೇಳುತ್ತಾನೆ ಊಟಕ್ಕೆ ಮತ್ತು ಬಾಯಾರಿಕೆಗೆ ಏನೂ ಅಗತ್ಯವಿಲ್ಲ"
+    },
+    {
+      "index": 1741,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1741.wav",
+      "ground_truth": "ಉದಾಹರಣೆಗಳು ಬ್ಲೇಝ್ ಮತ್ತೆ ಮತ್ತೆ ಹೂಬಿಡುವ ಏರುವ ಪ್ರಭೇದ ಅಮೆರಿಕನ್ ಪಿಲ್ಲರ್ ಒಮ್ಮೆ ಮಾತ್ರ ಹೂಬಿಡುವ ಹಬ್ಬುವ ಪ್ರಭೇದ",
+      "prediction_original": " ಉದಾಹರಣೆಗಳು ಬ್ಲೇ<0xE0><0xB2><0x9D>್ ಮತ್ತೆ ಮತ್ತೆ ಹೂಬಿಡುವ ಏರುವ ಪ್ರಭೇದ ಅಮೆರಿಕನ್ ಪಿಲ್ಲರ್ ಒಮ್ಮೆ ಮಾತ್ರ ಹೂಬಿಡುವ ಹಬ್ಬುವ ಪ್ರಭೇದ",
+      "prediction_corrected": " ಉದಾಹರಣೆಗಳು ಬ್ಲೇಝ್ ಮತ್ತೆ ಮತ್ತೆ ಹೂಬಿಡುವ ಏರುವ ಪ್ರಭೇದ ಅಮೆರಿಕನ್ ಪಿಲ್ಲರ್ ಒಮ್ಮೆ ಮಾತ್ರ ಹೂಬಿಡುವ ಹಬ್ಬುವ ಪ್ರಭೇದ"
+    },
+    {
+      "index": 1790,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1790.wav",
+      "ground_truth": "ಇಲ್ಲಿನ ಮೀನು ಊಟ ಮತ್ತು ತೈಲ ಸಸ್ಯ ತುಂಬಾ ಪ್ರಸಿದ್ಧ",
+      "prediction_original": " ಇಲ್ಲಿನ ಮೀನು <0xE0><0xB2><0x8A>ಟ ಮತ್ತು ತೈಲ ಸಸ್ಯ ತುಂಬಾ ಪ್ರಸಿದ್ಧ",
+      "prediction_corrected": " ಇಲ್ಲಿನ ಮೀನು ಊಟ ಮತ್ತು ತೈಲ ಸಸ್ಯ ತುಂಬಾ ಪ್ರಸಿದ್ಧ"
+    },
+    {
+      "index": 1918,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1918.wav",
+      "ground_truth": "ದೃಢತೆಯನ್ನು ಒದಗಿಸುವ ಮೂಲಕಾಂಡವೊಂದರ ಮೇಲೆ ಅವುಗಳನ್ನು ಕಸಿಮಾಡಬಹುದು ಅಥವಾ ಹಳೆಯ ಉದ್ಯಾನ ಗುಲಾಬಿಗಳಂತೆ ತಮ್ಮದೇ ಬೇರುಗಳನ್ನು ಬೆಳೆಸಿಕೊಳ್ಳಲೂ ಬಿಡಬಹುದು",
+      "prediction_original": " ದೃ<0xE0><0xB2><0xA2>ತೆಯನ್ನು ಒದಗಿಸುವ ಮೂಲಕಾಂಡವೊಂದರ ಮೇಲೆ ಅವುಗಳನ್ನು ಕಸಿಮಾಡಬಹುದು ಅಥವಾ ಹಳೆಯ ಉದ್ಯಾನ ಗುಲಾಬಿಗಳಂತೆ ತಮ್ಮದೇ ಬೇರುಗಳನ್ನು ಬೆಳೆಸಿಕೊಳ್ಳಲೂ ಬಿಡಬಹುದು",
+      "prediction_corrected": " ದೃಢತೆಯನ್ನು ಒದಗಿಸುವ ಮೂಲಕಾಂಡವೊಂದರ ಮೇಲೆ ಅವುಗಳನ್ನು ಕಸಿಮಾಡಬಹುದು ಅಥವಾ ಹಳೆಯ ಉದ್ಯಾನ ಗುಲಾಬಿಗಳಂತೆ ತಮ್ಮದೇ ಬೇರುಗಳನ್ನು ಬೆಳೆಸಿಕೊಳ್ಳಲೂ ಬಿಡಬಹುದು"
+    },
+    {
+      "index": 1972,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1972.wav",
+      "ground_truth": "ಯುರೋಪಿನಲ್ಲಿ ಸಕ್ಕರೆ ಬಳಕೆಯ ಆರಂಭಿಕ ಇತಿಹಾಸದಲ್ಲಿ ಸಕ್ಕರೆಯನ್ನು ಮನೆ ಔಷಧಿ ಉತ್ಪನ್ನವಾಗಿ ಬಳಸಲಾಗುತ್ತಿತ್ತು",
+      "prediction_original": " ಯುರೋಪಿನಲ್ಲಿ ಸಕ್ಕರೆ ಬಳಕೆಯ ಆರಂಭಿಕ ಇತಿಹಾಸದಲ್ಲಿ ಸಕ್ಕರೆಯನ್ನು ಮನೆ <0xE0><0xB2><0x94>ಷಧಿ ಉತ್ಪನ್ನವಾಗಿ ಬಳಸಲಾಗುತ್ತಿತ್ತು",
+      "prediction_corrected": " ಯುರೋಪಿನಲ್ಲಿ ಸಕ್ಕರೆ ಬಳಕೆಯ ಆರಂಭಿಕ ಇತಿಹಾಸದಲ್ಲಿ ಸಕ್ಕರೆಯನ್ನು ಮನೆ ಔಷಧಿ ಉತ್ಪನ್ನವಾಗಿ ಬಳಸಲಾಗುತ್ತಿತ್ತು"
+    },
+    {
+      "index": 1992,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_1992.wav",
+      "ground_truth": "ರೋಸ್ ಕುಕಿ ಒಂದು ಪ್ರಾತಿನಿಧಿಕ ಆಂಗ್ಲೊ ಇಂಡಿಯನ್ ಕುಕಿ ಮತ್ತು ಭಾರತೀಯ ಕ್ರೈಸ್ತಧರ್ಮೀಯರಲ್ಲಿ ಕ್ರಿಸ್ಮಸ್ ಋತುವಿನಲ್ಲಿ ಅಚ್ಚುಮೆಚ್ಚಿನ ಖಾದ್ಯವಾಗಿದೆ",
+      "prediction_original": " ರೋಸ್ ಕುಕಿ ಒಂದು ಪ್ರಾತಿನಿಧಿಕ ಆಂಗ್ಲೊಇಂಡಿಯನ್ ಕುಕಿ ಮತ್ತು ಭಾರತೀಯ ಕ್ರೈಸ್ತಧರ್ಮೀಯರಲ್ಲಿ ಕ್ರಿಸ್ಮಸ್ <0xE0><0xB2><0x8B>ತುವಿನಲ್ಲಿ ಅಚ್ಚುಮೆಚ್ಚಿನ ಖಾದ್ಯವಾಗಿದೆ",
+      "prediction_corrected": " ರೋಸ್ ಕುಕಿ ಒಂದು ಪ್ರಾತಿನಿಧಿಕ ಆಂಗ್ಲೊಇಂಡಿಯನ್ ಕುಕಿ ಮತ್ತು ಭಾರತೀಯ ಕ್ರೈಸ್ತಧರ್ಮೀಯರಲ್ಲಿ ಕ್ರಿಸ್ಮಸ್ ಋತುವಿನಲ್ಲಿ ಅಚ್ಚುಮೆಚ್ಚಿನ ಖಾದ್ಯವಾಗಿದೆ"
+    },
+    {
+      "index": 2048,
+      "audio_filepath": "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/wavs/Kathbath_2048.wav",
+      "ground_truth": "ಮಗು ಹುಟ್ಟಿದ ಹನ್ನೆರಡನೆಯ ದಿನ ತೊಟ್ಟಿಲಿಗೆ ಹಾಕುವುದು ಹೆಸರಿಡುವುದು ಜೋಗುಳ ಹಾಡುವುದು ರೂಢಿಯಲ್ಲಿದೆ",
+      "prediction_original": " ಮಗು ಹುಟ್ಟಿದ ಹನ್ನೆರಡನೆಯ ದಿನ ತೊಟ್ಟಿಲಿಗೆ ಹಾಕುವುದು ಹೆಸರಿಡುವುದು ಜೋಗುಳ ಹಾಡುವುದು ರೂ<0xE0><0xB2><0xA2>ಿಯಲ್ಲಿದೆ",
+      "prediction_corrected": " ಮಗು ಹುಟ್ಟಿದ ಹನ್ನೆರಡನೆಯ ದಿನ ತೊಟ್ಟಿಲಿಗೆ ಹಾಕುವುದು ಹೆಸರಿಡುವುದು ಜೋಗುಳ ಹಾಡುವುದು ರೂಢಿಯಲ್ಲಿದೆ"
+    }
+  ]
+}

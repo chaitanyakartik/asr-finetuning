@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-01-21T15:22:05.452824",
+  "metrics": {
+    "wer": 15.93,
+    "cer": 2.12,
+    "num_samples": 10
+  },
+  "model": "sarvam-api"
+}
