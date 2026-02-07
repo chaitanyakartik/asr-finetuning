@@ -1,1 +1,1 @@
-WER: 14.59% | CER: 2.86% | Samples: 2062
+WER: 92.12% | CER: 79.91% | Samples: 115

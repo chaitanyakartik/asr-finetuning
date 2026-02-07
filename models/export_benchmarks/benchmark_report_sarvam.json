@@ -1,9 +1,3 @@
-{
-  "timestamp": "2026-01-21T15:22:05.452824",
-  "metrics": {
-    "wer": 15.93,
-    "cer": 2.12,
-    "num_samples": 2062
-  },
-  "model": "sarvam-api"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7873c6454d882d83d041083f5d87cdefd3d50c093de135b23b3f519f706d809c
+size 151

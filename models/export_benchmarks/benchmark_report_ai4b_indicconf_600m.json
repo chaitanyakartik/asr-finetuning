@@ -1,9 +1,3 @@
-{
-  "timestamp": "2026-01-20T11:22:11.614909",
-  "metrics": {
-    "wer": 14.89,
-    "cer": 2.31,
-    "status": "completed"
-  },
-  "status": "completed"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:09a276e42d73dc0b698dda0f023e4829b67c578d3902d93e63afbb582eebe5a4
+size 153
