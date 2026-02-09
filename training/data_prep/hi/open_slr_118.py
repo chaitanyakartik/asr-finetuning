@@ -9,7 +9,7 @@ from tqdm import tqdm
 DATASET_NAME = "Gramvaani"
 DATASET_URL = "https://asr.iitm.ac.in/Gramvaani/NEW/GV_Train_100h.tar.gz"
 FILENAME = "GV_Train_100h.tar.gz"
-OUTPUT_DIR = "/Users/chaitanyakartik/Projects/asr-finetuning/evaluation/benchmarking/data/v2/Gramvaani"
+OUTPUT_DIR = "data/training/v3/hi/gramvaani"
 
 def run_gramvaani_pipeline():
     print(f"--- 🚀 Starting Pipeline: {DATASET_NAME} ---")

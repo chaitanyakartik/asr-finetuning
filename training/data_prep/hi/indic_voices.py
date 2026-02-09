@@ -40,7 +40,7 @@ def run_indicvoices_pipeline():
         ds = load_dataset(
             HF_DATASET_ID, 
             HF_CONFIG, 
-            split="valid", 
+            split="train", 
             token=hf_token,
             cache_dir=os.path.join(CACHE_DIR, 'datasets')
             # Note: Removed 'trust_remote_code' based on your previous logs
@@ -52,63 +52,89 @@ def run_indicvoices_pipeline():
         
         manifest_entries = []
         raw_metadata = []
+        
+        # Progress tracking
+        PROGRESS_INTERVAL = 100
+        SAVE_INTERVAL = 1000  # Save every 1000 samples
 
-        print(f"   ⬇️  Streaming & Processing first {N_SAMPLES} samples...")
+        print(f"   ⬇️  Streaming & Processing samples...")
+        print(f"   📊 Progress will be logged every {PROGRESS_INTERVAL} samples\n")
 
         for i, item in enumerate(ds):
             # Stop condition
             if N_SAMPLES != -1 and i >= N_SAMPLES:
                 break
 
-            # --- A. INSPECTION (First Item Only) ---
-            if i == 0:
-                print(f"\n   👀 [INSPECTION] Keys: {list(item.keys())}")
-                print(f"   👀 [INSPECTION] Audio Data: {type(item['audio_filepath'])}")
-                print(f"   👀 [INSPECTION] Text: {item.get('text', 'No Text')[:50]}...\n")
+            try:
+                # --- A. INSPECTION (First Item Only) ---
+                if i == 0:
+                    print(f"   👀 [INSPECTION] Keys: {list(item.keys())}")
+                    print(f"   👀 [INSPECTION] Audio Data: {type(item['audio_filepath'])}")
+                    print(f"   👀 [INSPECTION] Text: {item.get('text', 'No Text')[:50]}...\n")
 
-            # --- B. EXTRACT DATA ---
-            # Access 'audio_filepath' (converted to dict by cast_column)
-            audio_data_dict = item['audio_filepath']
-            
-            audio_array = audio_data_dict['array']
-            sr = audio_data_dict['sampling_rate']
-            
-            # IndicVoices often has 'normalized' text too, but 'text' is usually the standard key
-            text = item.get('text', "")
-            
-            # --- C. SAVE AUDIO ---
-            filename = f"{DATASET_NAME}_{i}.wav"
-            file_path = os.path.join(WAV_DIR, filename)
-            abs_path = os.path.abspath(file_path)
-            
-            sf.write(file_path, audio_array, sr)
+                # --- B. EXTRACT DATA ---
+                # Access 'audio_filepath' (converted to dict by cast_column)
+                audio_data_dict = item['audio_filepath']
+                
+                audio_array = audio_data_dict['array']
+                sr = audio_data_dict['sampling_rate']
+                
+                # IndicVoices often has 'normalized' text too, but 'text' is usually the standard key
+                text = item.get('text', "")
+                
+                # --- C. SAVE AUDIO ---
+                filename = f"{DATASET_NAME}_{i}.wav"
+                file_path = os.path.join(WAV_DIR, filename)
+                abs_path = os.path.abspath(file_path)
+                
+                sf.write(file_path, audio_array, sr)
 
-            # --- D. METADATA COLLECTION ---
-            # IndicVoices has rich metadata (gender, district, etc.)
-            raw_metadata.append({
-                "original_index": i,
-                "filename": filename,
-                "sr": sr,
-                "gender": item.get('gender', 'unknown'),
-                "district": item.get('district', 'unknown'),
-                "category": item.get('category', 'natural'),
-                "scenario": item.get('scenario', 'unknown'),
-                "task_name": item.get('task_name', 'unknown') # Often marks casual vs read
-            })
+                # --- D. METADATA COLLECTION ---
+                # IndicVoices has rich metadata (gender, district, etc.)
+                raw_metadata.append({
+                    "original_index": i,
+                    "filename": filename,
+                    "sr": sr,
+                    "gender": item.get('gender', 'unknown'),
+                    "district": item.get('district', 'unknown'),
+                    "category": item.get('category', 'natural'),
+                    "scenario": item.get('scenario', 'unknown'),
+                    "task_name": item.get('task_name', 'unknown') # Often marks casual vs read
+                })
 
-            # NeMo Manifest Entry
-            duration = len(audio_array) / sr
+                # NeMo Manifest Entry
+                duration = len(audio_array) / sr
+                
+                manifest_entry = {
+                    "audio_filepath": abs_path,
+                    "text": text,
+                    "duration": duration,
+                    "lang": "kn",
+                    "source": "indicvoices_natural"
+                }
+                manifest_entries.append(manifest_entry)
+                
+                # Progress logging
+                if (i + 1) % PROGRESS_INTERVAL == 0:
+                    print(f"   ✓ Processed {i + 1} samples...")
+                
+                # Periodic saving to prevent data loss
+                if (i + 1) % SAVE_INTERVAL == 0:
+                    print(f"   💾 Checkpoint save at {i + 1} samples...")
+                    # Save intermediate manifest
+                    manifest_path = os.path.join(OUTPUT_DIR, "train_manifest.json")
+                    with open(manifest_path, "w", encoding="utf-8") as f:
+                        for entry in manifest_entries:
+                            json.dump(entry, f, ensure_ascii=False)
+                            f.write('\n')
             
-            manifest_entry = {
-                "audio_filepath": abs_path,
-                "text": text,
-                "duration": duration,
-                "lang": "kn",
-                "source": "indicvoices_natural"
-            }
-            manifest_entries.append(manifest_entry)
+            except Exception as e:
+                print(f"   ⚠️  Error processing sample {i}: {e}")
+                continue
 
-        # --- E. SAVE FILES ---
+        # --- E. FINAL SAVE ---
+        print(f"\n   💾 Saving final files...")
+        
         meta_path = os.path.join(OUTPUT_DIR, "raw_metadata.json")
         with open(meta_path, "w", encoding="utf-8") as f:
             json.dump(raw_metadata, f, indent=4, ensure_ascii=False)
