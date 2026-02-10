@@ -207,7 +207,7 @@ which pip
 Expected:
 
 ```
-/mnt/data/asr-env/bin/python
+/mnt/data/asr-env/bin/activate
 /mnt/data/asr-env/bin/pip
 ```
 

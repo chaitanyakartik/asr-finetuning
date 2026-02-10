@@ -1,3 +1,46 @@
+tmux new -s d1
+source /mnt/data/asr-env/bin/activate
+
+
+python training/train_adv.py \
+  --phase 4 \
+  --exp_name asr_hybrid_en_kn_balanced_run1 \
+  --train_manifest /mnt/data/asr-finetuning/data/training/v3/mixed_kn_en_50_50.json \
+  --base_model /mnt/data/asr-finetuning/training/models/kathbath_hybrid_h200_scaleup_phase4_final.nemo \
+  --epochs 10 \
+  --batch_size 32 \
+  --lr 0.0002 \
+  --accumulate_grad 1
+
+
+python training/train_hi.py \
+  --phase 0 \
+  --exp_name asr_3lang_en_kn_hi_balanced \
+  --train_manifest /mnt/data/asr-finetuning/data/training/v3/mixed_kn_en_hi_27.5_27.5_45_final.json \
+  --base_model /mnt/data/asr-finetuning/training/models/asr_hybrid_en_kn_balanced_run1_phase4_final.nemo \
+  --epochs 6 \
+  --batch_size 32
+
+
+
+
+
+
+
+
+
+
+rsync -avhP \
+  --exclude='asr-env' \
+  --exclude='*.lock' \
+  -e "ssh -J ubuntu@47.29.24.119" \
+  /mnt/data/asr-finetuning/ \
+  neurodx@100.66.9.247:/dev/shm/chaitanya/asr-finetuning/
+
+
+
+
+
 python evaluation/benchmarking/run/run_benchmark_kenlm.py \
   --model_path "training/models/kathbath_hybrid_h200_scaleup_p3_phase3_final.nemo" \
   --manifest "/mnt/data/asr-finetuning/evaluation/benchmarking/curation/test_data/Kathbath/test_manifest.json" \

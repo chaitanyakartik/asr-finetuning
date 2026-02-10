@@ -5,10 +5,10 @@ ASR Benchmark Runner (Single Manifest, Manual RNNT)
 Runs ASR evaluation on a single manifest using manual RNNT inference.
 
 python evaluation/benchmarking/run/run_benchmark_bypass.py \
---model=training/models/kathbath_hybrid_h200_scaleup_phase2_final.nemo \
---manifest=evaluation/benchmarking/curation/evaluation/benchmarking/data/v1/kn_clean_read.json \
---output-dir=models/results_conf_100m_v2 \
---exp-name=conf_100m_v2
+--model=training/models/asr_3lang_en_kn_hi_balanced_phase0_final.nemo \
+--manifest=/mnt/data/asr-finetuning/evaluation/benchmarking/data/v1/kn_clean_read.json \
+--output-dir=test/multilang \
+--exp-name=multilang
 
 """
 
