@@ -102,15 +102,25 @@ def verify_version(version):
         print(f"❌ Version directory not found: {base_path}")
         return
     
-    # Find all subdirectories
-    datasets = sorted([d for d in base_path.iterdir() if d.is_dir()])
+    # Find all language directories, then datasets within each
+    lang_dirs = sorted([d for d in base_path.iterdir() if d.is_dir()])
     
-    if not datasets:
-        print(f"❌ No datasets found in {base_path}")
+    if not lang_dirs:
+        print(f"❌ No language directories found in {base_path}")
+        return
+    
+    # Collect all datasets across all languages
+    all_datasets = []
+    for lang_dir in lang_dirs:
+        datasets = [d for d in lang_dir.iterdir() if d.is_dir() and (d / "train_manifest.json").exists()]
+        all_datasets.extend([(lang_dir.name, d) for d in datasets])
+    
+    if not all_datasets:
+        print(f"❌ No datasets with train_manifest.json found in {base_path}")
         return
     
     print(f"\n{'='*60}")
-    print(f"Verifying {version} datasets ({len(datasets)} total)")
+    print(f"Verifying {version} datasets ({len(all_datasets)} total)")
     print(f"{'='*60}\n")
     
     complete = 0
@@ -119,8 +129,16 @@ def verify_version(version):
     total_samples = 0
     all_durations = []
     
-    for dataset in datasets:
-        print(f"📊 {dataset.name}")
+    # Group by language for display
+    current_lang = None
+    for lang, dataset in sorted(all_datasets):
+        if current_lang != lang:
+            if current_lang is not None:
+                print()  # Add spacing between languages
+            print(f"🌐 {lang.upper()}")
+            current_lang = lang
+        
+        print(f"  📊 {dataset.name}")
         result = verify_dataset(dataset)
         if result:
             if result["complete"]:

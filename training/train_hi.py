@@ -288,7 +288,7 @@ def run_training(args):
         'pin_memory': True,
         'use_start_end_token': False,
         'min_duration': 3.0,      # PHASE 0 SAFETY (No short files)
-        'max_duration': 20.0,
+        'max_duration': 16.0,
         'prefetch_factor': 4
     }
     model.setup_training_data(train_data_config=train_ds)
