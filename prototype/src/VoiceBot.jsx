@@ -149,7 +149,7 @@ const VoiceBot = () => {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [settings, setSettings] = useState({
     useTTS: true,
-    backendUrl: 'http://localhost:8000'
+    backendUrl: import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000'
   });
   const [recordingTime, setRecordingTime] = useState(0);
   const [selectedLanguage, setSelectedLanguage] = useState('english');
