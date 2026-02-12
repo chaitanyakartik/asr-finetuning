@@ -5,7 +5,7 @@ A React-based voice bot interface that integrates with a custom local ASR backen
 ## Features
 
 - 🎤 **Audio Recording**: Hold-to-record with visual feedback using MediaRecorder API
-- 👂 **ASR Integration**: Automatic transcription via local backend at `http://localhost:8000/transcribe`
+- 👂 **ASR Integration**: Automatic transcription via local backend at `http://localhost:8001/transcribe`
 - 🧠 **LLM Integration**: Google Gemini API for intelligent responses
 - 🗣️ **Text-to-Speech**: Browser-native speech synthesis
 - 💬 **Chat Interface**: Clean, WhatsApp-style chat UI
@@ -22,7 +22,7 @@ A React-based voice bot interface that integrates with a custom local ASR backen
 ## Prerequisites
 
 1. **Node.js** (v18 or higher)
-2. **ASR Backend**: Your local ASR server must be running at `http://localhost:8000`
+2. **ASR Backend**: Your local ASR server must be running at `http://localhost:8001`
    - Endpoint: `POST /transcribe`
    - Expected FormData key: `file`
    - Expected response: `{ "text": "transcribed text" }` or `{ "transcription": "..." }`
@@ -41,7 +41,7 @@ A React-based voice bot interface that integrates with a custom local ASR backen
 
 ## Running the Application
 
-1. **Start your ASR backend** (make sure it's running on port 8000):
+1. **Start your ASR backend** (make sure it's running on port 8001):
    ```bash
    # From your ASR project directory
    python inference/asr_server.py
@@ -127,7 +127,7 @@ If you see CORS errors in the console:
 - For HTTPS/production, use a valid SSL certificate
 
 ### ASR Backend Not Responding
-- Verify the backend is running: `curl http://localhost:8000`
+- Verify the backend is running: `curl http://localhost:8001`
 - Check the backend logs for errors
 - Ensure the `/transcribe` endpoint accepts FormData with a `file` key
 
